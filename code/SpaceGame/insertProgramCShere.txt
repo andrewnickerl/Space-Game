@@ -1,6 +1,1 @@
 placeholder for program.cs
-
-class myClass
-{
-aasdf;ljasd;flkjwae;fk;
-}
