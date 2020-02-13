@@ -21,5 +21,19 @@
       <FileName>BattleEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SpaceGameLibrary.SpaceEvent">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>SpaceEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceGameLibrary.Item">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAIAAAAAAAAAAEAAAAAAAgEAAAAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
