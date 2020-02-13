@@ -8,28 +8,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGameLibrary.Planet">
-    <Position X="3.75" Y="1.25" Width="1.5" />
+    <Position X="4.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IQAAAAAAAAAAAAAAABAAAAQAAAAAAAAAABAAAAAAAAA=</HashCode>
       <FileName>Planet.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGameLibrary.BattleEntity">
-    <Position X="7.25" Y="1.75" Width="1.5" />
+    <Position X="3" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAASAAAAAAAAAAAAAAAQAABAAAAAAAAAAAAAAQAA=</HashCode>
       <FileName>BattleEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGameLibrary.SpaceEvent">
-    <Position X="9.5" Y="1.75" Width="1.5" />
+    <Position X="6.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>SpaceEvent.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceGameLibrary.Item">
-    <Position X="5.5" Y="0.5" Width="1.5" />
+    <Position X="8.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAIAAAAAAAAAAEAAAAAAAgEAAAAAA=</HashCode>
       <FileName>Item.cs</FileName>
