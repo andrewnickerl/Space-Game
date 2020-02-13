@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SpaceGameLibrary
 {
-    public class Planet
+    public class BattleEntity
     {
         public string Name
         {
@@ -14,7 +14,7 @@ namespace SpaceGameLibrary
             }
         }
 
-        public string Objective
+        public short Hp
         {
             get => default;
             set
@@ -22,17 +22,20 @@ namespace SpaceGameLibrary
             }
         }
 
-        public array Story()
+        public short Damage
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public bool TakenDamage(short damage)
         {
             throw new System.NotImplementedException();
         }
 
-        public bool AccessStore(Player pc)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool Combat(Player pc, BattleEntity enemy, BattleEntity ally)
+        public bool DealDamage(short damage)
         {
             throw new System.NotImplementedException();
         }
