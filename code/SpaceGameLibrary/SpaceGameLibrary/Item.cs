@@ -6,7 +6,7 @@ namespace SpaceGameLibrary
 {
     public class Item
     {
-        public string name
+        public string Name
         {
             get => default;
             set
@@ -14,7 +14,7 @@ namespace SpaceGameLibrary
             }
         }
 
-        public string description
+        public string Description
         {
             get => default;
             set
@@ -22,7 +22,7 @@ namespace SpaceGameLibrary
             }
         }
 
-        public int damage
+        public int Damage
         {
             get => default;
             set
@@ -38,12 +38,19 @@ namespace SpaceGameLibrary
             }
         }
 
-        public bool reusable
+        public bool Reusable
         {
             get => default;
             set
             {
             }
-        }
+        } 
+        public byte Quantity
+        {
+            get => default;
+            set
+            {
+            }
+        }        
     }
 }
