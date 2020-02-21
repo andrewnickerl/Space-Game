@@ -1,53 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SpaceGameLibrary
 {
     public class Player
     {
-        public string Name
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public short Hp
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public System.Array Inventory
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string PlayerStatus
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public short Currency
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public bool EditInventory(Item item, System.Array Inventory)
-        {
-            throw new System.NotImplementedException();
-        }
+        public string Name { get; set; }
+        public short Hp { get; set; }
+        public List<Item> Inventory { get; set; }
+        public string PlayerStatus { get; set; }
+        public short Currency { get; set; }
 
         public bool TakeDamage(int damage, ref int hp)
         {
