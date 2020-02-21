@@ -11,6 +11,7 @@ namespace SpaceGameLibrary
         public string PlayerStatus { get; set; }
         public short Currency { get; set; }
         public Item EquippedItem { get; set; }
+        public string PetName { get; set; }
 
         public bool TakeDamage(int damage, ref int hp)
         {
