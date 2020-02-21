@@ -494,7 +494,7 @@ namespace SpaceGameLibrary
                     this.Story.Add("B) follow footprints leading outside the ship");
                     this.Story.Add("C) grab an Astrocola and watch cartoons");
                     this.Story.Add("D) tell the ship security protocols to initiate defense level BAMBAM");
-                    this.Story.Add($"(Ship security protocol)\n  known fugitive known as THE MAN entered and left with {pc.dog}"); // Scenario 1
+                    this.Story.Add($"(Ship security protocol)\n  known fugitive known as THE MAN entered and left with {pc.PetName}"); // Scenario 1
                     this.Story.Add($" you remember now, your dog {pc.PetName} is gone!!!THE MAN must pay!");
                     this.Story.Add("you grab the nearest item to you and man your ship speeding off towards the next planet to find him"); // item if statement start
                     this.Story.Add("A) you grab the blitz blade"); // Add the blitz blade item
@@ -569,6 +569,7 @@ namespace SpaceGameLibrary
                     // End of Aventus
                     return true;
 
+<<<<<<< HEAD
                 case PlanetTypes.SpotMee:
                     this.Story.Add("You are at planet SpotMee and land in the capital city, Brotopia. THE MAN is definitely here, but the city is large and filled with gladiator rings.");
                     this.Story.Add(". As you start to walk towards the city, an AD bot starts screaming its ad in your face.");
@@ -759,6 +760,23 @@ namespace SpaceGameLibrary
                     this.Story.Add("Thanks for playing!"); // Game Done
                     //End of Krytunga
                     return true;
+=======
+                //case PlanetTypes.SpotMee:
+                //    this.Story.Add()
+                //    // End of SpotMee
+                //    return true;
+
+                //case PlanetTypes.Wombodum:
+                //    this.Story.Add()
+                //    // End of Wombodum
+                //    return true;
+
+                //case PlanetTypes.Krytunga:
+                //    this.Story.Add()
+                //    //End of Krytunga
+                //    return true;
+
+>>>>>>> f28d0991723c8f299d011609f715457b40ea0e4d
                 default:
                     return false;
             }
