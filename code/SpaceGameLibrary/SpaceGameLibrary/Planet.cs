@@ -486,26 +486,26 @@ namespace SpaceGameLibrary
             {
                 case PlanetTypes.Noir:
                     this.Story.Add("(Narrator) \n On a Cold desolate night on Planet Noir our hero comes to, unaware of the adventure that awaits");
-                    this.Story.Add($"(SNarrator) \n slowly your eyes open, the emergency beacon on your ship is beaming, how you didn't hear it sooner is a mystery but your ship's security system is blaring a name... {pc.Name}");
+                    this.Story.Add($"(Narrator) \n slowly your eyes open, the emergency beacon on your ship is beaming, how you didn't hear it sooner is a mystery but your ship's security system is blaring a name... {pc.Name}");
                     this.Story.Add($"(Ship Security system) \n Greetings {pc.Name}, \n unknown perpetrator onboard during personnel stasis. current lifeforms present one...");
                     this.Story.Add($"({pc.Name} inner dialogue) \n one? could there be someone on here that is missing, you stand up to look around for clues");
-                    this.Story.Add(" Perplexed by mystery, you're faced with a dilemma.What do you do?"); // start of Scenario switch statement for Planet Noir choices
-                    this.Story.Add("A) ask security protocols who was on the ship"); 
-                    this.Story.Add("B) follow footprints leading outside the ship");
-                    this.Story.Add("C) grab an Astrocola and watch cartoons");
-                    this.Story.Add("D) tell the ship security protocols to initiate defense level BAMBAM");
+                    this.Story.Add("Perplexed by mystery, you're faced with a dilemma.What do you do?"); // start of Scenario switch statement for Planet Noir choices
+                    this.Story.Add("A) Ask security protocols who was on the ship"); 
+                    this.Story.Add("B) Follow footprints leading outside the ship");
+                    this.Story.Add("C) Grab an Astrocola and watch cartoons");
+                    this.Story.Add("D) Tell the ship security protocols to initiate defense level BAMBAM");
                     this.Story.Add($"(Ship security protocol)\n  known fugitive known as THE MAN entered and left with {pc.PetName}"); // Scenario 1
-                    this.Story.Add($" you remember now, your dog {pc.PetName} is gone!!!THE MAN must pay!");
-                    this.Story.Add("you grab the nearest item to you and man your ship speeding off towards the next planet to find him"); // item if statement start
-                    this.Story.Add("A) you grab the blitz blade"); // Add the blitz blade item
-                    this.Story.Add("B) you grab the Shield O Saturn"); // Add the shield o saturn item
-                    this.Story.Add("C) the Plutonian Plasma Rifle"); // Add the plasma rifle item
-                    this.Story.Add("Angry and disoriented you run to the ship door slamming on the hatch button, suddenly your sucked out into orbit");  // Scenario 2
-                    this.Story.Add("due to you being on another planet without an atmosphere, the oxygen is sucked out of you like Douglas Quaid in that movie TOTAL RECALL. nice job there guy");
-                    this.Story.Add("leisurely you motion towards the fridge to grab a ice cold Astrocola and notice the key behind it."); // Scenario 3 ADD the DAVE
-                    this.Story.Add("what a dumb place to hide my Deatomizing Assault Vulcan Emitter cannon aka The D.A.V.E, after collecting your weapon you remember your objective and set off to find THE MAN on the next planet");
-                    this.Story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM");  // Scenario 4
-                    this.Story.Add("and proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. nice job there guy");
+                    this.Story.Add($"You remember now, your dog {pc.PetName} is gone!!!THE MAN must pay!");
+                    this.Story.Add("You grab the nearest item to you and man your ship speeding off towards the next planet to find him"); // item if statement start
+                    this.Story.Add("A) You grab the blitz blade"); // Add the blitz blade item
+                    this.Story.Add("B) You grab the Shield O Saturn"); // Add the shield o saturn item
+                    this.Story.Add("C) You grab Plutonian Plasma Rifle"); // Add the plasma rifle item
+                    this.Story.Add("Angry and disoriented you run to the ship door slamming on the hatch button, suddenly your sucked out into orbit.");  // Scenario 2
+                    this.Story.Add("Due to you being on another planet without an atmosphere, the oxygen is sucked out of you like Douglas Quaid in that movie TOTAL RECALL. Nice job there guy");
+                    this.Story.Add("Leisurely you motion towards the fridge to grab a ice cold Astrocola and notice the key behind it."); // Scenario 3 ADD the DAVE
+                    this.Story.Add("What a dumb place to hide my Deatomizing Assault Vulcan Emitter cannon aka The D.A.V.E, after collecting your weapon you remember your objective and set off to find THE MAN on the next planet");
+                    this.Story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM.");  // Scenario 4
+                    this.Story.Add("Shortly thereafter you proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. Nice job there guy");
                     // End of Noir
                     return true;
 
@@ -555,7 +555,7 @@ namespace SpaceGameLibrary
                     this.Story.Add("Game Over.");
                     this.Story.Add("You come upon lumber yard 67. As you arrive, you see a ship that you don’t recognize fly away. It is much sleeker then the local freight ships. THE MAN has got away. "); // Option 2
                     this.Story.Add("You then hear a mewl from the yard. A kitten with red fur, a small horn, and bat wings trots over to you carrying a star-map data stick. ");
-                    this.Story.Add("you choose to");
+                    this.Story.Add("What do you do?");
                     this.Story.Add("1.)	feed the manticore");
                     this.Story.Add("2.)	kick the cat thing.");
                     this.Story.Add("3.)	Run back to ship.");
@@ -572,8 +572,8 @@ namespace SpaceGameLibrary
 <<<<<<< HEAD
                 case PlanetTypes.SpotMee:
                     this.Story.Add("You are at planet SpotMee and land in the capital city, Brotopia. THE MAN is definitely here, but the city is large and filled with gladiator rings.");
-                    this.Story.Add(". As you start to walk towards the city, an AD bot starts screaming its ad in your face.");
-                    this.Story.Add("(ad bot) \n Come on down, come on down. Come one, come all to the Guilds Gym Arena. Legendary boss, THE MAN, challenges all to come fight to take his fortune. Can any claim his Mells?!?!?!” ");
+                    this.Story.Add("As you start to walk towards the city, an AD bot starts screaming its ad in your face.");
+                    this.Story.Add("(Ad bot) \n Come on down, come on down. Come one, come all to the Guilds Gym Arena. Legendary boss, THE MAN, challenges all to come fight to take his fortune. Can any claim his Mells?!?!?!” ");
                     this.Story.Add("What do you do?"); // Options start
                     this.Story.Add("1.)	Go to the Marketplace.");
                     this.Story.Add("2.)	Go to Guilds Gym Arena.");
