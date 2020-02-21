@@ -18,16 +18,19 @@ namespace SpaceGameLibrary
         public string Objective { get; set; }
         public List<Item> StoreInventory { get; set; }
 
-        public bool AccessStore(Player pc, List<Item> storeInventory, string selection)
+        public bool Buy(Player pc, List<Item> storeInventory, string selection)
         {
-
             switch(selection)
             {
                 case "Auto Chopper":
                     if(storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        } else return false;
+
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
@@ -177,6 +180,11 @@ namespace SpaceGameLibrary
                 default:
                     return false;
             }
+        }
+
+        public bool Sell(Player pc, List<Item> storeInventory, string selection)
+        {
+
         }
 
         public bool Combat(Player pc, BattleEntity enemy, BattleEntity ally)
