@@ -519,7 +519,7 @@ namespace SpaceGameLibrary
                     this.Story.Add("3.)	Ask if he is an ostrich.");
                     this.Story.Add("4.)	See inventory"); // display inventory
                     this.Story.Add("5.)	See Stats"); // display stats
-                    this.Story.Add("You say that you’re PC and are looking for a human called THE MAN. "); // Scenario 1
+                    this.Story.Add($"You say that you’re {pc.Name} and are looking for a human called THE MAN. "); // Scenario 1
                     this.Story.Add("(Carlsin)\n “I don’t know who this man is but we did have a ship illegally land at lumber yard 67. I wouldn’t suggest going there since going there by yourself though. ");
                     this.Story.Add("The site was recently taken over by a young manticore. I’d stop by Frig&Horges in the marketplace if you plan to still go there. They have all the gear you might need to brave the jungle.");
                     this.Story.Add("You shove Carlsin causing him to fall off the landing platform. He becomes a new hood ornament for a freight ship leaving planet. You wander into town looking for information."); // Scenario 2
@@ -569,6 +569,198 @@ namespace SpaceGameLibrary
                     // End of Aventus
                     return Story;
 
+<<<<<<< HEAD
+                case PlanetTypes.SpotMee:
+                    this.Story.Add("You are at planet SpotMee and land in the capital city, Brotopia. THE MAN is definitely here, but the city is large and filled with gladiator rings.");
+                    this.Story.Add(". As you start to walk towards the city, an AD bot starts screaming its ad in your face.");
+                    this.Story.Add("(ad bot) \n Come on down, come on down. Come one, come all to the Guilds Gym Arena. Legendary boss, THE MAN, challenges all to come fight to take his fortune. Can any claim his Mells?!?!?!” ");
+                    this.Story.Add("What do you do?"); // Options start
+                    this.Story.Add("1.)	Go to the Marketplace.");
+                    this.Story.Add("2.)	Go to Guilds Gym Arena.");
+                    this.Story.Add("3.)	Check inventory.");
+                    this.Story.Add("4.)	Check stats.");
+                    this.Story.Add("As you wander down the marketplace, you see a store called, Do You Even Lift. You decide to shop there."); // Option 1
+                    this.Story.Add("1.)	Buy");
+                    this.Story.Add("2.)	Sell");
+                    this.Story.Add("3.)	Leave");
+                    this.Story.Add("Shop Items to buy:");
+                    this.Story.Add("1.)	20lbs Dumbbell/ qty: 20 price: 250 mells");
+                    this.Story.Add("2.)	45lbs Plate/ qty: 3 price: 50 mells");
+                    this.Story.Add("3.)	OFFs Protein/ price: 400 mells");
+                    this.Story.Add("4.)	Animal Energy Powder/ price: 150 mells");
+                    this.Story.Add("5.)	Leave");
+                    this.Story.Add(""); // When leaving shop, go to option 2
+                    this.Story.Add("You run off towards Guilds Gym Arena, the AD bot blaring the same ad the whole way. When you arrive to the arena you see a line with various aliens hoping to win THE MAN’s fortune. "); // Option 2
+                    this.Story.Add("When you finally get to the front you recognize an Orgus by its big green pig head with tusk shooting out. He has a name tag that reads Daisy.");
+                    this.Story.Add("(Daisy) \n in a deep gruff voice he asks, “Arena name and race?”");
+                    this.Story.Add("1.)	Give new name for arena fights."); // Options
+                    this.Story.Add("2.)	Give your name for arena fights.");
+                    this.Story.Add("3.)	Ask Daisy about name.");
+                    this.Story.Add("4.)	Mock Daisy for name.");
+                    this.Story.Add("You laugh at Daisy for being named after a weak Earth flower. Daisy roars over being mocked, “Daisy is greatest warrior name from Orgus home world!!! Puny human shall die!”"); // Option 4
+                    this.Story.Add("He slams his hand down on a button on his desk causing the floor below you to disappear. You fall into a pit of boiling oil becoming Daisy’s snack for the arena matches later.");
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("You give Daisy your name and he explains that you must win the 3 rounds in order to win THE MAN’s tournament. As you enter the arena for the first round a voice over the louder speakers come on. "); // Option 2
+                    this.Story.Add("“Cooooontestants!!! There has been a change for the first round! Instead of the traditional Brotopia dumbbell fight, whoever kills PC, the only human here, will win the tournament!!!” ");
+                    this.Story.Add("All the contestants turn toward you and before anyone else can jump you, an Orgus jumps from the stands and turns you into a pancake.");
+                    this.Story.Add("Game Over");
+                    this.Story.Add("Daisy tells you he was named after the greatest warrior in Orgus history. You marvel in wonder at the name. Daisy says he likes you and says if you enter the red door over there, you can skip to the final round."); // Option 3
+                    this.Story.Add("PC gives new name."); // Go to round 3 of option 1 // Option 1
+                    this.Story.Add("Welcome contestants!! The first round shall be the traditional Dumbbell fight! Ready, Go!");
+                    this.Story.Add("You look around and see everyone pulling out dumbbells and throwing them like snowballs.");
+                    this.Story.Add("1.)	Access Inventory"); // Options //[Everything but dumbbells fails and sends back to original options]
+                    this.Story.Add("2.)	Dodge and hope to pick up stray dumbbells");
+                    this.Story.Add("3.)	Cower in a corner.");
+                    this.Story.Add("4.)	Run around the arena screaming.");
+                    this.Story.Add("“You survived the round and moved on.”"); // If dumbbells used.
+                    this.Story.Add("You attempt to dodge the incoming dumbbells but get hit in the head crushing it.");
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("You run to the corner of the circular arena and cower in the fetal position. After 10 mins of fight, you hear victory! You’re on of the 5 finalists. Move on to round 2"); // Option 3
+                    this.Story.Add("You start screaming as you run around. You forget to breath properly and pass out after 10 mins. You awake with round 2 under way but a giant horned lizard having eaten your legs. "); // Option 4
+                    this.Story.Add("Game over.");
+                    this.Story.Add("(Announcer) \n “Champions moving on to round 2! You shall face one of our beasts we have in our arena. When called, come face your beast!”"); // Round 2
+                    this.Story.Add("The first 2 contestants both quickly get eaten, making you nervous.");
+                    this.Story.Add("(Announcer) \n "); // Fight {random Enemy} Win move on , lose Game Over // Round 3:
+                    this.Story.Add("“THE MAN shall greet the champion.”"); 
+                    this.Story.Add("THE MAN walks out to greet you but freezes when he sees you. He screams for them to release another beast as he runs away.");
+                    this.Story.Add("You chase after THE MAN barely making it to your ship before you see his ship leave atmosphere. You follow after him in the ship."); // Fight [Random Enemy] [Win move on, lose Game over]
+                    // End of SpotMee
+                    return true;
+
+                case PlanetTypes.Wombodum:
+                    this.Story.Add("You chase THE MAN to Wumbodom. The whole planet is one giant city and THE MAN went straight to land in the slums of the planet");
+                    this.Story.Add("With your larger ship, you can’t fit in where he landed, so you land on the roof of one of the outlying towers. As you climb down the building, you see a store called Wumbohex. ");
+                    this.Story.Add("1.)	Shop"); // Options
+                    this.Story.Add("2.)	Leave the tower");
+                    this.Story.Add("3.)	Check Inventory");
+                    this.Story.Add("4.)	Check Stats");
+                    this.Story.Add("1.)	The Claw/ price: 600 mells"); // Shop buy options
+                    this.Story.Add("2.)	Purple Remote/ price: 200 mells");
+                    this.Story.Add("3.)	Awesome Cyborg Doll/ price: 350 mells");
+                    this.Story.Add("4.)	Laser Sword/ price: 400 mells");
+                    this.Story.Add("5.)	Leave");
+                    this.Story.Add("You race down the rest of the tower and as you exit you bump into a cyborg Ephantus, an Elephant man race. He turns and stares at you with his red robotic eye.");
+                    this.Story.Add("What do you do?"); // Options
+                    this.Story.Add("1.)	Apologize and run away.");
+                    this.Story.Add("2.)	Attempt to fight.");
+                    this.Story.Add("3.)	Ask if they wanna go.");
+                    this.Story.Add("You ask the Ephantus and found it he is a she. She says she is Klarice and was surprise her hired date was a human.  "); // Option 3:
+                    this.Story.Add("She takes you to the closest mall and dragging you from one store to the next all day long. You awake the next morning tired and sore but 2000 mells richer. "); // . [Go to option 1]
+                    this.Story.Add("As you reach for a weapon his mechanical nose shoots into your chest and rips your heart out. He screams “KALIMA!” as you die."); // Option 2:
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("You run away from the Cyborg Ephantus in terror, hoping to never see them again. You rush into the slums knowing your so close to pet"); // Option 1
+                    this.Story.Add("As you head towards where THE MAN lands you see the busy main street full of beggars or a back alley that appears to bypass all of it.");
+                    this.Story.Add("What do you Do?");
+                    this.Story.Add("1.)	Take the main street."); // Options
+                    this.Story.Add("2.)	Take the alley.");
+                    this.Story.Add("You attempt to trudge past all the beggars without responding to them. A small female blue skinned humanoid with 2 small horns on her forehead and black bat wings on her back in a long brown shirt climbs onto your shoulder. "); // Option 1
+                    this.Story.Add("You recognize she is of the Lashtist race. She says mister “Where are you going? If I guide you there will you give me some food?” ");
+                    this.Story.Add("What will you do?");
+                    this.Story.Add("1.)	Say yes.");
+                    this.Story.Add("2.)	Tell her to scram.");
+                    this.Story.Add("She guides you to THE MAN’s ship, but you forgot Lashtist feed off the blood of other. She starts drinking your blood as you see THE MAN fly away."); // Option 1
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("She flutters away sobbing about being hungry. Then you notice her start drinking the blood of another beggar in an alley. He becomes a mummy is 30 seconds. You just dodged a bullet."); // Continue where option 2 joins back in]
+                    this.Story.Add("As you begin walking through the alley, a small green humanoid with large pointy ears clutching what appears to be a butter knife runs into you. You recognize him as a Gobleen. "); // // Option 2
+                    this.Story.Add("He is short of breath as if he was running from something. He realizes you’re not a wall but a person and freaks out. He screams, “You will not take my precious!!” as he strokes his butter knife. "); // Fight
+                    this.Story.Add("As you leave beggar central you see THE MAN’s ship, but there is a massive gang war on the path to the ship"); // [Win, gain Holy Butter Knife and join back with option 1] ,[Lose, Game over.]
+                    this.Story.Add("What do you Do?");
+                    this.Story.Add("1.)	Fight your way through."); // Options:
+                    this.Story.Add("2.)	Attempt to sneak around.");
+                    this.Story.Add("3.)	Yell dumbbell fight!");
+                    this.Story.Add("You yell out and both gangs turn to you. You hear someone says, “wrong planet!” as a pizza flies toward you.  Its aroma attracts the local Flesh fleas. You are eaten alive by the fleas. "); // Option 3:
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("As you attempt to sneak past the war grounds, a humanoid cyborg with no details to see his original race but a large ‘A’ on his chest confronts you. "); // Option 2:
+                    this.Story.Add("(Cyborg) \n “To whose allegiance do you claim?! Awesome or Metal?!” ");
+                    this.Story.Add("What do you Do?"); // Options
+                    this.Story.Add("1.)	Give item from inventory.");
+                    this.Story.Add("2.)	Answer with “Metal?”");
+                    this.Story.Add("3.)	Answer with “Awesome?”");
+                    this.Story.Add("4.)	[Fight]");
+                    this.Story.Add("Fight"); // Option 4: Go to option 1, fight through.
+                    this.Story.Add("(Cyborg) \n  “You dare say Metal Man is better?!?! To me, an Awesome Cyborg fan?!?!?! Be converted!!” "); //Option 2:
+                    this.Story.Add("He throws a helmet on you which forces you to watch ‘The Adventures of Awesome Cyborg’ on repeat for 3 weeks straight.");
+                    this.Story.Add("Awesome Cyborg is love; Awesome Cyborg is life. You join the gang with no self-will attempting to convert others to your cause.");
+                    this.Story.Add("Game Over."); 
+                    this.Story.Add("(Cyborg \n “I see through you lies Metal Man spy!! There is no saving your kind!”"); // Option 3:
+                    this.Story.Add("He pulls out an anti-battleship cannon and vaporizes you. You are wiped from existence.");
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("(Cyborg) \n  “You would give me this rare figurine of Awesome Cyborg?! There are only 10 in existence! I will cherish what you have given me! May you bring justice to the blind comrade!”"); //Option 1: // [If you give Awesome Cyborg Doll]
+                    this.Story.Add(""); // [Continue on to THE MAN’s ship]
+                    this.Story.Add("[Fight Random Enemy]"); // Option 1:
+                    this.Story.Add(""); // Win: [Fight Random Enemy]
+                    this.Story.Add(""); // Lose: Game Over.
+                    this.Story.Add(""); // Win Both: Continue on to THE MANS ship
+                    this.Story.Add("After scrapping through the warzone, you finally make it to THE MAN’s ship. Sadly, right as you approach the ship, the entry ramp raises up and the ship begins to leave. Over a speaker from the ship you hear THE MAN call out. ");
+                    this.Story.Add($"(THE MAN) \n “Muahahahaha!{pc.Name} you’re too slow. I’ve got everything I need to feats with {pc.PetName}. If you want to join us on Krytunga then be my guest!” He then speeds of into space");
+                    this.Story.Add("You know where this ends. Time to get pet back. You head back to your ship, setting coordinates for the planet of Krytunga, the crystal world.");
+                    // End of Wombodum
+                    return true;
+
+                case PlanetTypes.Krytunga:
+                    this.Story.Add("Krytunga, the crystal planet");
+                    this.Story.Add("Finally, you land on the remote planet of Krytunga. This planet is said to be uninhabitable due only the planet’s unique crystals that grow here. ");
+                    this.Story.Add("As you circle the planet you notice what appears to be a fortress made from crystal. You notice that THE MAN’s ship is landed in the courtyard.");
+                    this.Story.Add($"({pc.Name}) \n “Found you, you ugly bastard!” you growl to yourself. ");
+                    this.Story.Add("You land just outside the fortress and get ready to face the music, you mean THE MAN. As you leave your ship, a crystal alien you’ve never heard or seen of before approaches you");
+                    this.Story.Add("He looks like a 3-foot humanoid with crystal skin. As he draws near, he begins to speak.");
+                    this.Story.Add("(Crystal Alien) \n “Yo homedog! Care to swap some sparkle spazzles?”");
+                    this.Story.Add("What do you Do?"); // Options
+                    this.Story.Add("1.)	Say “I guess?”");
+                    this.Story.Add("2.)	Say “Some what?!?”");
+                    this.Story.Add("3.)	Punt the crystal dwarf thing");
+                    this.Story.Add("4.)	Ignore and rush into the fortress");
+                    this.Story.Add("(Crystal Alien) \n “Cool! Here’s what I got flesh man!”"); // Option 1:
+                    this.Story.Add("1.)	Red Crystal/ price: 200 mells"); // Items Sold:[Go into Buy/Sell mode]
+                    this.Story.Add("2.)	Blue Crystal/ price: 200 mells");
+                    this.Story.Add("3.)	Green Crystal/ price: 200 mells");
+                    this.Story.Add("4.)	Leave");
+                    this.Story.Add("The crystal alien launches into the history of the planet and the local lingo. You attempt to leave several times, but he cuts you off every time."); // Option 2:
+                    this.Story.Add("He leaves no room to interrupt during his entire 8-year long lecture. Given no room to ever leave, you die from starvation 1 month into the lecture.");
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("As your leg makes contact with the alien, it starts to move through him like swimming through honey. Before you can realize it, the alien has become your leg from the knee down"); // Option 3:
+                    this.Story.Add("His face disappears but now hear his voice in your head. Your otherwise fine and charge into the fortress mildly off balance."); // [Pick up with option 4]
+                    this.Story.Add("You charge into the fortress expecting to face THE MAN’s henchmen but find it empty. You rush through the halls until you come to a grand staircase going up to one massive door and another going down to an identical looking door."); // Option 4:
+                    this.Story.Add("What do you Do?"); // Options:
+                    this.Story.Add("1.)	Go up the stairs");
+                    this.Story.Add("2.)	Go down the stairs");
+                    this.Story.Add("As you climb down the stairs you take a deep breath before you fling the doors open. Astonished, you find not a throne room but what appears to be some sort of factory"); // Option 2:
+                    this.Story.Add("You wander to the edge of the observation platform to get a better look. ");
+                    this.Story.Add("As you stare out across the factory, it quickly becomes clear that this is where THE MAN creates the crystal aliens like the one that greeted you when you landed. As this dawns on you, you feel someone kick you from behind.");
+                    this.Story.Add("You fall over the railing into a vat of molten crystal in front of you. You’re able to turn your head before you fall in and see THE MAN cackling as he watches you die in the molten crystal.");
+                    this.Story.Add("Game Over");
+                    this.Story.Add("As you climb up the stairs you take a deep breath before you fling the doors open. You see THE MAN on a throne of crystal smiling down at you. "); // Option 1:
+                    this.Story.Add($"(THE MAN)\n  “Welcome {pc.Name}! I’ve been waiting for you. Can’t hold the grand party without you. Give me 5 more minutes and it will all be ready.”");
+                    this.Story.Add("What do you do?");
+                    this.Story.Add("1.)	Don’t wait and attack."); // Options
+                    this.Story.Add($"2.) Demand he give {pc.PetName} back.");
+                    this.Story.Add("3.)	Wait the 5 minutes.");
+                    this.Story.Add("You decide to wait to see what happens. More crystal aliens, similar to the one the greeted you start to bring in what appear to be party decorations"); // Option 3
+                    this.Story.Add("A table and chair are brought out for you to sit with a massive 7-layer cake is placed in front of you");
+                    this.Story.Add("The aliens start sing happy birthday to you, and THE MAN tells you to blow out the candles. You indulge them and blow out the candles");
+                    this.Story.Add("BOOOOOOOMMMM!!!!");
+                    this.Story.Add("The cake exploded the second you blew the candles out. You should have never trusted THE MAN, even if it was your birthday.");
+                    this.Story.Add("Game Over");
+                    this.Story.Add($"THE MAN stares a you confused. He goes on to tell you he never took {pc.PetName}; he just hid him in your ship’s exterior storage compartment. "); // Option 2:
+                    this.Story.Add("He goes on to say your birthday party will soon be ready and should stick around for it.");
+                    this.Story.Add($"Bewildered, you race out to your ship and check the exterior storage. Sure enough, the second you open it,{pc.PetName}leaps onto you and starts licking your face.");
+                    this.Story.Add("Overjoyed, the 2 of you go back onto your ship to float through the galaxy watching cartoons together. You don’t trust THE MAN with throwing any parties and just leave the planet.");
+                    this.Story.Add("As you start to leave atmosphere, you see THE MAN’s fortress explode. Glad to have trusted your gut, you and pet fly off on new adventures.");
+                    this.Story.Add($"Victory,{pc.Name} has got {pc.PetName} back!"); 
+                    this.Story.Add("Thanks for playing!"); // Game Done
+                    this.Story.Add("Shocked by your sudden attack, THE MAN throws out a yellow crystal that turns into 2-foot yellow crystal mouse."); // Option 1:
+                    this.Story.Add(""); // [Fight Mouse]
+                    this.Story.Add(""); // Win:
+                    this.Story.Add("(THE MAN) \n “Cursed knock-offs! I’ll just deal with you myself!”");
+                    this.Story.Add(""); // [Fight THE MAN]
+                    this.Story.Add(""); // Win:
+                    this.Story.Add($"After obliterating THE MAN, you run past the throne into what you assume was THE MAN’s room. There in a cage is {pc.PetName}.");
+                    this.Story.Add($"You quickly bust the lock and {pc.PetName} flies into your arms, licking your face. Finally, you and {pc.PetName} can get back to your primary mission, watching all the galaxy’s cartoons ever created!");
+                    this.Story.Add($"Victory,{pc.Name} has got {pc.PetName} back!");
+                    this.Story.Add("Thanks for playing!"); // Game Done
+                    //End of Krytunga
+                    return true;
+=======
                 //case PlanetTypes.SpotMee:
                 //    this.Story.Add()
                 //    // End of SpotMee
@@ -584,6 +776,7 @@ namespace SpaceGameLibrary
                 //    //End of Krytunga
                 //    return Story;
 
+>>>>>>> f28d0991723c8f299d011609f715457b40ea0e4d
                 default:
                     return Story;
             }
