@@ -7,138 +7,142 @@ namespace SpaceGameLibrary
 {
     public class Planet
     {
-        public string Name
-        {
-            get => default;
-            set
-            {
-            }
-        }
-        public PlanetTypes PlanetType { get; set; }
-        public List<Item> WeaponsList { get; set; }
         public Planet(PlanetTypes planet)
-        { 
-            this.PlanetType = planet;
-            this.WeaponsList = new List<Item>();
+        {
+            this.Name = planet;
+            this.StoreInventory = new List<Item>();
             AssignWeapons();
         }
 
-        public string Objective
+        public PlanetTypes Name { get; set; }
+        public string Objective { get; set; }
+        public List<Item> StoreInventory { get; set; }
+
+        public bool AccessStore(Player pc, List<Item> storeInventory, string selection)
         {
-            get => default;
-            set
+
+            switch(selection)
             {
+                case "Auto Chopper":
+                    if(storeInventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        storeInventory.Find(item => item.Name == selection).Quantity--;
+                        storeInventory.RemoveAll(item => item.Quantity <= 0);
+                        return true;
+                    }
+                    else return false;
+                default:
+                    return false;
             }
-        }
-
-        public array Story()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool AccessStore(Player pc)
-        {
-            
-            //switch()
-            //{
-            //    case "Auto chopper":
-            //        return
-            //}
-            throw new System.NotImplementedException();
         }
 
         public bool Combat(Player pc, BattleEntity enemy, BattleEntity ally)
         {
             throw new System.NotImplementedException();
         }
-        private void AssignWeapons()
+
+        public bool Combat(Player pc, BattleEntity enemy)
         {
-            switch(this.PlanetType)
+            throw new System.NotImplementedException();
+        }
+
+        private bool AssignWeapons()
+        {
+            switch (this.Name)
             {
                 case PlanetTypes.Aventus:
-                    Item itemone = new Item();
-                    itemone.Name = "Auto Chopper";
-                    itemone.Quantity = 1;
-                    itemone.Value = 150;
-                    this.WeaponsList.Add(itemone);
-                    Item itemtwo = new Item();
-                    itemtwo.Name = "Jungle starter kit";
-                    itemtwo.Quantity = 1;
-                    itemtwo.Value = 300;
-                    this.WeaponsList.Add(itemtwo);
-                    Item itemthree = new Item();
-                    itemthree.Name = "Schlemal doll";
-                    itemthree.Quantity = 1;
-                    itemthree.Value = 50;
-                    this.WeaponsList.Add(itemthree);
-                    Item itemfour = new Item();
-                    itemfour.Name = "Green remote";
-                    itemfour.Quantity = 1;
-                    itemfour.Value = 200;
-                    this.WeaponsList.Add(itemfour);
-                    break;
+                    Item item1 = new Item();
+                    item1.Name = "Auto Chopper";
+                    item1.Quantity = 1;
+                    item1.Value = 150;
+                    this.StoreInventory.Add(item1);
+                    Item item2 = new Item();
+                    item2.Name = "Jungle starter kit";
+                    item2.Quantity = 1;
+                    item2.Value = 300;
+                    this.StoreInventory.Add(item2);
+                    Item item3 = new Item();
+                    item3.Name = "Schlemal doll";
+                    item3.Quantity = 1;
+                    item3.Value = 50;
+                    this.StoreInventory.Add(item3);
+                    Item item4 = new Item();
+                    item4.Name = "Green remote";
+                    item4.Quantity = 1;
+                    item4.Value = 200;
+                    this.StoreInventory.Add(item4);
+                    return true;
                 case PlanetTypes.SpotMee:
-                    Item itemsix = new Item();
-                    itemsix.Name = "20 lbs Dumbbells";
-                    itemsix.Quantity = 20;
-                    itemsix.Value = 250;
-                    this.WeaponsList.Add(itemsix);
-                    Item itemsev = new Item();
-                    itemsev.Name = "45 lbs plate";
-                    itemsev.Quantity = 3;
-                    itemsev.Value = 50;
-                    this.WeaponsList.Add(itemsev);
-                    Item itemeight = new Item();
-                    itemeight.Name = "OFF protein";
-                    itemeight.Quantity = 1;
-                    itemeight.Value = 400;
-                    this.WeaponsList.Add(itemeight);
-                    Item itemnine = new Item();
-                    itemnine.Name = "Animal energy powder";
-                    itemnine.Quantity = 1;
-                    itemnine.Value = 150;
-                    this.WeaponsList.Add(itemnine);
-                    break;
+                    Item item6 = new Item();
+                    item6.Name = "20 lbs Dumbbells";
+                    item6.Quantity = 20;
+                    item6.Value = 250;
+                    this.StoreInventory.Add(item6);
+                    Item item7 = new Item();
+                    item7.Name = "45 lbs plate";
+                    item7.Quantity = 3;
+                    item7.Value = 50;
+                    this.StoreInventory.Add(item7);
+                    Item item8 = new Item();
+                    item8.Name = "OFF protein";
+                    item8.Quantity = 1;
+                    item8.Value = 400;
+                    this.StoreInventory.Add(item8);
+                    Item item9 = new Item();
+                    item9.Name = "Animal energy powder";
+                    item9.Quantity = 1;
+                    item9.Value = 150;
+                    this.StoreInventory.Add(item9);
+                    return true;
                 case PlanetTypes.Wombodum:
-                    Item itemten = new Item();
-                    itemten.Name = "Thew Claw";
-                    itemten.Quantity = 1;
-                    itemten.Value = 600;
-                    this.WeaponsList.Add(itemten);
-                    Item itemeleven = new Item();
-                    itemeleven.Name = "Purple remote";
-                    itemeleven.Quantity = 1;
-                    itemeleven.Value = 200;
-                    this.WeaponsList.Add(itemeleven);
+                    Item item10 = new Item();
+                    item10.Name = "Thew Claw";
+                    item10.Quantity = 1;
+                    item10.Value = 600;
+                    this.StoreInventory.Add(item10);
+                    Item item11 = new Item();
+                    item11.Name = "Purple remote";
+                    item11.Quantity = 1;
+                    item11.Value = 200;
+                    this.StoreInventory.Add(item11);
                     Item item13 = new Item();
                     item13.Name = "Awesome cyborg doll";
                     item13.Quantity = 1;
                     item13.Value = 350;
-                    this.WeaponsList.Add(item13);
+                    this.StoreInventory.Add(item13);
                     Item item14 = new Item();
                     item14.Name = "laser sword";
                     item14.Quantity = 1;
                     item14.Value = 400;
-                    this.WeaponsList.Add(item14);
-                    break;
+                    this.StoreInventory.Add(item14);
+                    return true;
                 case PlanetTypes.Krytunga:
                     Item item15 = new Item();
                     item15.Name = "Red crystal";
                     item15.Quantity = 1;
                     item15.Value = 200;
-                    this.WeaponsList.Add(item15);
+                    this.StoreInventory.Add(item15);
                     Item item16 = new Item();
                     item16.Name = "Blue crystal";
                     item16.Quantity = 1;
                     item16.Value = 200;
-                    this.WeaponsList.Add(item16);
+                    this.StoreInventory.Add(item16);
                     Item item17 = new Item();
                     item17.Name = "Green crystal";
                     item17.Quantity = 1;
                     item17.Value = 200;
-                    this.WeaponsList.Add(item17);
-                    break;
+                    this.StoreInventory.Add(item17);
+                    return true;
+                default:  //used for testing to let us know if method didn't work as intended
+                    return false;
             }
+        }
+
+        public string[] Story()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
