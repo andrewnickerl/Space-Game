@@ -388,7 +388,23 @@ namespace SpaceGameLibrary
 
         public bool Combat(Player pc, BattleEntity enemy)
         {
-            throw new System.NotImplementedException();
+            do
+            {
+                enemy.Hp -= item.DMG;
+                if(enemy.Hp > 0)
+                {
+                    pc.Hp -= enemy.Damage;
+                }
+                if(enemy.Hp <= 0)
+                {
+                    break;
+                }
+            } while (pc.Hp > 0);
+            if(pc.Hp <= 0)
+            {
+                return false;
+            }
+            return true;
         }
 
         public List<Item> AssignWeapons()
