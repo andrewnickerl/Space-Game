@@ -7,11 +7,11 @@ namespace SpaceGameLibrary
 {
     public class Planet
     {
-        public Planet(PlanetTypes planet)
+        public Planet(PlanetTypes planet, Player pc)
         {
             this.Name = planet;
-            this.StoreInventory = new List<Item>();
-            AssignWeapons();
+            this.StoreInventory = AssignWeapons();
+            this.Story = AssignStory(pc);
         }
 
         public PlanetTypes Name { get; set; }
@@ -389,7 +389,7 @@ namespace SpaceGameLibrary
             throw new System.NotImplementedException();
         }
 
-        private bool AssignWeapons()
+        public List<Item> AssignWeapons()
         {
             switch (this.Name)
             {
@@ -414,7 +414,7 @@ namespace SpaceGameLibrary
                     item4.Quantity = 1;
                     item4.Value = 200;
                     this.StoreInventory.Add(item4);
-                    return true;
+                    return StoreInventory;
                 case PlanetTypes.SpotMee:
                     Item item6 = new Item();
                     item6.Name = "20 lbs Dumbbells";
@@ -436,7 +436,7 @@ namespace SpaceGameLibrary
                     item9.Quantity = 1;
                     item9.Value = 150;
                     this.StoreInventory.Add(item9);
-                    return true;
+                    return StoreInventory;
                 case PlanetTypes.Wombodum:
                     Item item10 = new Item();
                     item10.Name = "Thew Claw";
@@ -458,7 +458,7 @@ namespace SpaceGameLibrary
                     item14.Quantity = 1;
                     item14.Value = 400;
                     this.StoreInventory.Add(item14);
-                    return true;
+                    return StoreInventory;
                 case PlanetTypes.Krytunga:
                     Item item15 = new Item();
                     item15.Name = "Red crystal";
@@ -475,12 +475,12 @@ namespace SpaceGameLibrary
                     item17.Quantity = 1;
                     item17.Value = 200;
                     this.StoreInventory.Add(item17);
-                    return true;
-                default:  //used for testing to let us know if method didn't work as intended
-                    return false;
+                    return StoreInventory;
+                default:
+                    return StoreInventory;
             }
         }
-        private bool AssignStory(Player pc)
+        public List<string> AssignStory(Player pc)
         {
             switch (this.Name)
             {
@@ -507,7 +507,7 @@ namespace SpaceGameLibrary
                     this.Story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM");  // Scenario 4
                     this.Story.Add("and proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. nice job there guy");
                     // End of Noir
-                    return true;
+                    return Story;
 
                 case PlanetTypes.Aventus:
                     this.Story.Add($"{pc.Name} lands on Aventus after the ship scanners showed THE MAN’s ship landing here. Uncertain what he landed here but we shall find out.");
@@ -567,25 +567,25 @@ namespace SpaceGameLibrary
                     this.Story.Add("You rush back through the jungle in hope that you can get to the ship in time. As you arrive, you power it on and check to see if there are any traces of the ship that just left.");
                     this.Story.Add("You’re in luck! You take off from the landing pad, sending several Schlemals to their death and chase after THE MAN.");
                     // End of Aventus
-                    return true;
+                    return Story;
 
                 //case PlanetTypes.SpotMee:
                 //    this.Story.Add()
                 //    // End of SpotMee
-                //    return true;
+                //    return Story;
 
                 //case PlanetTypes.Wombodum:
                 //    this.Story.Add()
                 //    // End of Wombodum
-                //    return true;
+                //    return Story;
 
                 //case PlanetTypes.Krytunga:
                 //    this.Story.Add()
                 //    //End of Krytunga
-                //    return true;
+                //    return Story;
 
                 default:
-                    return false;
+                    return Story;
             }
         }
        
