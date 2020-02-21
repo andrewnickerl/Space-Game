@@ -39,8 +39,11 @@ namespace SpaceGameLibrary
                 case "Jungle starter kit":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        } else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
@@ -49,128 +52,192 @@ namespace SpaceGameLibrary
                 case "Schlemal doll":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "Green remote":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "20 lbs dumbbells":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "45 lbs plate":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "OFF protein":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "Animal energy powder":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "The claw":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "Purple remote":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "Awesome cyborg doll":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "Laser sword":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "Red crystal":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "Blue Crsytal":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
                     }
                     else return false;
+
                 case "Green crystal":
                     if (storeInventory.Exists(item => item.Name == selection))
                     {
-                        pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
-                        pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        if (pc.Currency >= storeInventory.Find(item => item.Name == selection).Value)
+                        {
+                            pc.Inventory.Add(storeInventory.Find(item => item.Name == selection));
+                            pc.Currency -= storeInventory.Find(item => item.Name == selection).Value;
+                        }
+                        else return false;
                         storeInventory.Find(item => item.Name == selection).Quantity--;
                         storeInventory.RemoveAll(item => item.Quantity <= 0);
                         return true;
@@ -184,7 +251,131 @@ namespace SpaceGameLibrary
 
         public bool Sell(Player pc, List<Item> storeInventory, string selection)
         {
-
+            switch (selection)
+            {
+                case "Auto Chopper":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Jungle starter kit":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Schlemal doll":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Green remote":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "20 lbs dumbbells":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "45 lbs plate":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "OFF protein":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Animal energy powder":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "The claw":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Purple remote":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Awesome cyborg doll":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Laser sword":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Red crystal":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Blue crystal":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Green crystal":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                default: 
+                    return false;
+            }
         }
 
         public bool Combat(Player pc, BattleEntity enemy, BattleEntity ally)
