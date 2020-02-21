@@ -6,51 +6,11 @@ namespace SpaceGameLibrary
 {
     public class Item
     {
-        public string Name
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public string Description
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public int Damage
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public short Value
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public bool Reusable
-        {
-            get => default;
-            set
-            {
-            }
-        } 
-        public byte Quantity
-        {
-            get => default;
-            set
-            {
-            }
-        }        
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Damage { get; set; }
+        public short Value { get; set; }
+        public bool Reusable { get; set; }
+        public byte Quantity { get; set; }
     }
 }
