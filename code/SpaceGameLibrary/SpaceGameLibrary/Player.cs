@@ -10,6 +10,7 @@ namespace SpaceGameLibrary
         public List<Item> Inventory { get; set; }
         public string PlayerStatus { get; set; }
         public short Currency { get; set; }
+        public Item EquippedItem { get; set; }
 
         public bool TakeDamage(int damage, ref int hp)
         {
@@ -24,6 +25,19 @@ namespace SpaceGameLibrary
         public bool GameOver()
         {
             throw new System.NotImplementedException();
+        }
+
+        public bool EquipItem(Item weapon)
+        {
+            try
+            {
+                EquippedItem = weapon;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
