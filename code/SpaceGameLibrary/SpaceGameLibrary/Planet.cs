@@ -390,7 +390,7 @@ namespace SpaceGameLibrary
         {
             do
             {
-                enemy.Hp -= item.DMG;
+                enemy.Hp -= pc.EquippedItem.Damage;
                 if(enemy.Hp > 0)
                 {
                     pc.Hp -= enemy.Damage;
