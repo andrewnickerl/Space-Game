@@ -30,7 +30,7 @@ namespace SpaceGameLibrary
             }
         }
 
-        public int Value
+        public short Value
         {
             get => default;
             set
