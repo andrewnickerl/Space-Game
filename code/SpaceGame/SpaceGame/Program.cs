@@ -8,6 +8,11 @@ namespace SpaceGame
     {
         static void Main(string[] args)
         {
+            Console.Writeline();
+            
+            
+            
+            
             //Player pc = new Player();
             //BattleEntity shark = new BattleEntity();
             //string selection = Console.ReadLine();
