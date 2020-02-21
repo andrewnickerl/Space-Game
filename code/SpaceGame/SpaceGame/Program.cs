@@ -8,23 +8,12 @@ namespace SpaceGame
     {
         static void Main(string[] args)
         {
-            Console.Writeline();
-            
-            
-            
-            
-            //Player pc = new Player();
-            //BattleEntity shark = new BattleEntity();
-            //string selection = Console.ReadLine();
-            //Planet noir = new Planet(Enumerations.PlanetTypes.Noir);
-
-            //noir.Combat(pc, shark);
-
-            //foreach (Item item in pc.Inventory)
-            //{
-            //    Console.WriteLine(item.Name);
-            //}
-            //Console.ReadKey();
+            Player pc = new Player();
+            Planet noir = new Planet(Enumerations.PlanetTypes.Noir);
+            foreach (var item in noir.Story)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
