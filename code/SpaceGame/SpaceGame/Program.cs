@@ -1,6 +1,7 @@
 ﻿using System;
 using SpaceGameLibrary;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace SpaceGame
 {
@@ -20,7 +21,11 @@ namespace SpaceGame
             foreach (var output in noir.Story)
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Thread.Sleep(50);
+               
                 Console.WriteLine(output);
+               
                 Console.ReadKey();
             }
             foreach (var output in aventus.Story)
