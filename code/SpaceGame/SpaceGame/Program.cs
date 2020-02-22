@@ -23,9 +23,9 @@ namespace SpaceGame
             //    Console.Clear();
             //    Console.ForegroundColor = ConsoleColor.Green;
             //    Thread.Sleep(50);
-               
+
             //    Console.WriteLine(output);
-               
+
             //    Console.ReadKey();
             //}
             //foreach (var output in aventus.Story)
@@ -71,12 +71,12 @@ namespace SpaceGame
             //Planet 1 - Noir - Intro
             Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc);
 
-            for(int i = 0; i < noir.Story.Count; i++)
+            for (int i = 0; i < noir.Story.Count; i++)
             {
                 Console.Clear();
                 Console.WriteLine(noir.Story[i]);
-                
-                if (i==5)
+
+                if (i == 5)
                 {
                     if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
                     {
@@ -140,12 +140,12 @@ namespace SpaceGame
                         continue;
                     }
                 }
-                if (i==12)
+                if (i == 12)
                 {
                     Console.WriteLine("GAME OVER");
                     return;
                 }
-                if (i==14)
+                if (i == 14)
                 {
                     pc.Inventory.Add(noir.StoreInventory[0]);
                     pc.EquipItem(noir.StoreInventory[0]);
@@ -190,10 +190,10 @@ namespace SpaceGame
                                 for (int j = 0; j < pc.Inventory.Count; j++)
                                 {
                                     Console.Write(pc.Inventory[j].Name);
-                                    if(j != pc.Inventory.Count - 1)
+                                    if (j != pc.Inventory.Count - 1)
                                     {
                                         Console.Write(", ");
-                                    }                                    
+                                    }
                                 }
                                 Console.WriteLine("\n\n\n\nPress any key to continue...");
                                 Console.ReadKey();
@@ -269,7 +269,7 @@ namespace SpaceGame
                         continue;
                     }
                 }
-                
+
                 if (i == 14)
                 {
                     pc.Inventory.Add(noir.StoreInventory[0]);
@@ -287,47 +287,227 @@ namespace SpaceGame
                 Console.WriteLine("\n\n\n\nPress any key to continue...");
                 Console.ReadKey();
             }
-            //foreach (var item in aventus.Story)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //foreach (var item in aventus.StoreInventory)
-            //{
-            //    Console.WriteLine(item.Name);
-            //}
+            foreach (var item in aventus.Story)
+            {
+                Console.WriteLine(item);
+            }
+            foreach (var item in aventus.StoreInventory)
+            {
+                Console.WriteLine(item.Name);
+            }
 
-            //Planet spotMee = new Planet(Enumerations.PlanetTypes.SpotMee, pc);
+            Planet spotMee = new Planet(Enumerations.PlanetTypes.SpotMee, pc);
 
-            //foreach (var item in spotMee.Story)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //foreach (var item in spotMee.StoreInventory)
-            //{
-            //    Console.WriteLine(item.Name);
-            //}
+            for (int i = 0; i < spotMee.Story.Count; i++)
+            {
+                Console.Clear();
+                Console.WriteLine(spotMee.Story[i]);
 
-            //Planet wombodum = new Planet(Enumerations.PlanetTypes.Wombodum, pc);
+                if (i == 3)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1:
+                                continue;
+                            case 2:
+                                i = 6;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 10)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 7 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1:
+                                Console.Clear();
+                                Console.WriteLine("\n \n Please enter your Arena Name:");
+                                Console.ReadLine();
+                                i = 18;
+                                continue;
+                            case 2:
+                                i = 13;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                Console.WriteLine(spotMee.Story[18]);
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i = 17;
+                                continue;
+                            case 4:
+                                continue;
+                            case 5:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 6:
+                                Console.Clear();
+                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 13)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if (i == 17)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if (i == 18)
+                {
+                    i = 29;
+                    continue;
+                }
+                if (i == 21)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1:
+                                Console.Clear();
+                                Console.WriteLine(spotMee.Story[22]);
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                continue;
+                            case 2:
+                                i = 22;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                Console.WriteLine(spotMee.Story[25]);
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i = 24;
+                                continue;
+                            case 4:
+                                i = 25;
+                                continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 24)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if (i == 27)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if (i == 22)
+                {
+                    i = 27;
+                    continue;
+                }
+                if (i == 25)
+                {
+                    i = 27;
+                    continue;
+                }
 
-            //foreach (var item in wombodum.Story)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //foreach (var item in wombodum.StoreInventory)
-            //{
-            //    Console.WriteLine(item.Name);
-            //}
 
-            //Planet krytunga = new Planet(Enumerations.PlanetTypes.Krytunga, pc);
+                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                Console.ReadKey();
+                //foreach (var item in spotMee.Story)
+                //{
+                //    Console.WriteLine(item);
+                //}
+                //foreach (var item in spotMee.StoreInventory)
+                //{
+                //    Console.WriteLine(item.Name);
+                //}
 
-            //foreach (var item in krytunga.Story)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //foreach (var item in krytunga.StoreInventory)
-            //{
-            //    Console.WriteLine(item.Name);
-            //}
+                //Planet wombodum = new Planet(Enumerations.PlanetTypes.Wombodum, pc);
+
+                //foreach (var item in wombodum.Story)
+                //{
+                //    Console.WriteLine(item);
+                //}
+                //foreach (var item in wombodum.StoreInventory)
+                //{
+                //    Console.WriteLine(item.Name);
+                //}
+
+                //Planet krytunga = new Planet(Enumerations.PlanetTypes.Krytunga, pc);
+
+                //foreach (var item in krytunga.Story)
+                //{
+                //    Console.WriteLine(item);
+                //}
+                //foreach (var item in krytunga.StoreInventory)
+                //{
+                //    Console.WriteLine(item.Name);
+                //}
+            }
         }
     }
 }
