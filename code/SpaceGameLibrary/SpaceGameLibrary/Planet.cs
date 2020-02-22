@@ -662,7 +662,7 @@ namespace SpaceGameLibrary
                     return story;
 
                 case PlanetTypes.Wombodum:
-                    /*0*/story.Add("You chase THE MAN to Wumbodom. The whole planet is one giant city and THE MAN went straight to land in the slums of the planet");
+                    /*0*/story.Add("You chase THE MAN to Wumbodom. \n \nThe whole planet is one giant city and THE MAN went straight to land in the slums of the planet");
                     /*1*/story.Add("With your larger ship, you can’t fit in where he landed, so you land on the roof of one of the outlying towers. As you climb down the building, you see a store called Wumbohex. ");
                     /*2*/story.Add("1) Shop\n\n2) Leave the tower.\n\n3) Check Inventory.\n\n4) Check Stats\n\nWhat will you do?"); // Options
                     /*3*/story.Add("1) The Claw/ price: 600 mells.\n\n2) Purple Remote/ price: 200 mells.\n\n3) Awesome Cyborg Doll/ price: 350 mells.\n\n4)	Laser Sword/ price: 400 mells.\n\n5) Leave.\n\nWhat will you do?"); // Shop buy options
@@ -713,11 +713,11 @@ namespace SpaceGameLibrary
                      /*0*/story.Add("Krytunga, the crystal planet");
                      /*1*/story.Add("Finally, you land on the remote planet of Krytunga. This planet is said to be uninhabitable due only the planet’s unique crystals that grow here.");
                      /*2*/story.Add("As you circle the planet you notice what appears to be a fortress made from crystal. You notice that THE MAN’s ship is landed in the courtyard.");
-                     /*3*/story.Add($"({pc.Name}) \n “Found you, you ugly bastard!” you growl to yourself. ");
-                     /*4*/story.Add("You land just outside the fortress and get ready to face the music, you mean THE MAN. As you leave your ship, a crystal alien you’ve never heard or seen of before approaches you");
+                     /*3*/story.Add($"({pc.Name}) \n “Found you, you ugly bastard!” you growl to yourself.");
+                     /*4*/story.Add("You land just outside the fortress and get ready to face the music... \n \n \nyou mean THE MAN. \n \nAs you leave your ship, a crystal alien you’ve never heard of or seen before approaches you");
                      /*5*/story.Add("He looks like a 3-foot humanoid with crystal skin. As he draws near, he begins to speak.");
                      /*6*/story.Add("(Crystal Alien) \n “Yo homedog! Care to swap some sparkle spazzles?”");
-                     /*7*/story.Add("1) Say I guess?\n\n2) Say “Some what?!?\n\n 3) Punt the crystal dwarf thing.\n\n4) Ignore and rush into the fortress.\n\n What do you do?"); // Options
+                     /*7*/story.Add("1) Say I guess?\n\n2) Say “Some what?!?\n\n 3) Punt the crystal dwarf thing.\n\n4) Ignore and rush into the fortress.\n\n5) Check Inventory.\n\n6) Check Stats\n\nWhat do you do?"); // Options
                      /*8*/story.Add("(Crystal Alien) \n “Cool! Here’s what I got flesh man!”"); // Option 1:
                      /*9*/story.Add("1) Red Crystal/ price: 200 mells.\n\n2) Blue Crystal/ price: 200 mells.\n\n3)	Green Crystal/ price: 200 mells\n\n4) Leave.\n\nWhat will you do?"); // Items Sold:[Go into Buy/Sell mode]
                      /*10*/story.Add("The crystal alien launches into the history of the planet and the local lingo. You attempt to leave several times, but he cuts you off every time."); // Option 2:
@@ -725,28 +725,28 @@ namespace SpaceGameLibrary
                      /*12*/story.Add("Should've brought a snack pak there guy!");
                      /*13*/story.Add("As your leg makes contact with the alien, it starts to move through him like swimming through honey. Before you can realize it, the alien has become your leg from the knee down"); // Option 3:
                      /*14*/story.Add("His face disappears but now hear his voice in your head. Your otherwise fine and charge into the fortress mildly off balance."); // [Pick up with option 4]
-                     /*15*/story.Add("You charge into the fortress expecting to face THE MAN’s henchmen but find it empty. You rush through the halls until you come to a grand staircase going up to one massive door and another going down to an identical looking door."); // Option 4:
-                     /*16*/story.Add("1) Go up the stairs.\n\n2)	Go down the stairs.\n\nWhat do you Do?");
-                     /*17*/story.Add("As you climb down the stairs you take a deep breath before you fling the doors open. Astonished, you find not a throne room but what appears to be some sort of factory"); // Option 2:
+                     /*15*/story.Add("You charge into the fortress expecting to face THE MAN’s henchmen but find it empty. \n \nYou rush through the halls until you come to a grand staircase going up to one massive door and another going down to an identical looking door."); // Option 4:
+                     /*16*/story.Add("1)  Go up the stairs.\n\n2)  Go down the stairs. \n\n5)  Check Inventory.\n\n6)  Check Stats \n\nWhat do you Do?");
+                     /*17*/story.Add("As you climb down the stairs you take a deep breath before you fling the doors open. \n \nAstonished, you find not a throne room but what appears to be some sort of factory"); // Option 2:
                      /*18*/story.Add("You wander to the edge of the observation platform to get a better look.");
-                     /*19*/story.Add("As you stare out across the factory, it quickly becomes clear that this is where THE MAN creates the crystal aliens like the one that greeted you when you landed. As this dawns on you, you feel someone kick you from behind.");
-                     /*20*/story.Add("You fall over the railing into a vat of molten crystal in front of you. You’re able to turn your head before you fall in and see THE MAN cackling as he watches you die in the molten crystal.");
+                     /*19*/story.Add("As you stare out across the factory, \n \nit quickly becomes clear that this is where THE MAN creates the crystal aliens like the one that greeted you when you landed. \n \nAs this dawns on you, you feel someone kick you from behind.");
+                     /*20*/story.Add("You fall over the railing into a vat of molten crystal in front of you. \n \nYou’re able to turn your head before you fall in and see THE MAN cackling as he watches you die in the molten crystal.");
                      /*21*/story.Add("Nice job there guy!");
                      /*22*/story.Add("As you climb up the stairs you take a deep breath before you fling the doors open. You see THE MAN on a throne of crystal smiling down at you. "); // Option 1:
                      /*23*/story.Add($"(THE MAN)\n “Welcome {pc.Name}! I’ve been waiting for you. Can’t hold the grand party without you. Give me 5 more minutes and it will all be ready.”");
-                     /*24*/story.Add("1) Don’t wait and attack.\n\n2) Demand he give {pc.PetName} back.\n\n3) Wait the 5 minutes.\n\nWhat do you do?"); // Options
+                     /*24*/story.Add($"1) Don’t wait and attack.\n\n2) Demand he give {pc.PetName} back.\n\n3) Wait the 5 minutes.\n\nWhat do you do?"); // Options
                      /*25*/story.Add("You decide to wait to see what happens. More crystal aliens, similar to the one the greeted you start to bring in what appear to be party decorations"); // Option 3
-                     /*26*/story.Add("A table and chair are brought out for you to sit with a massive 7-layer cake is placed in front of you");
-                     /*27*/story.Add("The aliens start sing happy birthday to you, and THE MAN tells you to blow out the candles. You indulge them and blow out the candles");
+                     /*26*/story.Add("A table and chair are brought out for you to sit, with a massive 7-layer cake is placed in front of you");
+                     /*27*/story.Add("The aliens start sing happy birthday to you, and THE MAN tells you to blow out the candles. \n \nYou indulge them and blow out the candles.....");
                      /*28*/story.Add("BOOOOOOOMMMM!!!!");
                      /*29*/story.Add("The cake explodes the second you blow the candles out. You should have never trusted THE MAN, even if it was your birthday.");
                      /*30*/story.Add("How'd that wish turn out there guy?!");
-                     /*31*/story.Add($"THE MAN stares a you confused. He goes on to tell you he never took {pc.PetName}; he just hid him in your ship’s exterior storage compartment."); // Option 2:
+                     /*31*/story.Add($"THE MAN stares a you confused. He goes on to tell you he never took {pc.PetName} \n \nHe just hid him in your ship’s exterior storage compartment."); // Option 2:
                      /*32*/story.Add("He goes on to say your birthday party will soon be ready and should stick around for it.");
-                     /*33*/story.Add($"Bewildered, you race out to your ship and check the exterior storage.Sure enough, the second you open it,{pc.PetName}leaps onto you and starts licking your face.");
-                     /*34*/story.Add("Overjoyed, the 2 of you go back onto your ship to float through the galaxy watching cartoons together. You don’t trust THE MAN with throwing any parties and just leave the planet.");
-                     /*35*/story.Add("As you start to leave atmosphere, you see THE MAN’s fortress explode. Glad to have trusted your gut, you and pet fly off on new adventures.");
-                     /*36*/story.Add($"Victory,{pc.Name} has got {pc.PetName} back!");
+                     /*33*/story.Add($"Bewildered, you race out to your ship and check the exterior storage. \n \nSure enough, the second you open it,{pc.PetName}leaps onto you and starts licking your face.");
+                     /*34*/story.Add("Overjoyed, the 2 of you go back onto your ship to float through the galaxy watching cartoons together. \n \nYou don’t trust THE MAN with throwing any parties and just leave the planet.");
+                     /*35*/story.Add($"As you start to leave atmosphere, you see THE MAN’s fortress explode. \n \nGlad to have trusted your gut, you and {pc.PetName} fly off on new adventures.");
+                     /*36*/story.Add($"Victory!!! \n \n \n{pc.Name} has got {pc.PetName} back!");
                      /*37*/story.Add("!!!Thanks for playing!!!"); // Game Done
                      /*38*/story.Add("Shocked by your sudden attack, THE MAN throws out a yellow crystal that turns into 2-foot yellow crystal mouse."); // Option 1:
                      /*39*/story.Add(""); // [Fight Mouse]
@@ -754,8 +754,8 @@ namespace SpaceGameLibrary
                      /*41*/story.Add("(THE MAN) \n “Cursed knock-offs! I’ll just deal with you myself!”");
                      /*42*/story.Add(""); // [Fight THE MAN]
                      /*43*/story.Add(""); // Win:
-                     /*44*/story.Add($"After obliterating THE MAN, you run past the throne into what you assume was THE MAN’s room. There in a cage is {pc.PetName}.");
-                     /*45*/story.Add($"You quickly bust the lock and {pc.PetName} flies into your arms, licking your face. Finally, you and {pc.PetName} can get back to your primary mission, watching all the galaxy’s cartoons ever created!");
+                     /*44*/story.Add($"After obliterating THE MAN, you run past the throne into what you assume was THE MAN’s room. \nThere in a cage is {pc.PetName}.");
+                     /*45*/story.Add($"You quickly bust the lock and {pc.PetName} flies into your arms, licking your face. \nFinally, you and {pc.PetName} can get back to your primary mission, \nwatching all the galaxy’s cartoons ever created!");
                      /*46*/story.Add($"Victory,{pc.Name} has got {pc.PetName} back!");
                      /*47*/story.Add("Thanks for playing!"); // Game Done
                     //End of Krytunga
