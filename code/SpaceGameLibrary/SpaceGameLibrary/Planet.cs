@@ -507,6 +507,7 @@ namespace SpaceGameLibrary
             {
                 case PlanetTypes.Noir:
 
+<<<<<<< HEAD
                  
 
                     story.Add("(Narrator)\n On a Cold desolate night on Planet Noir, our hero comes to, unaware of the adventure that awaits....");
@@ -526,6 +527,29 @@ namespace SpaceGameLibrary
                     story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM!!");  // Scenario 4
                     story.Add("In an instant you proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. Nice job there guy");
 
+=======
+                    story.Add("(Narrator) \n On a Cold desolate night on Planet Noir our hero comes to, unaware of the adventure that awaits");
+                    story.Add($"(SNarrator) \n slowly your eyes open, the emergency beacon on your ship is beaming, how you didn't hear it sooner is a mystery but your ship's security system is blaring a name... {pc.Name.ToUpper()}!!!!");
+                    story.Add($"(Ship Security system) \n Greetings {pc.Name}, \n unknown perpetrator onboard during personnel stasis. current lifeforms present one...");
+                    story.Add($"({pc.Name} inner dialogue) \n one? could there be someone on here that is missing, you stand up to look around for clues");
+                    story.Add("Perplexed by mystery, you're faced with a dilemma.What do you do?"); // start of Scenario switch statement for Planet Noir choices
+                    story.Add("A) ask security protocols who was on the ship");
+                    story.Add("B) follow footprints leading outside the ship");
+                    story.Add("C) grab an Astrocola and watch cartoons");
+                    story.Add("D) tell the ship security protocols to initiate defense level BAMBAM");
+                    story.Add($"(Ship security protocol)\n  known fugitive known as THE MAN entered and left with {pc.PetName}"); // Scenario 1
+                    story.Add($" you remember now, your dog {pc.PetName} is gone!!!THE MAN must pay!");
+                    story.Add("you grab the nearest item to you and man your ship speeding off towards the next planet to find him"); // item if statement start
+                    story.Add("A) you grab the blitz blade"); // Add the blitz blade item
+                    story.Add("B) you grab the Shield O Saturn"); // Add the shield o saturn item
+                    story.Add("C) the Plutonian Plasma Rifle"); // Add the plasma rifle item
+                    story.Add("Angry and disoriented you run to the ship door slamming on the hatch button, suddenly your sucked out into orbit");  // Scenario 2
+                    story.Add("due to you being on another planet without an atmosphere, the oxygen is sucked out of you like Douglas Quaid in that movie TOTAL RECALL. nice job there guy");
+                    story.Add("leisurely you motion towards the fridge to grab a ice cold Astrocola and notice the key behind it."); // Scenario 3 ADD the DAVE
+                    story.Add("what a dumb place to hide my Deatomizing Assault Vulcan Emitter cannon aka The D.A.V.E, after collecting your weapon you remember your objective and set off to find THE MAN on the next planet");
+                    story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM");  // Scenario 4
+                    story.Add("and proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. nice job there guy");
+>>>>>>> e9a17b8fbdb1c119d899f62e12c67e1e4573b124
                     // End of Noir
                     return story;
 
@@ -566,8 +590,6 @@ namespace SpaceGameLibrary
                     story.Add("You sneak up on a Schlemal and right as it notices you, you leap onto its back. It leaps into the air and dunks the both of you into a tree compressor. You become an ambassador’s new table.");
                     story.Add("Game Over.");
                     // go to Jungle, crossroads option 2
-
-
                     story.Add("You head into the jungle in hopes of finding THE MAN or pet. After trudging through the jungle, the path splits into 2.");
                     story.Add("1.)	Take the right path");
                     story.Add("2.)	Take the left path");
@@ -588,12 +610,10 @@ namespace SpaceGameLibrary
                     story.Add("You lost a hand but gained a manticore companion. With the data chip and your new companion, you rush back to your ship and chase after THE MAN.");
                     story.Add("You rush back through the jungle in hope that you can get to the ship in time. As you arrive, you power it on and check to see if there are any traces of the ship that just left.");
                     story.Add("You’re in luck! You take off from the landing pad, sending several Schlemals to their death and chase after THE MAN.");
-
                     // End of Aventus
                     return story;
 
                 case PlanetTypes.SpotMee:
-
                     story.Add("You are at planet SpotMee and land in the capital city, Brotopia. THE MAN is definitely here, but the city is large and filled with gladiator rings.");
                     story.Add(". As you start to walk towards the city, an AD bot starts screaming its ad in your face.");
                     story.Add("(ad bot) \n Come on down, come on down. Come one, come all to the Guilds Gym Arena. Legendary boss, THE MAN, challenges all to come fight to take his fortune. Can any claim his Mells?!?!?!” ");
@@ -647,7 +667,6 @@ namespace SpaceGameLibrary
                     story.Add("“THE MAN shall greet the champion.”");
                     story.Add("THE MAN walks out to greet you but freezes when he sees you. He screams for them to release another beast as he runs away.");
                     story.Add("You chase after THE MAN barely making it to your ship before you see his ship leave atmosphere. You follow after him in the ship."); // Fight [Random Enemy] [Win move on, lose Game over]
-
                     // End of SpotMee
                     return story;
 
