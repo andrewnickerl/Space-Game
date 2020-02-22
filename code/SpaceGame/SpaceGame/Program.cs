@@ -57,8 +57,6 @@ namespace SpaceGame
         static void run()
         {
             Player pc = new Player();
-            //pc.Name = "Andrew";
-            //pc.PetName = "Fluffy";
 
             int input; //used for input validation
 
@@ -162,6 +160,7 @@ namespace SpaceGame
                 Console.WriteLine("\n\n\n\nPress any key to continue...");
                 Console.ReadKey();
             }
+
 
             //Planet 2 - Aventus
             Planet aventus = new Planet(Enumerations.PlanetTypes.Aventus, pc);
