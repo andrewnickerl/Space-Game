@@ -252,10 +252,42 @@ namespace SpaceGameLibrary
             }
         }
 
-        public bool Sell(Player pc, List<Item> storeInventory, string selection)
+        public bool Sell(Player pc, string selection)
         {
             switch (selection)
             {
+                case "The D.A.V.E.":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Blitz Blade":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Shield o' Saturn":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
+                case "Plutonian Plasma Rifle":
+                    if (pc.Inventory.Exists(item => item.Name == selection))
+                    {
+                        pc.Currency += pc.Inventory.Find(item => item.Name == selection).Value;
+                        pc.Inventory.Remove(pc.Inventory.Find(item => item.Name == selection));
+                        return true;
+                    }
+                    else return false;
                 case "Auto Chopper":
                     if (pc.Inventory.Exists(item => item.Name == selection))
                     {
@@ -429,8 +461,7 @@ namespace SpaceGameLibrary
                     Item shieldOSaturn = new Item();
                     shieldOSaturn.Name = "Shield o' Saturn";
                     shieldOSaturn.Quantity = 1;
-                    shieldOSaturn.Value = 200;
-                    
+                    shieldOSaturn.Value = 200;                    
                     inventory.Add(shieldOSaturn);
                     Item plasmaRifle = new Item();
                     plasmaRifle.Name = "Plutonian Plasma Rifle";
@@ -561,7 +592,7 @@ namespace SpaceGameLibrary
                     /*1*/story.Add("After dodging the freight ships during your approach, you land on platform 934 after getting clearance from the port officials.");
                     /*2*/story.Add("You see what looks like an ostrich in a tuxedo walking towards you. In a shrill voice the call out to you.");
                     /*3*/story.Add("(Carlsin):\nGreetings traveler, I am Carlsin, a dock supervisor here at Aventus. Who are you and what is your reason for being here?"); // start options switch statement
-                    /*4*/story.Add("1) Give what Carlsin asked.\n\n2) Refuse to answer and shove past.\n\n3) Ask if he is an ostrich.\n\n4) See inventory\n\n5) See Stats\n\nWhat will you do?");
+                    /*4*/story.Add("1) Give what Carlsin asked.\n\n2) Refuse to answer and shove past.\n\n3) Ask if he is an ostrich.\n\n4) See inventory/Equip an item.\n\n5) See Stats\n\nWhat will you do?");
                     /*5*/story.Add($"You say that you’re {pc.Name} and are looking for a human called THE MAN."); // Scenario 1
                     /*6*/story.Add("(Carlsin)\n “I don’t know who this man is but we did have a ship illegally land at lumber yard 67. I wouldn’t suggest going there since going there by yourself though.");
                     /*7*/story.Add("The site was recently taken over by a young manticore. I’d stop by Frig&Horges in the marketplace if you plan to still go there. They have all the gear you might need to brave the jungle.");
@@ -569,14 +600,14 @@ namespace SpaceGameLibrary
                     /*9*/story.Add("You ask him and immediately see him start to tremble. He screeches as he charges towards you. Before you can react, his beak opens wider than you think possible and bites your head off."); // Scenario 3
                     /*10*/story.Add("Nice job there guy!");
                     /*11*/story.Add("You come to a crossroad with a sign pointing to several different places."); // Crossroads switch statement
-                    /*12*/story.Add("1) Go to marketplace\n\n2) Go to jungle\n\n3) Attempt to ride one of the local Schlemals(Carlsin’s race)\n\n4) See inventory.");
+                    /*12*/story.Add("1) Go to marketplace\n\n2) Go to jungle\n\n3) Attempt to ride one of the local Schlemals(Carlsin’s race)\n\n4) See inventory.\n\nWhat will you do?");
                     /*13*/story.Add("You go to the marketplace and see a store called Frig&Horge.You enter and ask the clerk if you can sell things here. They say yes.");
-                    /*14*/story.Add("1)	Buy items\n\n2) Sell items\n\n3) Leave\n\nWhat would you like to do?"); // Market options
-                    /*15*/story.Add("1)	Auto Chopper____Price 150 Mells\n\n2)	Jungle Starter Kit_____Price 300 Mells\n\n3)	Schlemal Doll______Price 50 Mells\n\n4)	Green Remote_____Price 200 Mells\n\n5)	Leave\n\nWhat will you do."); // Sub-options 2
-                    /*16*/story.Add("1)	Show PC inventory with prices\n\n2 Leave\n\nWhat will you do?"); // Sub-Option 3
+                    /*14*/story.Add("1) Buy items\n\n2) Sell items\n\n3) See inventory\n\n4) See stats\n\n5) Leave\n\nWhat would you like to do?"); // Market options
+                    /*15*/story.Add("1)	Auto Chopper____Price 150 Mells\n\n2)	Jungle Starter Kit_____Price 300 Mells\n\n3)	Schlemal Doll______Price 50 Mells\n\n4)	Green Remote_____Price 200 Mells\n\n5)	Leave\n\nWhat will you do?"); // Sub-options 2
+                    /*16*/story.Add("1) Show PC inventory with prices\n\n2) Leave\n\nWhat will you do?"); // Sub-Option 3
                     /*17*/story.Add("You sneak up on a Schlemal and right as it notices you, you leap onto its back. It leaps into the air and dunks the both of you into a tree compressor. You become an ambassador’s new table.");
                     /*18*/story.Add("Nice job there Guy!");
-                    /*19*/story.Add("You head into the jungle in hopes of finding THE MAN or pet. After trudging through the jungle, the path splits into 2");
+                    /*19*/story.Add($"You head into the jungle in hopes of finding THE MAN and {pc.PetName}. After trudging through the jungle, the path splits into 2.");
                     /*20*/story.Add("1)	Take the right path\n\n2)	Take the left path\n\n3)	Check inventory\n\n4)	Check stats.\n\nWhat will you do?");
                     /*21*/story.Add("As you continue down the right path, you smell something sweet from a large flower. As you stop to smell the flower, it lunges out and eats the top half of you."); // Option 1
                     /*22*/story.Add("Nice job there guy!");
