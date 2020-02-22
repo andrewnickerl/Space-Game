@@ -639,7 +639,7 @@ namespace SpaceGameLibrary
                     /*5*/story.Add("1) Apologize and run away.\n\n2) Attempt to fight.\n\n3) Ask if they wanna go.\n\nWhat do you do?"); // Options
                     /*6*/story.Add("You ask the Ephantus and found it he is a she. She says she is Klarice and was surprise her hired date was a human."); // Option 3:
                     /*7*/story.Add("She takes you to the closest mall and dragging you from one store to the next all day long. You awake the next morning tired and sore but 2000 mells richer. "); // . [Go to option 1]
-                    /*8*/story.Add("As you reach for a weapon his mechanical nose shoots into your chest and rips your heart out. He screams “KALIMA!” as you die."); // Option 2:
+                    /*8*/story.Add("As you reach for a weapon his mechanical nose shoots into your chest and rips your heart out. \n \n He screams “KALIMA!” as you die."); // Option 2:
                     /*9*/story.Add("Nice job there guy!");
                     /*10*/story.Add("You run away from the Cyborg Ephantus in terror, hoping to never see them again. You rush into the slums knowing your so close to pet"); // Option 1
                     /*11*/story.Add("As you head towards where THE MAN lands you see the busy main street full of beggars or a back alley that appears to bypass all of it.");
