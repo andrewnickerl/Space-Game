@@ -648,13 +648,13 @@ namespace SpaceGameLibrary
                     /*20*/story.Add("You look around and see everyone pulling out dumbbells and throwing them like snowballs.");
                     /*21*/story.Add("1) Access Inventory.\n\n2)	Dodge and hope to pick up stray dumbbells.\n\n3) Cower in a corner.\n\n4)	Run around the arena screaming.\n\nWhat will you do?"); // Options //[Everything but dumbbells fails and sends back to original options]
                     /*22*/story.Add("“You survived the round and moved on.”"); // If dumbbells used.
-                    /*23*/story.Add("You attempt to dodge the incoming dumbbells but get hit in the head crushing it.");
+                    /*23*/story.Add("You attempt to dodge the incoming dumbbells but get hit in the head crushing it."); //option 2
                     /*24*/story.Add("Nice job there guy!");
                     /*25*/story.Add("You run to the corner of the circular arena and cower in the fetal position. After 10 mins of fight, you hear victory! You’re on of the 5 finalists. Move on to round 2"); // Option 3
                     /*26*/story.Add("You start screaming as you run around. You forget to breath properly and pass out after 10 mins. You awake with round 2 under way but a giant horned lizard having eaten your legs."); // Option 4
-                    /*27*/story.Add("A little low on that food chain now my guy!");
+                    /*27*/story.Add("A little low on that food chain now my guy!"); // option 3 end
                     /*28*/story.Add("(Announcer)\n “Champions moving on to round 2! You shall face one of our beasts we have in our arena. When called, come face your beast!”"); // Round 2
-                    /*29*/story.Add("The first 2 contestants both quickly get eaten, making you nervous.");
+                    /*29*/story.Add("The first 2 contestants both quickly get eaten, making you nervous."); //Fight enemy, win move on.
                     /*30*/story.Add("(Announcer) \n THE MAN shall greet the champion!"); // Fight {random Enemy} Win move on , lose Game Over // Round 3:
                     /*31*/story.Add("THE MAN walks out to greet you but freezes when he sees you. He screams for them to release another beast as he runs away.");
                     /*32*/story.Add("You chase after THE MAN barely making it to your ship before you see his ship leave atmosphere. You follow after him in the ship."); // Fight [Random Enemy] [Win move on, lose Game over]
