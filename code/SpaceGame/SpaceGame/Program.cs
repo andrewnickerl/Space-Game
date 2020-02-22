@@ -23,6 +23,30 @@ namespace SpaceGame
                 Console.WriteLine(output);
                 Console.ReadKey();
             }
+            foreach (var output in aventus.Story)
+            {
+                Console.Clear();
+                Console.WriteLine(output);
+                Console.ReadKey();
+            }
+            foreach (var output in spotMee.Story)
+            {
+                Console.Clear();
+                Console.WriteLine(output);
+                Console.ReadKey();
+            }
+            foreach (var output in wombodum.Story)
+            {
+                Console.Clear();
+                Console.WriteLine(output);
+                Console.ReadKey();
+            }
+            foreach (var output in krytunga.Story)
+            {
+                Console.Clear();
+                Console.WriteLine(output);
+                Console.ReadKey();
+            }
 
             Console.ReadKey();
         }
