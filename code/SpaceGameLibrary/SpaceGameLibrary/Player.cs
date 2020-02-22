@@ -13,21 +13,6 @@ namespace SpaceGameLibrary
         public Item EquippedItem { get; set; }
         public string PetName { get; set; } 
 
-        public bool TakeDamage(int damage, ref int hp)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool UseItem(Item item)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public bool GameOver()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public bool EquipItem(Item weapon)
         {
             try
