@@ -509,22 +509,22 @@ namespace SpaceGameLibrary
 
                  
 
-                    story.Add("(Narrator) \n On a Cold desolate night on Planet Noir our hero comes to, unaware of the adventure that awaits");
-                    story.Add($"(SNarrator) \n slowly your eyes open, the emergency beacon on your ship is beaming, how you didn't hear it sooner is a mystery but your ship's security system is blaring a name... {pc.Name.ToUpper()}!!!!");
+                    story.Add("(Narrator)\n On a Cold desolate night on Planet Noir, our hero comes to, unaware of the adventure that awaits....");
+                    story.Add($"(Narrator) \n Slowly your eyes open, the emergency beacon on your ship is beaming, how you didn't hear it sooner is a mystery but your ship's security system is blaring a name... {pc.Name.ToUpper()}!!!!");
                     story.Add($"(Ship Security system) \n Greetings {pc.Name}, \n unknown perpetrator onboard during personnel stasis. current lifeforms present one...");
-                    story.Add($"({pc.Name} inner dialogue) \n one? could there be someone on here that is missing, you stand up to look around for clues");
-                    story.Add("Perplexed by mystery, you're faced with a dilemma.What do you do?"); // start of Scenario switch statement for Planet Noir choices
-                    story.Add("A) ask security protocols who was on the ship\n\nB) follow footprints leading outside the ship\n\nC) grab an Astrocola and watch cartoons\n\nD) tell the ship security protocols to initiate defense level BAMBAM");
-                    story.Add($"(Ship security protocol)\n  known fugitive known as THE MAN entered and left with {pc.PetName}"); // Scenario 1
-                    story.Add($" you remember now, your dog {pc.PetName} is gone!!!THE MAN must pay!");
-                    story.Add("you grab the nearest item to you and man your ship speeding off towards the next planet to find him"); // item if statement start
-                    story.Add("A) you grab the blitz blade\nB) you grab the Shield O Saturn\nC) the Plutonian Plasma Rifle"); // Add the blitz blade item // Add the shield o saturn item// Add the plasma rifle item
-                    story.Add("Angry and disoriented you run to the ship door slamming on the hatch button, suddenly your sucked out into orbit");  // Scenario 2
-                    story.Add("due to you being on another planet without an atmosphere, the oxygen is sucked out of you like Douglas Quaid in that movie TOTAL RECALL. nice job there guy");
-                    story.Add("leisurely you motion towards the fridge to grab a ice cold Astrocola and notice the key behind it."); // Scenario 3 ADD the DAVE
-                    story.Add("what a dumb place to hide my Deatomizing Assault Vulcan Emitter cannon aka The D.A.V.E, after collecting your weapon you remember your objective and set off to find THE MAN on the next planet");
-                    story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM");  // Scenario 4
-                    story.Add("and proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. nice job there guy");
+                    story.Add($"({pc.Name} inner dialogue) \n one??? Could there be someone on here that is missing, you stand up to look around for clues");
+                    story.Add("Perplexed by mystery, you're faced with a dilemma. What do you do?"); // start of Scenario switch statement for Planet Noir choices
+                    story.Add("A) Ask security protocols who was on the ship\n\nB) follow footprints leading outside the ship\n\nC) Grab an Astrocola and watch cartoons\n\nD) Tell the ship security protocols to initiate defense level BAMBAM");
+                    story.Add($"(Ship security protocol)\n  Known fugitive known as THE MAN entered and left with {pc.PetName}"); // Scenario 1
+                    story.Add($"You remember now, your dog {pc.PetName} is gone!!!THE MAN must pay!!!!");
+                    story.Add("You grab the nearest item to you and man your ship speeding off towards the next planet to find him"); // item if statement start
+                    story.Add("A) You grab the Blitz Blade\nB) You grab the Shield O Saturn\nC) You grab the Plutonian Plasma Rifle"); // Add the blitz blade item // Add the shield o saturn item// Add the plasma rifle item
+                    story.Add("Angry and disoriented, you run to the ship door slamming on the hatch button, suddenly your sucked out into orbit");  // Scenario 2
+                    story.Add("Due to you being on another planet without an atmosphere, the oxygen is sucked out of you like Douglas Quaid in that movie TOTAL RECALL. Nice job there guy");
+                    story.Add("Leisurely you motion towards the fridge to grab a ice cold Astrocola and notice the key behind it."); // Scenario 3 ADD the DAVE
+                    story.Add("What a dumb place to hide my Deatomizing Assault Vulcan Emitter cannon aka The D.A.V.E, after collecting your weapon you remember your objective and set off to find THE MAN on the next planet");
+                    story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM!!");  // Scenario 4
+                    story.Add("In an instant you proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. Nice job there guy");
 
                     // End of Noir
                     return story;
