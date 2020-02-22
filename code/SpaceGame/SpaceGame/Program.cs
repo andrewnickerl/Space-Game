@@ -19,8 +19,9 @@ namespace SpaceGame
 
             foreach (var output in noir.Story)
             {
-                Console.WriteLine(output);
                 Console.Clear();
+                Console.WriteLine(output);
+                Console.ReadKey();
             }
 
             Console.ReadKey();
