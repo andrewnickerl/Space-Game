@@ -68,246 +68,6 @@ namespace SpaceGame
             pc.PetName = Console.ReadLine();
 
 
-            ////Planet 1 - Noir - Intro
-            //Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc);
-
-            //for (int i = 0; i < noir.Story.Count; i++)
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(noir.Story[i]);
-
-            //    if (i == 5)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1:
-            //                    continue;
-            //                case 2:
-            //                    i = 9;
-            //                    continue;
-            //                case 3:
-            //                    i = 12;
-            //                    continue;
-            //                case 4:
-            //                    i = 15;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 9)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 4 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1:
-            //                    pc.Inventory.Add(noir.StoreInventory[1]);
-            //                    pc.EquipItem(noir.StoreInventory[1]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    break;
-            //                case 2:
-            //                    pc.Inventory.Add(noir.StoreInventory[2]);
-            //                    pc.EquipItem(noir.StoreInventory[2]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    break;
-            //                case 3:
-            //                    pc.Inventory.Add(noir.StoreInventory[3]);
-            //                    pc.EquipItem(noir.StoreInventory[3]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    break;
-            //            }
-            //            break;
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 12)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 14)
-            //    {
-            //        pc.Inventory.Add(noir.StoreInventory[0]);
-            //        pc.EquipItem(noir.StoreInventory[0]);
-            //        Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //        Console.ReadKey();
-            //        i = 5;
-            //        continue;
-            //    }
-            //    if (i == 16)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //    Console.ReadKey();
-            //}
-
-            ////Planet 2 - Aventus
-            //Planet aventus = new Planet(Enumerations.PlanetTypes.Aventus, pc);
-
-            //for (int i = 0; i < aventus.Story.Count; i++)
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(aventus.Story[i]);
-
-            //    if (i == 4)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1:
-            //                    continue;
-            //                case 2:
-            //                    i = 7;
-            //                    continue;
-            //                case 3:
-            //                    i = 8;
-            //                    continue;
-            //                case 4:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 5:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 8)
-            //    {
-            //        i = 10;
-            //        continue;
-            //    }
-            //    if (i == 10)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-
-            //    if (i == 12)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 4 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1:
-            //                    i = 13;
-            //                    continue;
-            //                case 2:
-            //                    i = 19;
-            //                    continue;
-            //                case 3:
-            //                    i = 17;
-            //                    continue;
-            //                case 4:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //            break;
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i = 8;
-            //            continue;
-            //        }
-            //    }
-
-            //    if (i == 14)
-            //    {
-            //        pc.Inventory.Add(noir.StoreInventory[0]);
-            //        Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //        Console.ReadKey();
-            //        i = 5;
-            //        continue;
-            //    }
-            //    if (i == 16)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-
-            //    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //    Console.ReadKey();
-            //}
-            //foreach (var item in aventus.Story)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //foreach (var item in aventus.StoreInventory)
-            //{
-            //    Console.WriteLine(item.Name);
-            //}
-
-
-
-            //foreach (var item in spotMee.Story)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //foreach (var item in spotMee.StoreInventory)
-            //{
-            //    Console.WriteLine(item.Name);
-            //}
-
-
             //Planet 1 - Noir - Intro
             Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc);
             //loops through story List<string> for Noir and manipulates output from list using i based on user input
@@ -1022,10 +782,315 @@ namespace SpaceGame
                 {
                     if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
                     {
-
+                        switch (input)
+                        {
+                            case 1: //implement shop
+                                continue;
+                            case 2: //leave tower
+                                i = 3;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
                     }
-
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
                 }
+                if (i == 5)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Run away
+                                i = 9;
+                                continue;
+                            case 2: //Attempt to fight (death)
+                                i = 7;
+                                continue;
+                            case 3: //go on date, earn 2000 mells
+                                pc.Currency += 2000;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 5:
+                                Console.Clear();
+                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if(i == 9)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if(i == 8)
+                {
+                    i = 9;
+                    continue;
+                }
+                if (i == 12)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Main street
+                                continue;
+                            case 2: //Back Alley(battle)
+                                i = 19;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 15)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Go with vampire
+                                continue;
+                            case 2: //Go by yourself
+                                Console.Clear();
+                                Console.WriteLine(wombodum.Story[18]);
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i = 20;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 17)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if (i == 22)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Fight through
+                                i = 35;
+                                continue;
+                            case 2: //Attempt to sneak
+                                i = 24;
+                                continue;
+                            case 3: //Yell (death)
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 5:
+                                Console.Clear();
+                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 24)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if (i == 27)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 7 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Give Awesome Cyborg Doll
+                                i = 34;
+                                continue;
+                            case 2: //Metal? (death)
+                                continue;
+                            case 3: //Awesome? (death)
+                                i = 31;
+                                continue;
+                            case 4: //Fight
+                                i = 35;
+                                continue;
+                            case 5:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 6:
+                                Console.Clear();
+                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
+                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
+                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 31)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if (i == 34)
+                {
+                    Console.WriteLine("GAME OVER");
+                    return;
+                }
+                if (i == 35)
+                {
+                    i = 40;
+                    continue;
+                }
+
+                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                Console.ReadKey();
             }
         }
     }

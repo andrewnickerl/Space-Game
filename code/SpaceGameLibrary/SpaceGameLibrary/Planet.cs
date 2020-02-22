@@ -672,11 +672,11 @@ namespace SpaceGameLibrary
                     /*7*/story.Add("She takes you to the closest mall and dragging you from one store to the next all day long. You awake the next morning tired and sore but 2000 mells richer. "); // . [Go to option 1]
                     /*8*/story.Add("As you reach for a weapon his mechanical nose shoots into your chest and rips your heart out. \n \n He screams “KALIMA!” as you die."); // Option 2:
                     /*9*/story.Add("Nice job there guy!");
-                    /*10*/story.Add("You run away from the Cyborg Ephantus in terror, hoping to never see them again. You rush into the slums knowing your so close to pet"); // Option 1
+                    /*10*/story.Add($"You run away from the Cyborg Ephantus in terror, hoping to never see them again. \n You rush into the slums knowing your so close to {pc.PetName}");  // Option 1
                     /*11*/story.Add("As you head towards where THE MAN lands you see the busy main street full of beggars or a back alley that appears to bypass all of it.");
-                    /*12*/story.Add("1) Take the main street.\n\n2) Take the alley.\n\nWhat do you Do?");
+                    /*12*/story.Add("1) Take the main street.\n\n2) Take the alley.\n\n3) Check Inventory.\n\n4) Check Stats\n\nWhat do you Do?");
                     /*13*/story.Add("You attempt to trudge past all the beggars without responding to them. A small female blue skinned humanoid with 2 small horns on her forehead and black bat wings on her back in a long brown shirt climbs onto your shoulder. "); // Option 1
-                    /*14*/story.Add("You recognize she is of the Lashtist race. She says mister “Where are you going? If I guide you there will you give me some food?” ");
+                    /*14*/story.Add("You recognize she is of the Lashtist race. \nShe says mister “Where are you going? If I guide you there will you give me some food?” ");
                     /*15*/story.Add("1)	Say yes.\n\n2)	Tell her to scram.\n\nWhat will you do?");
                     /*16*/story.Add("She guides you to THE MAN’s ship, but you forgot Lashtist feed off the blood of other. She starts drinking your blood as you see THE MAN fly away."); // Option 1
                     /*17*/story.Add("Nice job there Guy!");
@@ -684,15 +684,15 @@ namespace SpaceGameLibrary
                     /*19*/story.Add("As you begin walking through the alley, a small green humanoid with large pointy ears clutching what appears to be a butter knife runs into you. You recognize him as a Gobleen. "); // // Option 2
                     /*20*/story.Add("He is short of breath as if he was running from something. He realizes you’re not a wall but a person and freaks out. He screams, “You will not take my precious!!” as he strokes his butter knife. "); // Fight
                     /*21*/story.Add("As you leave beggar central you see THE MAN’s ship, but there is a massive gang war on the path to the ship"); // [Win, gain Holy Butter Knife and join back with option 1] ,[Lose, Game over.]
-                    /*22*/story.Add("1) Fight your way through.\n\n2) Attempt to sneak around.\n\n3) Yell dumbbell fight!\n\nWhat do you Do?"); // Options:
+                    /*22*/story.Add("1) Fight your way through.\n\n2) Attempt to sneak around.\n\n3) Yell dumbbell fight!\n\n4) Check Inventory.\n\n5) Check Stats\n\nWhat do you Do?"); // Options:
                     /*23*/story.Add("You yell out and both gangs turn to you. You hear someone says, “wrong planet!” as a pizza flies toward you.  Its aroma attracts the local Flesh fleas. You are eaten alive by the fleas. "); // Option 3:
                     /*24*/story.Add("Nice job there guy!");
                     /*25*/story.Add("As you attempt to sneak past the war grounds, a humanoid cyborg with no details to see his original race but a large ‘A’ on his chest confronts you. "); // Option 2:
                     /*26*/story.Add("(Cyborg) \n “To whose allegiance do you claim?! Awesome or Metal?!” ");
                     /*27*/story.Add("1) Give item from inventory.\n\n2)	Answer with “Metal?”\n\n3)	Answer with Awesome?\n\n4)	[Fight]\n\nWhat do you Do?");  // Option 4: Go to option 1, fight through.
                     /*28*/story.Add("(Cyborg) \n “You dare say Metal Man is better?!?! To me, an Awesome Cyborg fan?!?!?! Be converted!!” "); //Option 2:
-                    /*29*/story.Add("He throws a helmet on you which forces you to watch ‘The Adventures of Awesome Cyborg’ on repeat for 3 weeks straight.");
-                    /*30*/story.Add("Awesome Cyborg is love; Awesome Cyborg is life. You join the gang with no self-will attempting to convert others to your cause.");
+                    /*29*/story.Add("He throws a helmet on you. \nIt forces you to watch ‘The Adventures of Awesome Cyborg’ on repeat for 3 weeks straight.");
+                    /*30*/story.Add("Awesome Cyborg is love; \nAwesome Cyborg is life. \nYou join the gang with no self-will attempting to convert others to your cause.");
                     /*31*/story.Add("Way to follow the sheep there guy!");
                     /*32*/story.Add("(Cyborg) \n“I see through you lies Metal Man spy!! There is no saving your kind!”"); // Option 3:
                     /*33*/story.Add("He pulls out an anti-battleship cannon and vaporizes you.You are wiped from existence.");
@@ -703,9 +703,9 @@ namespace SpaceGameLibrary
                     /*38*/story.Add(""); // Win: [Fight Random Enemy]
                     /*39*/story.Add(""); // Lose: Game Over.
                     /*40*/story.Add(""); // Win Both: Continue on to THE MANS ship
-                    /*41*/story.Add("After scrapping through the warzone, you finally make it to THE MAN’s ship. Sadly, right as you approach the ship, the entry ramp raises up and the ship begins to leave. Over a speaker from the ship you hear THE MAN call out. ");
-                    /*42*/story.Add($"(THE MAN)\n “Muahahahaha!{pc.Name} you’re too slow. I’ve got everything I need to feats with {pc.PetName}. If you want to join us on Krytunga then be my guest!” He then speeds of into space");
-                    /*43*/story.Add("You know where this ends. Time to get pet back. You head back to your ship, setting coordinates for the planet of Krytunga, the crystal world.");
+                    /*41*/story.Add("After scrapping through the warzone, you finally make it to THE MAN’s ship. \n \nSadly, right as you approach the ship, the entry ramp raises up and the ship begins to leave. \n \nOver a speaker from the ship you hear THE MAN call out. ");
+                    /*42*/story.Add($"(THE MAN)\n “Muahahahaha!{pc.Name} you’re too slow. I’ve got everything I need to feast with {pc.PetName}. \n \nIf you want to join us on Krytunga then be my guest!” He then speeds off into space");
+                    /*43*/story.Add($"You know where this ends. Time to get {pc.PetName} back. \n \nYou head back to your ship, setting coordinates for the planet of Krytunga, the crystal world.");
                     // End of Wombodum
                     return story;
 
