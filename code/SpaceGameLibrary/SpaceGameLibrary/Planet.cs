@@ -418,21 +418,25 @@ namespace SpaceGameLibrary
                     theDAVE.Name = "The D.A.V.E.";
                     theDAVE.Quantity = 1;
                     theDAVE.Value = 5;
+                    theDAVE.Damage = 10000;
                     inventory.Add(theDAVE);
                     Item blitzBlade = new Item();
                     blitzBlade.Name = "Blitz Blade";
                     blitzBlade.Quantity = 1;
                     blitzBlade.Value = 200;
+                    blitzBlade.Damage = 3;
                     inventory.Add(blitzBlade);
                     Item shieldOSaturn = new Item();
                     shieldOSaturn.Name = "Shield o' Saturn";
                     shieldOSaturn.Quantity = 1;
                     shieldOSaturn.Value = 200;
+                    
                     inventory.Add(shieldOSaturn);
                     Item plasmaRifle = new Item();
                     plasmaRifle.Name = "Plutonian Plasma Rifle";
                     plasmaRifle.Quantity = 1;
                     plasmaRifle.Value = 200;
+                    plasmaRifle.Damage = 4;
                     inventory.Add(plasmaRifle);
                     return inventory;
                 case PlanetTypes.Aventus:
@@ -440,26 +444,27 @@ namespace SpaceGameLibrary
                     autoChopper.Name = "Auto Chopper";
                     autoChopper.Quantity = 1;
                     autoChopper.Value = 150;
+                     autoChopper.Damage = 15;
                     inventory.Add(autoChopper);
                     Item jungleStarterKit = new Item();
-                    jungleStarterKit.Name = "Jungle Starter Kit";
+                    jungleStarterKit.Name = "Jungle Starter Kit";  //does nothing 
                     jungleStarterKit.Quantity = 1;
                     jungleStarterKit.Value = 300;
                     inventory.Add(jungleStarterKit);
                     Item schlemalDoll = new Item();
-                    schlemalDoll.Name = "Schlemal Doll";
+                    schlemalDoll.Name = "Schlemal Doll"; //does nothing
                     schlemalDoll.Quantity = 1;
                     schlemalDoll.Value = 50;
                     inventory.Add(schlemalDoll);
                     Item greenRemote = new Item();
-                    greenRemote.Name = "Green Remote";
+                    greenRemote.Name = "Green Remote"; //transports dog you win
                     greenRemote.Quantity = 1;
                     greenRemote.Value = 200;
                     inventory.Add(greenRemote);
                     return inventory;
                 case PlanetTypes.SpotMee:
                     Item twLbDumbbells = new Item();
-                    twLbDumbbells.Name = "20 lb Dumbbells";
+                    twLbDumbbells.Name = "20 lb Dumbbells"; // a consumable
                     twLbDumbbells.Quantity = 1;
                     twLbDumbbells.Value = 250;
                     inventory.Add(twLbDumbbells);
@@ -467,14 +472,15 @@ namespace SpaceGameLibrary
                     ftFiveLbPlate.Name = "45 lb Plate";
                     ftFiveLbPlate.Quantity = 1;
                     ftFiveLbPlate.Value = 50;
+                    ftFiveLbPlate.Damage = 45;
                     inventory.Add(ftFiveLbPlate);
                     Item offProtein = new Item();
-                    offProtein.Name = "OFF Protein";
+                    offProtein.Name = "OFF Protein";  //blocks 4 rounds
                     offProtein.Quantity = 1;
                     offProtein.Value = 400;
                     inventory.Add(offProtein);
                     Item animalEnergyPowder = new Item();
-                    animalEnergyPowder.Name = "Animal Energy Powder";
+                    animalEnergyPowder.Name = "Animal Energy Powder"; //doubles damage
                     animalEnergyPowder.Quantity = 1;
                     animalEnergyPowder.Value = 150;
                     inventory.Add(animalEnergyPowder);
@@ -484,14 +490,15 @@ namespace SpaceGameLibrary
                     theClaw.Name = "The Claw";
                     theClaw.Quantity = 1;
                     theClaw.Value = 600;
+                    theClaw.Damage = 20;
                     inventory.Add(theClaw);
                     Item purpleRemote = new Item();
-                    purpleRemote.Name = "Purple Remote";
+                    purpleRemote.Name = "Purple Remote"; //transports THE MAN start the fight
                     purpleRemote.Quantity = 1;
                     purpleRemote.Value = 200;
                     inventory.Add(purpleRemote);
                     Item cyborgDoll = new Item();
-                    cyborgDoll.Name = "Awesome Cyborg Doll";
+                    cyborgDoll.Name = "Awesome Cyborg Doll"; // does nothing
                     cyborgDoll.Quantity = 1;
                     cyborgDoll.Value = 350;
                     inventory.Add(cyborgDoll);
@@ -499,21 +506,22 @@ namespace SpaceGameLibrary
                     laserSword.Name = "Laser Sword";
                     laserSword.Quantity = 1;
                     laserSword.Value = 400;
+                    laserSword.Damage = 10;
                     inventory.Add(laserSword);
                     return inventory;
                 case PlanetTypes.Krytunga:
                     Item redCrystal = new Item();
-                    redCrystal.Name = "Red Crystal";
+                    redCrystal.Name = "Red Crystal"; //summons something
                     redCrystal.Quantity = 1;
                     redCrystal.Value = 200;
                     inventory.Add(redCrystal);
                     Item blueCrystal = new Item();
-                    blueCrystal.Name = "Blue Crystal";
+                    blueCrystal.Name = "Blue Crystal"; // summons something
                     blueCrystal.Quantity = 1;
                     blueCrystal.Value = 200;
                     inventory.Add(blueCrystal);
                     Item greenCrystal = new Item();
-                    greenCrystal.Name = "Green Crystal";
+                    greenCrystal.Name = "Green Crystal"; // summons something
                     greenCrystal.Quantity = 1;
                     greenCrystal.Value = 200;
                     inventory.Add(greenCrystal);
