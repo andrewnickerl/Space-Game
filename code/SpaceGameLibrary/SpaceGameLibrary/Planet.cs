@@ -391,16 +391,16 @@ namespace SpaceGameLibrary
             do
             {
                 enemy.Hp -= pc.EquippedItem.Damage;
-                if (enemy.Hp > 0)
+                if(enemy.Hp > 0)
                 {
                     pc.Hp -= enemy.Damage;
                 }
-                if (enemy.Hp <= 0)
+                if(enemy.Hp <= 0)
                 {
                     break;
                 }
             } while (pc.Hp > 0);
-            if (pc.Hp <= 0)
+            if(pc.Hp <= 0)
             {
                 return false;
             }
@@ -506,7 +506,29 @@ namespace SpaceGameLibrary
             switch (this.Name)
             {
                 case PlanetTypes.Noir:
-
+<<<<<<< HEAD
+                    this.Story.Add("(Narrator) \n On a Cold desolate night on Planet Noir our hero comes to, unaware of the adventure that awaits");
+                    this.Story.Add($"(Narrator) \n slowly your eyes open, the emergency beacon on your ship is beaming, how you didn't hear it sooner is a mystery but your ship's security system is blaring a name... {pc.Name}");
+                    this.Story.Add($"(Ship Security system) \n Greetings {pc.Name}, \n unknown perpetrator onboard during personnel stasis. current lifeforms present one...");
+                    this.Story.Add($"({pc.Name} inner dialogue) \n one? could there be someone on here that is missing, you stand up to look around for clues");
+                    this.Story.Add("Perplexed by mystery, you're faced with a dilemma.What do you do?"); // start of Scenario switch statement for Planet Noir choices
+                    this.Story.Add("A) Ask security protocols who was on the ship"); 
+                    this.Story.Add("B) Follow footprints leading outside the ship");
+                    this.Story.Add("C) Grab an Astrocola and watch cartoons");
+                    this.Story.Add("D) Tell the ship security protocols to initiate defense level BAMBAM");
+                    this.Story.Add($"(Ship security protocol)\n  known fugitive known as THE MAN entered and left with {pc.PetName}"); // Scenario 1
+                    this.Story.Add($"You remember now, your dog {pc.PetName} is gone!!!THE MAN must pay!");
+                    this.Story.Add("You grab the nearest item to you and man your ship speeding off towards the next planet to find him"); // item if statement start
+                    this.Story.Add("A) You grab the blitz blade"); // Add the blitz blade item
+                    this.Story.Add("B) You grab the Shield O Saturn"); // Add the shield o saturn item
+                    this.Story.Add("C) You grab Plutonian Plasma Rifle"); // Add the plasma rifle item
+                    this.Story.Add("Angry and disoriented you run to the ship door slamming on the hatch button, suddenly your sucked out into orbit.");  // Scenario 2
+                    this.Story.Add("Due to you being on another planet without an atmosphere, the oxygen is sucked out of you like Douglas Quaid in that movie TOTAL RECALL. Nice job there guy");
+                    this.Story.Add("Leisurely you motion towards the fridge to grab a ice cold Astrocola and notice the key behind it."); // Scenario 3 ADD the DAVE
+                    this.Story.Add("What a dumb place to hide my Deatomizing Assault Vulcan Emitter cannon aka The D.A.V.E, after collecting your weapon you remember your objective and set off to find THE MAN on the next planet");
+                    this.Story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM.");  // Scenario 4
+                    this.Story.Add("Shortly thereafter you proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. Nice job there guy");
+=======
                     story.Add("(Narrator) \n On a Cold desolate night on Planet Noir our hero comes to, unaware of the adventure that awaits");
                     story.Add($"(SNarrator) \n slowly your eyes open, the emergency beacon on your ship is beaming, how you didn't hear it sooner is a mystery but your ship's security system is blaring a name... {pc.Name.ToUpper()}!!!!");
                     story.Add($"(Ship Security system) \n Greetings {pc.Name}, \n unknown perpetrator onboard during personnel stasis. current lifeforms present one...");
@@ -528,6 +550,7 @@ namespace SpaceGameLibrary
                     story.Add("what a dumb place to hide my Deatomizing Assault Vulcan Emitter cannon aka The D.A.V.E, after collecting your weapon you remember your objective and set off to find THE MAN on the next planet");
                     story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM");  // Scenario 4
                     story.Add("and proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. nice job there guy");
+>>>>>>> f5b6ae278ae96e69860ef9cdcd460ac1e5efa911
                     // End of Noir
                     return story;
 
@@ -568,6 +591,28 @@ namespace SpaceGameLibrary
                     story.Add("You sneak up on a Schlemal and right as it notices you, you leap onto its back. It leaps into the air and dunks the both of you into a tree compressor. You become an ambassador’s new table.");
                     story.Add("Game Over.");
                     // go to Jungle, crossroads option 2
+<<<<<<< HEAD
+                    this.Story.Add("You head into the jungle in hopes of finding THE MAN or pet. After trudging through the jungle, the path splits into 2.");
+                    this.Story.Add("1.)	Take the right path");
+                    this.Story.Add("2.)	Take the left path");
+                    this.Story.Add("3.)	Check inventory"); // check inventory
+                    this.Story.Add("4.)	Check stats."); // check stats
+                    this.Story.Add("As you continue down the right path, you smell something sweet from a large flower. As you stop to smell the flower, it lunges out and eats the top half of you."); // Option 1
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("You come upon lumber yard 67. As you arrive, you see a ship that you don’t recognize fly away. It is much sleeker then the local freight ships. THE MAN has got away. "); // Option 2
+                    this.Story.Add("You then hear a mewl from the yard. A kitten with red fur, a small horn, and bat wings trots over to you carrying a star-map data stick. ");
+                    this.Story.Add("What do you do?");
+                    this.Story.Add("1.)	feed the manticore");
+                    this.Story.Add("2.)	kick the cat thing.");
+                    this.Story.Add("3.)	Run back to ship.");
+                    this.Story.Add("You kick the cat with wings causing it to drop the star-map data stick. As you bend over to pick it up you hear another mewl. "); //  Option 2
+                    this.Story.Add("Right as your hand touches the data stick, you get engulfed in flames. All that is left is ashes.");
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("You give the manticore cub some of your food. It greedily devours the food and your hand. It starts to purr and won’t leave you alone. "); // Option 1
+                    this.Story.Add("You lost a hand but gained a manticore companion. With the data chip and your new companion, you rush back to your ship and chase after THE MAN.");
+                    this.Story.Add("You rush back through the jungle in hope that you can get to the ship in time. As you arrive, you power it on and check to see if there are any traces of the ship that just left.");
+                    this.Story.Add("You’re in luck! You take off from the landing pad, sending several Schlemals to their death and chase after THE MAN.");
+=======
                     story.Add("You head into the jungle in hopes of finding THE MAN or pet. After trudging through the jungle, the path splits into 2.");
                     story.Add("1.)	Take the right path");
                     story.Add("2.)	Take the left path");
@@ -588,10 +633,66 @@ namespace SpaceGameLibrary
                     story.Add("You lost a hand but gained a manticore companion. With the data chip and your new companion, you rush back to your ship and chase after THE MAN.");
                     story.Add("You rush back through the jungle in hope that you can get to the ship in time. As you arrive, you power it on and check to see if there are any traces of the ship that just left.");
                     story.Add("You’re in luck! You take off from the landing pad, sending several Schlemals to their death and chase after THE MAN.");
+>>>>>>> f5b6ae278ae96e69860ef9cdcd460ac1e5efa911
                     // End of Aventus
                     return story;
 
                 case PlanetTypes.SpotMee:
+<<<<<<< HEAD
+                    this.Story.Add("You are at planet SpotMee and land in the capital city, Brotopia. THE MAN is definitely here, but the city is large and filled with gladiator rings.");
+                    this.Story.Add("As you start to walk towards the city, an AD bot starts screaming its ad in your face.");
+                    this.Story.Add("(Ad bot) \n Come on down, come on down. Come one, come all to the Guilds Gym Arena. Legendary boss, THE MAN, challenges all to come fight to take his fortune. Can any claim his Mells?!?!?!” ");
+                    this.Story.Add("What do you do?"); // Options start
+                    this.Story.Add("1.)	Go to the Marketplace.");
+                    this.Story.Add("2.)	Go to Guilds Gym Arena.");
+                    this.Story.Add("3.)	Check inventory.");
+                    this.Story.Add("4.)	Check stats.");
+                    this.Story.Add("As you wander down the marketplace, you see a store called, Do You Even Lift. You decide to shop there."); // Option 1
+                    this.Story.Add("1.)	Buy");
+                    this.Story.Add("2.)	Sell");
+                    this.Story.Add("3.)	Leave");
+                    this.Story.Add("Shop Items to buy:");
+                    this.Story.Add("1.)	20lbs Dumbbell/ qty: 20 price: 250 mells");
+                    this.Story.Add("2.)	45lbs Plate/ qty: 3 price: 50 mells");
+                    this.Story.Add("3.)	OFFs Protein/ price: 400 mells");
+                    this.Story.Add("4.)	Animal Energy Powder/ price: 150 mells");
+                    this.Story.Add("5.)	Leave");
+                    this.Story.Add(""); // When leaving shop, go to option 2
+                    this.Story.Add("You run off towards Guilds Gym Arena, the AD bot blaring the same ad the whole way. When you arrive to the arena you see a line with various aliens hoping to win THE MAN’s fortune. "); // Option 2
+                    this.Story.Add("When you finally get to the front you recognize an Orgus by its big green pig head with tusk shooting out. He has a name tag that reads Daisy.");
+                    this.Story.Add("(Daisy) \n in a deep gruff voice he asks, “Arena name and race?”");
+                    this.Story.Add("1.)	Give new name for arena fights."); // Options
+                    this.Story.Add("2.)	Give your name for arena fights.");
+                    this.Story.Add("3.)	Ask Daisy about name.");
+                    this.Story.Add("4.)	Mock Daisy for name.");
+                    this.Story.Add("You laugh at Daisy for being named after a weak Earth flower. Daisy roars over being mocked, “Daisy is greatest warrior name from Orgus home world!!! Puny human shall die!”"); // Option 4
+                    this.Story.Add("He slams his hand down on a button on his desk causing the floor below you to disappear. You fall into a pit of boiling oil becoming Daisy’s snack for the arena matches later.");
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("You give Daisy your name and he explains that you must win the 3 rounds in order to win THE MAN’s tournament. As you enter the arena for the first round a voice over the louder speakers come on. "); // Option 2
+                    this.Story.Add("“Cooooontestants!!! There has been a change for the first round! Instead of the traditional Brotopia dumbbell fight, whoever kills PC, the only human here, will win the tournament!!!” ");
+                    this.Story.Add("All the contestants turn toward you and before anyone else can jump you, an Orgus jumps from the stands and turns you into a pancake.");
+                    this.Story.Add("Game Over");
+                    this.Story.Add("Daisy tells you he was named after the greatest warrior in Orgus history. You marvel in wonder at the name. Daisy says he likes you and says if you enter the red door over there, you can skip to the final round."); // Option 3
+                    this.Story.Add("PC gives new name."); // Go to round 3 of option 1 // Option 1
+                    this.Story.Add("Welcome contestants!! The first round shall be the traditional Dumbbell fight! Ready, Go!");
+                    this.Story.Add("You look around and see everyone pulling out dumbbells and throwing them like snowballs.");
+                    this.Story.Add("1.)	Access Inventory"); // Options //[Everything but dumbbells fails and sends back to original options]
+                    this.Story.Add("2.)	Dodge and hope to pick up stray dumbbells");
+                    this.Story.Add("3.)	Cower in a corner.");
+                    this.Story.Add("4.)	Run around the arena screaming.");
+                    this.Story.Add("“You survived the round and moved on.”"); // If dumbbells used.
+                    this.Story.Add("You attempt to dodge the incoming dumbbells but get hit in the head crushing it.");
+                    this.Story.Add("Game Over.");
+                    this.Story.Add("You run to the corner of the circular arena and cower in the fetal position. After 10 mins of fight, you hear victory! You’re on of the 5 finalists. Move on to round 2"); // Option 3
+                    this.Story.Add("You start screaming as you run around. You forget to breath properly and pass out after 10 mins. You awake with round 2 under way but a giant horned lizard having eaten your legs. "); // Option 4
+                    this.Story.Add("Game over.");
+                    this.Story.Add("(Announcer) \n “Champions moving on to round 2! You shall face one of our beasts we have in our arena. When called, come face your beast!”"); // Round 2
+                    this.Story.Add("The first 2 contestants both quickly get eaten, making you nervous.");
+                    this.Story.Add("(Announcer) \n "); // Fight {random Enemy} Win move on , lose Game Over // Round 3:
+                    this.Story.Add("“THE MAN shall greet the champion.”"); 
+                    this.Story.Add("THE MAN walks out to greet you but freezes when he sees you. He screams for them to release another beast as he runs away.");
+                    this.Story.Add("You chase after THE MAN barely making it to your ship before you see his ship leave atmosphere. You follow after him in the ship."); // Fight [Random Enemy] [Win move on, lose Game over]
+=======
                     story.Add("You are at planet SpotMee and land in the capital city, Brotopia. THE MAN is definitely here, but the city is large and filled with gladiator rings.");
                     story.Add(". As you start to walk towards the city, an AD bot starts screaming its ad in your face.");
                     story.Add("(ad bot) \n Come on down, come on down. Come one, come all to the Guilds Gym Arena. Legendary boss, THE MAN, challenges all to come fight to take his fortune. Can any claim his Mells?!?!?!” ");
@@ -645,6 +746,7 @@ namespace SpaceGameLibrary
                     story.Add("“THE MAN shall greet the champion.”");
                     story.Add("THE MAN walks out to greet you but freezes when he sees you. He screams for them to release another beast as he runs away.");
                     story.Add("You chase after THE MAN barely making it to your ship before you see his ship leave atmosphere. You follow after him in the ship."); // Fight [Random Enemy] [Win move on, lose Game over]
+>>>>>>> f5b6ae278ae96e69860ef9cdcd460ac1e5efa911
                     // End of SpotMee
                     return story;
 
