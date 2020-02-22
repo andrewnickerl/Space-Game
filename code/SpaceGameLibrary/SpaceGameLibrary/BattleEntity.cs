@@ -6,29 +6,9 @@ namespace SpaceGameLibrary
 {
     public class BattleEntity
     {
-        public string Name
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public short Hp
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public short Damage
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public string Name { get; set; }
+        public short Hp { get; set; }
+        public short Damage { get; set; }
 
         public bool TakenDamage(short damage)
         {
