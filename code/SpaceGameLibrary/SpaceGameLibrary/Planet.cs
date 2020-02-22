@@ -538,22 +538,22 @@ namespace SpaceGameLibrary
                     /*7*/story.Add($"You remember now! Your dog, {pc.PetName}, is gone!!! THE MAN must pay!!!!");
                     /*8*/story.Add("You grab the nearest item to you and man your ship speeding off towards the next planet to find him."); // item if statement start
                     /*9*/story.Add("1) The Blitz Blade\n2) The Shield o' Saturn\n3) The Plutonian Plasma Rifle\n\nWhich item will you grab?"); // Add the blitz blade item // Add the shield o saturn item// Add the plasma rifle item
-                    /*10*/story.Add("Angry and disoriented, you run to the ship door slamming on the hatch button, suddenly your sucked out into orbit");  // Scenario 2
+                    /*10*/story.Add("Angry and disoriented, you run to the ship door slamming on the hatch button, suddenly you're sucked out into orbit.");  // Scenario 2
                     /*11*/story.Add("Due to you being on another planet without an atmosphere, the oxygen is sucked out of you like Douglas Quaid in that movie TOTAL RECALL.");
                     /*12*/story.Add("Nice job there guy!");
                     /*13*/story.Add("Leisurely you motion towards the fridge to grab a ice cold Astrocola and notice the key behind it."); // Scenario 3 ADD the DAVE
-                    /*14*/story.Add("What a dumb place to hide your Deatomizing Assault Vulcan Emitter cannon (aka The D.A.V.E)!  After collecting your weapon you remember your objective and set off to find THE MAN on the next planet");
+                    /*14*/story.Add("What a dumb place to hide your Deatomizing Assault Vulcan Emitter cannon (aka The D.A.V.E)!  After collecting your trusty D.A.V.E. you decide you should probably figure out what happened here, so you ask the ship security protocols who was on the ship.");
                     /*15*/story.Add("Paranoid that THE MAN is still onboard your ship you scream to the ship security system to go level BAMBAM!!");  // Scenario 4
                     /*16*/story.Add("In an instant you proceed to get turned into swiss cheese by the turrets on the ship. THE MAN tricked you and sabotaged the weapon system. Nice job there guy!");
                     // End of Noir
                     return story;
 
                 case PlanetTypes.Aventus:
-                    /*0*/story.Add($"{pc.Name} lands on Aventus after the ship scanners showed THE MAN’s ship landing here. Uncertain what he landed here but we shall find out.");
-                    /*1*/story.Add("Last known location shows him disappearing just past the only spaceport on the planet, Artelius. After dodging the freight ships, you land on platform 934 after getting clearance from the port officials. ");
+                    /*0*/story.Add($"Ship scanners showed THE MAN’s ship landing on the planet Aventus. It's uncertain what he landed here to do, but we shall find out!");
+                    /*1*/story.Add("After dodging the freight ships during your approach, you land on platform 934 after getting clearance from the port officials.");
                     /*2*/story.Add("You see what looks like an ostrich in a tuxedo walking towards you. In a shrill voice the call out to you.");
-                    /*3*/story.Add("(Carlsin):\nGreetings traveler, I am Carlsin, a dock supervisor here at Aventus. who are you and what is your reason for being here?"); // start options switch statement
-                    /*4*/story.Add("1.)Give what Carlsen asked.\n\n2.) Refuse to answer and shove past.\n\n3.) Ask if he is an ostrich.\n\n4.) See inventory\n\n5.) See Stats\n\n What will you do?");
+                    /*3*/story.Add("(Carlsin):\nGreetings traveler, I am Carlsin, a dock supervisor here at Aventus. Who are you and what is your reason for being here?"); // start options switch statement
+                    /*4*/story.Add("1) Give what Carlsin asked.\n\n2) Refuse to answer and shove past.\n\n3) Ask if he is an ostrich.\n\n4) See inventory\n\n5) See Stats\n\nWhat will you do?");
                     /*5*/story.Add($"You say that you’re {pc.Name} and are looking for a human called THE MAN."); // Scenario 1
                     /*6*/story.Add("(Carlsin)\n “I don’t know who this man is but we did have a ship illegally land at lumber yard 67. I wouldn’t suggest going there since going there by yourself though.");
                     /*7*/story.Add("The site was recently taken over by a young manticore. I’d stop by Frig&Horges in the marketplace if you plan to still go there. They have all the gear you might need to brave the jungle.");
@@ -561,20 +561,20 @@ namespace SpaceGameLibrary
                     /*9*/story.Add("You ask him and immediately see him start to tremble. He screeches as he charges towards you. Before you can react, his beak opens wider than you think possible and bites your head off."); // Scenario 3
                     /*10*/story.Add("Nice job there guy!");
                     /*11*/story.Add("You come to a crossroad with a sign pointing to several different places."); // Crossroads switch statement
-                    /*12*/story.Add("1.) Go to marketplace\n\n2.) Go to jungle\n\n3.) Attempt to ride one of the local Schlemals(Carlsin’s race)\n\n4.) See inventory.");
+                    /*12*/story.Add("1) Go to marketplace\n\n2) Go to jungle\n\n3) Attempt to ride one of the local Schlemals(Carlsin’s race)\n\n4) See inventory.");
                     /*13*/story.Add("You go to the marketplace and see a store called Frig&Horge.You enter and ask the clerk if you can sell things here. They say yes.");
-                    /*14*/story.Add("1.)	Buy items\n\n2.) Sell items\n\n3.) Leave\n\nWhat would you like to do?"); // Market options
-                    /*15*/story.Add("1.)	Auto Chopper____Price 150 Mells\n\n2.)	Jungle Starter Kit_____Price 300 Mells\n\n3.)	Schlemal Doll______Price 50 Mells\n\n4.)	Green Remote_____Price 200 Mells\n\n5.)	Leave\n\nWhat will you do."); // Sub-options 2
-                    /*16*/story.Add("1.)	Show PC inventory with prices\n\n2. Leave\n\nWhat will you do."); // Sub-Option 3
+                    /*14*/story.Add("1)	Buy items\n\n2) Sell items\n\n3) Leave\n\nWhat would you like to do?"); // Market options
+                    /*15*/story.Add("1)	Auto Chopper____Price 150 Mells\n\n2)	Jungle Starter Kit_____Price 300 Mells\n\n3)	Schlemal Doll______Price 50 Mells\n\n4)	Green Remote_____Price 200 Mells\n\n5)	Leave\n\nWhat will you do."); // Sub-options 2
+                    /*16*/story.Add("1)	Show PC inventory with prices\n\n2 Leave\n\nWhat will you do?"); // Sub-Option 3
                     /*17*/story.Add("You sneak up on a Schlemal and right as it notices you, you leap onto its back. It leaps into the air and dunks the both of you into a tree compressor. You become an ambassador’s new table.");
                     /*18*/story.Add("Nice job there Guy!");
-                    /*19*/story.Add("You head into the jungle in hopes of finding THE MAN or pet. After trudging through the jungle, the path splits into 2.");
-                    /*20*/story.Add("1.)	Take the right path\n\n2.)	Take the left path\n\n3.)	Check inventory\n\n4.)	Check stats.\n\nWhat will you do?");
+                    /*19*/story.Add("You head into the jungle in hopes of finding THE MAN or pet. After trudging through the jungle, the path splits into 2");
+                    /*20*/story.Add("1)	Take the right path\n\n2)	Take the left path\n\n3)	Check inventory\n\n4)	Check stats.\n\nWhat will you do?");
                     /*21*/story.Add("As you continue down the right path, you smell something sweet from a large flower. As you stop to smell the flower, it lunges out and eats the top half of you."); // Option 1
                     /*22*/story.Add("Nice job there guy!");
                     /*23*/story.Add("You come upon lumber yard 67. As you arrive, you see a ship that you don’t recognize fly away. It is much sleeker then the local freight ships.THE MAN has got away!!"); // Option 2
                     /*24*/story.Add("You then hear a mewl from the yard. A kitten with red fur, a small horn, and bat wings trots over to you carrying a star-map data stick.");
-                    /*25*/story.Add("1.) feed the manticore\n\n2.) kick the cat thing.\n\n3.) Run back to ship.\n\nWhat will you do?");
+                    /*25*/story.Add("1) feed the manticore\n\n2) kick the cat thing.\n\n3) Run back to ship.\n\nWhat will you do?");
                     /*26*/story.Add("You kick the cat with wings causing it to drop the star-map data stick. As you bend over to pick it up you hear another mewl."); //  Option 2
                     /*27*/story.Add("Right as your hand touches the data stick, you get engulfed in flames. All that is left is ashes.");
                     /*28*/story.Add("Nice job there guy!");
@@ -589,14 +589,14 @@ namespace SpaceGameLibrary
                     /*0*/story.Add("You are at planet SpotMee and land in the capital city, Brotopia. THE MAN is definitely here, but the city is large and filled with gladiator rings.");
                     /*1*/story.Add("As you start to walk towards the city, an AD bot starts screaming its ad in your face.");
                     /*2*/story.Add("(ad bot)\n Come on down!come on down! Come one, come all to the Guilds Gym Arena! Legendary boss, THE MAN!, challenges all to come fight to take his fortune! Can any claim his Mells?!?!?!” ");
-                    /*3*/story.Add("1.) Go to the Marketplace.\n\n2.) Go to Guilds Gym Arena.\n\n3.)	Check inventory.\n\n4.)	Check stats.\n\nWhat do you do?");
+                    /*3*/story.Add("1) Go to the Marketplace.\n\n2) Go to Guilds Gym Arena.\n\n3)	Check inventory.\n\n4)	Check stats.\n\nWhat do you do?");
                     /*4*/story.Add("As you wander down the marketplace, you see a store called, DO YOU EVEN LIFT. You decide to shop there."); // Option 1
-                    /*5*/story.Add("1.) Buy.\n\n2.) Sell.\n\n3.)	Leave.\n\nWhat will you do?");
-                    /*6*/story.Add("1.) 20lbs Dumbbell/ qty: 20 price: 250 mells\n\n2.) 45lbs Plate/ qty: 3 price: 50 mells3.) OFFs Protein/ price: 400 mells\n\n4.)	Animal Energy Powder/ price: 150 mells\n\n5.) Leave.\n\nWhat will you do?"); //"Shop Items to buy
+                    /*5*/story.Add("1) Buy.\n\n2) Sell.\n\n3)	Leave.\n\nWhat will you do?");
+                    /*6*/story.Add("1) 20lbs Dumbbell/ qty: 20 price: 250 mells\n\n2) 45lbs Plate/ qty: 3 price: 50 mells3) OFFs Protein/ price: 400 mells\n\n4)	Animal Energy Powder/ price: 150 mells\n\n5) Leave.\n\nWhat will you do?"); //"Shop Items to buy
                     /*7*/story.Add("You run off towards Guilds Gym Arena, the AD bot blaring the same ad the whole way. When you arrive to the arena you see a line with various aliens hoping to win THE MAN’s fortune."); // Option 2
                     /*8*/story.Add("When you finally get to the front you recognize an Orgus by its big green pig head with tusk shooting out. He has a name tag that reads Daisy.");
                     /*9*/story.Add("(Daisy)\nin a deep gruff voice he asks,“Arena name and race?”");
-                    /*10*/story.Add("1.) Give new name for arena fights.\n\n2.) Give your name for arena fights.\n\n3.) Ask Daisy about name.\n\n4.) Mock Daisy for name.\n\nWhat will you do?"); // Options
+                    /*10*/story.Add("1) Give new name for arena fights.\n\n2) Give your name for arena fights.\n\n3) Ask Daisy about name.\n\n4) Mock Daisy for name.\n\nWhat will you do?"); // Options
                     /*11*/story.Add("You laugh at Daisy for being named after a weak Earth flower. Daisy roars over being mocked, “Daisy is greatest warrior name from Orgus home world!!! Puny human shall die!”"); // Option 4
                     /*12*/story.Add("He slams his hand down on a button on his desk causing the floor below you to disappear. You fall into a pit of boiling oil becoming Daisy’s snack for the arena matches later.");
                     /*13*/story.Add("Nice job there guy!");
@@ -607,7 +607,7 @@ namespace SpaceGameLibrary
                     /*18*/story.Add("Daisy tells you he was named after the greatest warrior in Orgus history. You marvel in wonder at the name. Daisy says he likes you and says if you enter the red door over there, you can skip to the final round."); // Option 3
                     /*19*/story.Add("Welcome contestants!! The first round shall be the traditional Dumbbell fight! Ready, Go!");
                     /*20*/story.Add("You look around and see everyone pulling out dumbbells and throwing them like snowballs.");
-                    /*21*/story.Add("1.) Access Inventory.\n\n2.)	Dodge and hope to pick up stray dumbbells.\n\n3.) Cower in a corner.\n\n4.)	Run around the arena screaming.\n\nWhat will you do?"); // Options //[Everything but dumbbells fails and sends back to original options]
+                    /*21*/story.Add("1) Access Inventory.\n\n2)	Dodge and hope to pick up stray dumbbells.\n\n3) Cower in a corner.\n\n4)	Run around the arena screaming.\n\nWhat will you do?"); // Options //[Everything but dumbbells fails and sends back to original options]
                     /*22*/story.Add("“You survived the round and moved on.”"); // If dumbbells used.
                     /*23*/story.Add("You attempt to dodge the incoming dumbbells but get hit in the head crushing it.");
                     /*24*/story.Add("Nice job there guy!");
@@ -625,32 +625,32 @@ namespace SpaceGameLibrary
                 case PlanetTypes.Wombodum:
                     /*0*/story.Add("You chase THE MAN to Wumbodom. The whole planet is one giant city and THE MAN went straight to land in the slums of the planet");
                     /*1*/story.Add("With your larger ship, you can’t fit in where he landed, so you land on the roof of one of the outlying towers. As you climb down the building, you see a store called Wumbohex. ");
-                    /*2*/story.Add("1.) Shop\n\n2.) Leave the tower.\n\n3.) Check Inventory.\n\n4.) Check Stats\n\nWhat will you do?"); // Options
-                    /*3*/story.Add("1.) The Claw/ price: 600 mells.\n\n2.) Purple Remote/ price: 200 mells.\n\n3.) Awesome Cyborg Doll/ price: 350 mells.\n\n4.)	Laser Sword/ price: 400 mells.\n\n5.) Leave.\n\nWhat will you do?"); // Shop buy options
+                    /*2*/story.Add("1) Shop\n\n2) Leave the tower.\n\n3) Check Inventory.\n\n4) Check Stats\n\nWhat will you do?"); // Options
+                    /*3*/story.Add("1) The Claw/ price: 600 mells.\n\n2) Purple Remote/ price: 200 mells.\n\n3) Awesome Cyborg Doll/ price: 350 mells.\n\n4)	Laser Sword/ price: 400 mells.\n\n5) Leave.\n\nWhat will you do?"); // Shop buy options
                     /*4*/story.Add("You race down the rest of the tower and as you exit you bump into a cyborg Ephantus, an Elephant man race. He turns and stares at you with his red robotic eye.");
-                    /*5*/story.Add("1.) Apologize and run away.\n\n2.) Attempt to fight.\n\n3.) Ask if they wanna go.\n\nWhat do you do?"); // Options
+                    /*5*/story.Add("1) Apologize and run away.\n\n2) Attempt to fight.\n\n3) Ask if they wanna go.\n\nWhat do you do?"); // Options
                     /*6*/story.Add("You ask the Ephantus and found it he is a she. She says she is Klarice and was surprise her hired date was a human."); // Option 3:
                     /*7*/story.Add("She takes you to the closest mall and dragging you from one store to the next all day long. You awake the next morning tired and sore but 2000 mells richer. "); // . [Go to option 1]
                     /*8*/story.Add("As you reach for a weapon his mechanical nose shoots into your chest and rips your heart out. He screams “KALIMA!” as you die."); // Option 2:
                     /*9*/story.Add("Nice job there guy!");
                     /*10*/story.Add("You run away from the Cyborg Ephantus in terror, hoping to never see them again. You rush into the slums knowing your so close to pet"); // Option 1
                     /*11*/story.Add("As you head towards where THE MAN lands you see the busy main street full of beggars or a back alley that appears to bypass all of it.");
-                    /*12*/story.Add("1.) Take the main street.\n\n2.) Take the alley.\n\nWhat do you Do?");
+                    /*12*/story.Add("1) Take the main street.\n\n2) Take the alley.\n\nWhat do you Do?");
                     /*13*/story.Add("You attempt to trudge past all the beggars without responding to them. A small female blue skinned humanoid with 2 small horns on her forehead and black bat wings on her back in a long brown shirt climbs onto your shoulder. "); // Option 1
                     /*14*/story.Add("You recognize she is of the Lashtist race. She says mister “Where are you going? If I guide you there will you give me some food?” ");
-                    /*15*/story.Add("1.)	Say yes.\n\n2.)	Tell her to scram.\n\nWhat will you do?");
+                    /*15*/story.Add("1)	Say yes.\n\n2)	Tell her to scram.\n\nWhat will you do?");
                     /*16*/story.Add("She guides you to THE MAN’s ship, but you forgot Lashtist feed off the blood of other. She starts drinking your blood as you see THE MAN fly away."); // Option 1
                     /*17*/story.Add("Nice job there Guy!");
                     /*18*/story.Add("She flutters away sobbing about being hungry. Then you notice her start drinking the blood of another beggar in an alley. He becomes a mummy is 30 seconds. You just dodged a bullet."); // Continue where option 2 joins back in]
                     /*19*/story.Add("As you begin walking through the alley, a small green humanoid with large pointy ears clutching what appears to be a butter knife runs into you. You recognize him as a Gobleen. "); // // Option 2
                     /*20*/story.Add("He is short of breath as if he was running from something. He realizes you’re not a wall but a person and freaks out. He screams, “You will not take my precious!!” as he strokes his butter knife. "); // Fight
                     /*21*/story.Add("As you leave beggar central you see THE MAN’s ship, but there is a massive gang war on the path to the ship"); // [Win, gain Holy Butter Knife and join back with option 1] ,[Lose, Game over.]
-                    /*22*/story.Add("1.) Fight your way through.\n\n2.) Attempt to sneak around.\n\n3.) Yell dumbbell fight!\n\nWhat do you Do?"); // Options:
+                    /*22*/story.Add("1) Fight your way through.\n\n2) Attempt to sneak around.\n\n3) Yell dumbbell fight!\n\nWhat do you Do?"); // Options:
                     /*23*/story.Add("You yell out and both gangs turn to you. You hear someone says, “wrong planet!” as a pizza flies toward you.  Its aroma attracts the local Flesh fleas. You are eaten alive by the fleas. "); // Option 3:
                     /*24*/story.Add("Nice job there guy!");
                     /*25*/story.Add("As you attempt to sneak past the war grounds, a humanoid cyborg with no details to see his original race but a large ‘A’ on his chest confronts you. "); // Option 2:
                     /*26*/story.Add("(Cyborg) \n “To whose allegiance do you claim?! Awesome or Metal?!” ");
-                    /*27*/story.Add("1.) Give item from inventory.\n\n2.)	Answer with “Metal?”\n\n3.)	Answer with Awesome?\n\n4.)	[Fight]\n\nWhat do you Do?");  // Option 4: Go to option 1, fight through.
+                    /*27*/story.Add("1) Give item from inventory.\n\n2)	Answer with “Metal?”\n\n3)	Answer with Awesome?\n\n4)	[Fight]\n\nWhat do you Do?");  // Option 4: Go to option 1, fight through.
                     /*28*/story.Add("(Cyborg) \n “You dare say Metal Man is better?!?! To me, an Awesome Cyborg fan?!?!?! Be converted!!” "); //Option 2:
                     /*29*/story.Add("He throws a helmet on you which forces you to watch ‘The Adventures of Awesome Cyborg’ on repeat for 3 weeks straight.");
                     /*30*/story.Add("Awesome Cyborg is love; Awesome Cyborg is life. You join the gang with no self-will attempting to convert others to your cause.");
@@ -672,22 +672,22 @@ namespace SpaceGameLibrary
 
                 case PlanetTypes.Krytunga:
                      /*0*/story.Add("Krytunga, the crystal planet");
-                     /*1*/story.Add("Finally, you land on the remote planet of Krytunga. This planet is said to be uninhabitable due only the planet’s unique crystals that grow here. ");
+                     /*1*/story.Add("Finally, you land on the remote planet of Krytunga. This planet is said to be uninhabitable due only the planet’s unique crystals that grow here.");
                      /*2*/story.Add("As you circle the planet you notice what appears to be a fortress made from crystal. You notice that THE MAN’s ship is landed in the courtyard.");
                      /*3*/story.Add($"({pc.Name}) \n “Found you, you ugly bastard!” you growl to yourself. ");
                      /*4*/story.Add("You land just outside the fortress and get ready to face the music, you mean THE MAN. As you leave your ship, a crystal alien you’ve never heard or seen of before approaches you");
                      /*5*/story.Add("He looks like a 3-foot humanoid with crystal skin. As he draws near, he begins to speak.");
                      /*6*/story.Add("(Crystal Alien) \n “Yo homedog! Care to swap some sparkle spazzles?”");
-                     /*7*/story.Add("1.) Say I guess?\n\n2.) Say “Some what?!?\n\n 3.) Punt the crystal dwarf thing.\n\n4.) Ignore and rush into the fortress.\n\n What do you do?"); // Options
+                     /*7*/story.Add("1) Say I guess?\n\n2) Say “Some what?!?\n\n 3) Punt the crystal dwarf thing.\n\n4) Ignore and rush into the fortress.\n\n What do you do?"); // Options
                      /*8*/story.Add("(Crystal Alien) \n “Cool! Here’s what I got flesh man!”"); // Option 1:
-                     /*9*/story.Add("1.) Red Crystal/ price: 200 mells.\n\n2.) Blue Crystal/ price: 200 mells.\n\n3.)	Green Crystal/ price: 200 mells\n\n4.) Leave.\n\nWhat will you do?"); // Items Sold:[Go into Buy/Sell mode]
+                     /*9*/story.Add("1) Red Crystal/ price: 200 mells.\n\n2) Blue Crystal/ price: 200 mells.\n\n3)	Green Crystal/ price: 200 mells\n\n4) Leave.\n\nWhat will you do?"); // Items Sold:[Go into Buy/Sell mode]
                      /*10*/story.Add("The crystal alien launches into the history of the planet and the local lingo. You attempt to leave several times, but he cuts you off every time."); // Option 2:
                      /*11*/story.Add("He leaves no room to interrupt during his entire 8-year long lecture. Given no room to ever leave, you die from starvation 1 month into the lecture.");
                      /*12*/story.Add("Should've brought a snack pak there guy!");
                      /*13*/story.Add("As your leg makes contact with the alien, it starts to move through him like swimming through honey. Before you can realize it, the alien has become your leg from the knee down"); // Option 3:
                      /*14*/story.Add("His face disappears but now hear his voice in your head. Your otherwise fine and charge into the fortress mildly off balance."); // [Pick up with option 4]
                      /*15*/story.Add("You charge into the fortress expecting to face THE MAN’s henchmen but find it empty. You rush through the halls until you come to a grand staircase going up to one massive door and another going down to an identical looking door."); // Option 4:
-                     /*16*/story.Add("1.) Go up the stairs.\n\n2.)	Go down the stairs.\n\nWhat do you Do?");
+                     /*16*/story.Add("1) Go up the stairs.\n\n2)	Go down the stairs.\n\nWhat do you Do?");
                      /*17*/story.Add("As you climb down the stairs you take a deep breath before you fling the doors open. Astonished, you find not a throne room but what appears to be some sort of factory"); // Option 2:
                      /*18*/story.Add("You wander to the edge of the observation platform to get a better look.");
                      /*19*/story.Add("As you stare out across the factory, it quickly becomes clear that this is where THE MAN creates the crystal aliens like the one that greeted you when you landed. As this dawns on you, you feel someone kick you from behind.");
@@ -695,7 +695,7 @@ namespace SpaceGameLibrary
                      /*21*/story.Add("Nice job there guy!");
                      /*22*/story.Add("As you climb up the stairs you take a deep breath before you fling the doors open. You see THE MAN on a throne of crystal smiling down at you. "); // Option 1:
                      /*23*/story.Add($"(THE MAN)\n “Welcome {pc.Name}! I’ve been waiting for you. Can’t hold the grand party without you. Give me 5 more minutes and it will all be ready.”");
-                     /*24*/story.Add("1.) Don’t wait and attack.\n\n2.) Demand he give {pc.PetName} back.\n\n3.) Wait the 5 minutes.\n\nWhat do you do?"); // Options
+                     /*24*/story.Add("1) Don’t wait and attack.\n\n2) Demand he give {pc.PetName} back.\n\n3) Wait the 5 minutes.\n\nWhat do you do?"); // Options
                      /*25*/story.Add("You decide to wait to see what happens. More crystal aliens, similar to the one the greeted you start to bring in what appear to be party decorations"); // Option 3
                      /*26*/story.Add("A table and chair are brought out for you to sit with a massive 7-layer cake is placed in front of you");
                      /*27*/story.Add("The aliens start sing happy birthday to you, and THE MAN tells you to blow out the candles. You indulge them and blow out the candles");
