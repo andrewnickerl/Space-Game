@@ -63,10 +63,23 @@ namespace SpaceGame
 
             Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc);
 
-            foreach (var item in noir.Story)
+            for(int i = 0; i < noir.Story.Count; i++)
             {
-                Console.WriteLine(item);
                 Console.Clear();
+                Console.WriteLine(noir.Story[i]);
+                if(noir.Story[i].EndsWith('?'))
+                {
+                    int input = int.Parse(Console.ReadLine());
+                    switch(input)
+                    {
+                        case 1:
+                            i = 10;
+                            break;
+                        case 2:
+                            i = 16;
+                            break;
+                    }
+                }
             }
 
             Planet aventus = new Planet(Enumerations.PlanetTypes.Aventus, pc);
