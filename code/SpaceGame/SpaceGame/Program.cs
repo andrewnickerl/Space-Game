@@ -282,6 +282,7 @@ namespace SpaceGame
                                         Console.Write(letter);
                                         Thread.Sleep(10);
                                     }
+                                    Console.Write("\n");
                                 }
                                 foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
                                 {
@@ -394,6 +395,7 @@ namespace SpaceGame
                                         Console.Write(letter);
                                         Thread.Sleep(10);
                                     }
+                                    Console.Write("\n");
                                 }
                                 foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
                                 {
@@ -459,6 +461,7 @@ namespace SpaceGame
                                         Console.Write(letter);
                                         Thread.Sleep(10);
                                     }
+                                    Console.Write("\n");
                                 }
                                 foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
                                 {
@@ -807,6 +810,7 @@ namespace SpaceGame
                                         Console.Write(letter);
                                         Thread.Sleep(10);
                                     }
+                                    Console.Write("\n");
                                 }
                                 foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
                                 {
@@ -1330,6 +1334,7 @@ namespace SpaceGame
                                             Console.Write(letter);
                                             Thread.Sleep(10);
                                         }
+                                        Console.Write("\n");
                                     }
                                     foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
                                     {
@@ -1934,6 +1939,7 @@ namespace SpaceGame
                                         Console.Write(letter);
                                         Thread.Sleep(10);
                                     }
+                                    Console.Write("\n");
                                 }
                                 foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
                                 {
@@ -2030,6 +2036,7 @@ namespace SpaceGame
                                         Console.Write(letter);
                                         Thread.Sleep(10);
                                     }
+                                    Console.Write("\n");
                                 }
                                 foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
                                 {
@@ -2129,6 +2136,7 @@ namespace SpaceGame
                                         Console.Write(letter);
                                         Thread.Sleep(10);
                                     }
+                                    Console.Write("\n");
                                 }
                                 foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
                                 {
