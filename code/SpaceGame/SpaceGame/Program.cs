@@ -9,49 +9,6 @@ namespace SpaceGame
     {
         static void Main(string[] args)
         {
-            Player pc = new Player();
-            pc.Name = "PlayerName";
-            pc.PetName = "PetName";
-            Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc);
-            Planet aventus = new Planet(Enumerations.PlanetTypes.Aventus, pc);
-            Planet spotMee = new Planet(Enumerations.PlanetTypes.SpotMee, pc);
-            Planet wombodum = new Planet(Enumerations.PlanetTypes.Wombodum, pc);
-            Planet krytunga = new Planet(Enumerations.PlanetTypes.Krytunga, pc);
-
-            //foreach (var output in noir.Story)
-            //{
-            //    Console.Clear();
-            //    Console.ForegroundColor = ConsoleColor.Green;
-            //    Thread.Sleep(50);
-
-            //    Console.WriteLine(output);
-
-            //    Console.ReadKey();
-            //}
-            //foreach (var output in aventus.Story)
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(output);
-            //    Console.ReadKey();
-            //}
-            //foreach (var output in spotMee.Story)
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(output);
-            //    Console.ReadKey();
-            //}
-            //foreach (var output in wombodum.Story)
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(output);
-            //    Console.ReadKey();
-            //}
-            //foreach (var output in krytunga.Story)
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(output);
-            //    Console.ReadKey();
-            //}
             run();
         }
         static void run()
@@ -60,1037 +17,1699 @@ namespace SpaceGame
 
             int input; //used for input validation
 
-            Console.Write("What is your name?: ");
+            foreach (char letter in "What is your name?: ")
+            {
+                Console.Write(letter);
+                Thread.Sleep(10);
+            }
             pc.Name = Console.ReadLine();
-            Console.Write("What is the name of your beloved fur baby? ");
+            foreach (char letter in "What is the name of your beloved fur baby? ")
+            {
+                Console.Write(letter);
+                Thread.Sleep(10);
+            }
             pc.PetName = Console.ReadLine();
 
 
-            ////Planet 1 - Noir - Intro
-            //Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc);
-            ////loops through story List<string> for Noir and manipulates output from list using i based on user input
-            //for (int i = 0; i < noir.Story.Count; i++)
-            //{
-            //    Console.Clear(); //clears console before each iteration
-            //    Console.WriteLine(noir.Story[i]); //displays each element of the story List<string>
+            //Planet 1 - Noir - Intro
+            Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc);
+            //loops through story List<string> for Noir and manipulates output from list using i based on user input
+            for (int i = 0; i < noir.Story.Count; i++)
+            {
+                Console.Clear(); //clears console before each iteration
+                foreach (char letter in noir.Story[i])  //displays each element of the story List<string>
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
 
-            //    if (i == 5) //decide what action to take upon waking up
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0) //takes user input an validates that it is within appropriate range
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //ask ship security system who was onboard
-            //                    continue;
-            //                case 2: //follow footprints leading outside ship
-            //                    i = 9;
-            //                    continue;
-            //                case 3: //grab astrocola and watch toons
-            //                    i = 12;
-            //                    continue;
-            //                case 4: //set security to BAMBAM
-            //                    i = 15;
-            //                    continue;
-            //            }
-            //        }
-            //        else //handles incorrect user input
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 9) //decide which item to grab as you leave the ship
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 4 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1:  //blitz blade
-            //                    pc.Inventory.Add(noir.StoreInventory[1]);
-            //                    pc.EquipItem(noir.StoreInventory[1]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    break;
-            //                case 2: //shield o' saturn
-            //                    pc.Inventory.Add(noir.StoreInventory[2]);
-            //                    pc.EquipItem(noir.StoreInventory[2]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    break;
-            //                case 3: //plasma rifle
-            //                    pc.Inventory.Add(noir.StoreInventory[3]);
-            //                    pc.EquipItem(noir.StoreInventory[3]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    break;
-            //            }
-            //            break;
-            //        }
-            //        else //handles incorrect user input
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 12) //oxygen sucked out of you death
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 14) //add DAVE after watching toons/drinking cola
-            //    {
-            //        pc.Inventory.Add(noir.StoreInventory[0]);
-            //        pc.EquipItem(noir.StoreInventory[0]);
-            //        Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //        Console.ReadKey();
-            //        i = 5;
-            //        continue;
-            //    }
-            //    if (i == 16) //sabotaged weapon system death
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //    Console.ReadKey();
-            //}
-
-
-            ////Planet 2 - Aventus
-            //Planet aventus = new Planet(Enumerations.PlanetTypes.Aventus, pc);
-            ////Loops through story List<string> for Aventus and manipulates output from list using i based on user input
-            //for (int i = 0; i < aventus.Story.Count; i++)
-            //{
-            //    Console.Clear(); //clears console before every iteration
-            //    Console.WriteLine(aventus.Story[i]); //outputs the string at position i from the Aventus story list
-
-            //    if (i == 4) //choose the action for your conversation with Carlsin
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //answer his question
-            //                    continue;
-            //                case 2: //shove by him
-            //                    i = 7;
-            //                    continue;
-            //                case 3: //ask if he is an ostrich
-            //                    i = 8;
-            //                    continue;
-            //                case 4: //see inventory/equip new item
-            //                    Console.Clear();
-            //                    int j;
-            //                    for (j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.WriteLine($"{j + 1}) {pc.Inventory[j].Name}");
-            //                    }
-
-            //                    Console.WriteLine("\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n");
-            //                    if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
-            //                    {
-            //                        pc.EquipItem(pc.Inventory[input - 1]);
-            //                        Console.WriteLine($"\nYou have equipped {pc.EquippedItem.Name}.");
-            //                    }
-
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 5: //see stats
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n");
-            //                    foreach (string status in pc.PlayerStatus)
-            //                    {
-            //                        Console.WriteLine($"{status}\n");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else //handle incorrect user inputs
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 8) //shove carlsin and continue on your way (option 2)
-            //    {
-            //        i = 10;
-            //        Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //        Console.ReadKey();
-            //        continue;
-            //    }
-            //    if (i == 10) //Carlsin bites your head off after option 3
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-
-            //    if (i == 12) //Decision at crossroads
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //go to marketplace
-            //                    continue;
-            //                case 2: //go to jungle
-            //                    i = 18;
-            //                    continue;
-            //                case 3: //attempt to ride schlemal
-            //                    i = 16;
-            //                    continue;
-            //                case 4: //see inventory/equip item
-            //                    //clear console and display inventory
-            //                    Console.Clear();
-            //                    int j;
-            //                    for (j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.WriteLine($"{j + 1}) {pc.Inventory[j].Name}");
-            //                    }
-            //                    //provide option to switch equipped item
-            //                    Console.WriteLine("\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n");
-            //                    if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
-            //                    {
-            //                        pc.EquipItem(pc.Inventory[input - 1]);
-            //                        Console.WriteLine($"\nYou have equipped {pc.EquippedItem.Name}.");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    //decrement i to bring loop back to decision statement
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else //handle incorrect user input
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 14) //User input at marketplace to buy items, sell items, see inventory/equip item, or leave
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //buy items
-            //                    continue;
-            //                case 2: //sell items
-            //                    i = 15;
-            //                    continue;
-            //                case 3: //view inventory/equip item
-            //                    //clear console and display inventory
-            //                    Console.Clear();
-            //                    int j;
-            //                    for (j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.WriteLine($"{j + 1}) {pc.Inventory[j].Name}");
-            //                    }
-            //                    //provide option to switch equipped item
-            //                    Console.WriteLine("\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n");
-            //                    if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
-            //                    {
-            //                        pc.EquipItem(pc.Inventory[input - 1]);
-            //                        Console.WriteLine($"\nYou have equipped {pc.EquippedItem.Name}.");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    //decrement i to bring loop back to decision statement
-            //                    i--;
-            //                    continue;
-            //                case 4: //see stats
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n");
-            //                    foreach (string status in pc.PlayerStatus)
-            //                    {
-            //                        Console.WriteLine($"{status}\n");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 5: //leave
-            //                    i = 18;
-            //                    continue;
-            //            }
-            //        }
-            //        else //handle incorrect user input
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 15) //buy menu
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //buy Auto Chopper
-            //                    if (aventus.Buy(pc, aventus.StoreInventory, "Auto Chopper"))
-            //                    {
-            //                        Console.WriteLine("\nYou have purchased an Auto Chopper.\n");
-            //                    }
-            //                    else
-            //                    {
-            //                        Console.WriteLine("Either you have insufficient funds to purchase this item or it is out of stock.");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 13;
-            //                    continue;
-            //                case 2: //buy Jungle Starter Kit
-            //                    if (aventus.Buy(pc, aventus.StoreInventory, "Jungle Starter Kit"))
-            //                    {
-            //                        Console.WriteLine("\nYou have purchased a Jungle Starter Kit.\n");
-            //                    }
-            //                    else
-            //                    {
-            //                        Console.WriteLine("Either you have insufficient funds to purchase this item or it is out of stock.");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 13;
-            //                    continue;
-            //                case 3: //buy Schlemal Doll
-            //                    if (aventus.Buy(pc, aventus.StoreInventory, "Schlemal Doll"))
-            //                    {
-            //                        Console.WriteLine("\nYou have purchased a Schlemal Doll.\n");
-            //                    }
-            //                    else
-            //                    {
-            //                        Console.WriteLine("Either you have insufficient funds to purchase this item or it is out of stock.");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 13;
-            //                    continue;
-            //                case 4: //buy Green Remote
-            //                    if (aventus.Buy(pc, aventus.StoreInventory, "Green Remote"))
-            //                    {
-            //                        Console.WriteLine("\nYou have purchased a Green Remote.\n");
-            //                    }
-            //                    else
-            //                    {
-            //                        Console.WriteLine("Either you have insufficient funds to purchase this item or it is out of stock.");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 13;
-            //                    continue;
-            //                case 5: //leave
-            //                    Console.WriteLine("\nYou decide not to buy for now.");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 13;
-            //                    continue;
-            //            }
-            //        }
-            //        else //handle incorrect user input
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 16) //sell menu
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 3 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //show player inventory with item values and option to sell
-            //                    Console.Clear();
-            //                    //presents player inventory with values of each inventory item
-            //                    int j;
-            //                    for (j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.WriteLine($"{j + 1}) {pc.Inventory[j].Name}: {pc.Inventory[j].Value} mells");
-            //                    }
-            //                    //based on user selection, sell item from inventory or move on
-            //                    Console.WriteLine("\n\nIf you would like to sell an item, input it's number.\nIf you choose not to sell, press any other key.\n");
-            //                    if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
-            //                    {
-            //                        string itemSoldName = pc.Inventory[input - 1].Name;
-            //                        short itemSoldValue = pc.Inventory[input - 1].Value;
-            //                        if (aventus.Sell(pc, itemSoldName))
-            //                        {
-            //                            Console.WriteLine($"You have sold {itemSoldName} for {itemSoldValue} mells.");
-            //                        }
-            //                        else
-            //                        {
-            //                            Console.WriteLine("You may not sell this item.");
-            //                        }
-            //                        Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                        Console.ReadKey();
-            //                        i = 13;
-            //                        continue;
-            //                    }
-
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 2: //leave
-            //                    Console.WriteLine("\nYou decide not to sell for now.");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 13;
-            //                    continue;
-            //            }
-            //        }
-            //        else //handle incorrect user input
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-
-            //    if (i == 18) //attempt to ride schlemal death
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-
-            //    if (i == 20) //jungle path option
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //take right path
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    continue;
-
-            //                case 2: //take left path
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 22;
-            //                    continue;
-            //                case 3: //check inventory
-            //                    Console.Clear();
-            //                    int j;
-            //                    for (j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.WriteLine($"{j + 1}) {pc.Inventory[j].Name}");
-            //                    }
-
-            //                    Console.WriteLine("\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n");
-            //                    if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
-            //                    {
-            //                        pc.EquipItem(pc.Inventory[input - 1]);
-            //                        Console.WriteLine($"\nYou have equipped {pc.EquippedItem.Name}.");
-            //                    }
-
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 4: //check stats
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n");
-            //                    foreach (string status in pc.PlayerStatus)
-            //                    {
-            //                        Console.WriteLine($"{status}\n");
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else //handle incorrect user input
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-
-            //    if (i == 22) //jungle flower death
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-
-            //    if (i == 25) //manticore decision
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 4 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //feed manticore
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 28;
-            //                    continue;
-            //                case 2: //kick manticore
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    continue;
-            //                case 3: //run to ship
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 30;
-            //                    continue;
-            //            }
-            //        }
-            //    }
+                if (i == 5) //decide what action to take upon waking up
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0) //takes user input an validates that it is within appropriate range
+                    {
+                        switch (input)
+                        {
+                            case 1: //ask ship security system who was onboard
+                                continue;
+                            case 2: //follow footprints leading outside ship
+                                i = 9;
+                                continue;
+                            case 3: //grab astrocola and watch toons
+                                i = 12;
+                                continue;
+                            case 4: //set security to BAMBAM
+                                i = 15;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 9) //decide which item to grab as you leave the ship
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 4 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1:  //blitz blade
+                                pc.Inventory.Add(noir.StoreInventory[1]);
+                                pc.EquipItem(noir.StoreInventory[1]);
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                break;
+                            case 2: //shield o' saturn
+                                pc.Inventory.Add(noir.StoreInventory[2]);
+                                pc.EquipItem(noir.StoreInventory[2]);
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                break;
+                            case 3: //plasma rifle
+                                pc.Inventory.Add(noir.StoreInventory[3]);
+                                pc.EquipItem(noir.StoreInventory[3]);
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                break;
+                        }
+                        break;
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 12) //oxygen sucked out of you death
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 14) //add DAVE after watching toons/drinking cola
+                {
+                    pc.Inventory.Add(noir.StoreInventory[0]);
+                    pc.EquipItem(noir.StoreInventory[0]);
+                    foreach (char letter in "\n\n\n\nPress any key to continue...")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    Console.ReadKey();
+                    i = 5;
+                    continue;
+                }
+                if (i == 12)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                }                
+                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
+                Console.ReadKey();
+            }
 
 
-            //    if (i == 28)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-
-            //    if (i == 30)
-            //    {
-            //        pc.PlayerStatus.Add("Missing a hand");
-            //        pc.PlayerStatus.Add("Has manticore cub pet");
-            //        Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n");
-            //        foreach (string status in pc.PlayerStatus)
-            //        {
-            //            Console.WriteLine($"{status}");
-            //        }
-            //    }
-
-            //    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //    Console.ReadKey();
-            //}
-
-            ////Planet 3 SpotMee
-            //Planet spotMee = new Planet(Enumerations.PlanetTypes.SpotMee, pc);
-
-            //for (int i = 0; i < spotMee.Story.Count; i++)
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(spotMee.Story[i]);
-
-            //    if (i == 3)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1:
-            //                    continue;
-            //                case 2:
-            //                    i = 6;
-            //                    continue;
-            //                case 3:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 4:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 10)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 7 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1:
-            //                    Console.Clear();
-            //                    Console.WriteLine("\n \n Please enter your Arena Name:");
-            //                    Console.ReadLine();
-            //                    i = 18;
-            //                    continue;
-            //                case 2:
-            //                    i = 13;
-            //                    continue;
-            //                case 3:
-            //                    Console.Clear();
-            //                    Console.WriteLine(spotMee.Story[18]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 17;
-            //                    continue;
-            //                case 4:
-            //                    continue;
-            //                case 5:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 6:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 13)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 17)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 18)
-            //    {
-            //        i = 29;
-            //        continue;
-            //    }
-            //    if (i == 21)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1:
-            //                    Console.Clear();
-            //                    Console.WriteLine(spotMee.Story[22]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    continue;
-            //                case 2:
-            //                    i = 22;
-            //                    continue;
-            //                case 3:
-            //                    Console.Clear();
-            //                    Console.WriteLine(spotMee.Story[25]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 24;
-            //                    continue;
-            //                case 4:
-            //                    i = 25;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 24)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 27)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 22)
-            //    {
-            //        i = 27;
-            //        continue;
-            //    }
-            //    if (i == 25)
-            //    {
-            //        i = 27;
-            //        continue;
-            //    }
+            //Planet 2 - Aventus
+            Planet aventus = new Planet(Enumerations.PlanetTypes.Aventus, pc);
+            //Loops through story List<string> for Aventus and manipulates output from list using i based on user input
+            for (int i = 0; i < aventus.Story.Count; i++)
+            {
+                Console.Clear();  //outputs the string at position i from the Aventus story list
+                foreach (char letter in aventus.Story[i])
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
 
 
-            //    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //    Console.ReadKey();
-            //}
+                if (i == 4) //choose the action for your conversation with Carlsin
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //answer his question
+                                continue;
+                            case 2: //shove by him
+                                i = 7;
+                                continue;
+                            case 3: //ask if he is an ostrich
+                                i = 8;
+                                continue;
+                            case 4: //see inventory/equip new item
+                                Console.Clear();
+                                int j;
+                                for (j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }                                                              
+                                if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
+                                {
+                                    pc.EquipItem(pc.Inventory[input - 1]);
+                                    foreach (char letter in $"\nYou have equipped {pc.EquippedItem.Name}.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
 
-            ////Planet 4 Wombodum
-            //Planet wombodum = new Planet(Enumerations.PlanetTypes.Wombodum, pc);
-            //for (int i = 0; i < wombodum.Story.Count; i++)
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine(wombodum.Story[i]);
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 5: //see stats
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 8) //shove carlsin and continue on your way (option 2)
+                {
+                    i = 10;
+                    foreach (char letter in "\n\n\n\nPress any key to continue...")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    Console.ReadKey();
+                    continue;
+                }
+                if (i == 10) //Carlsin bites your head off after option 3
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
 
-            //    if (i == 2)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //implement shop
-            //                    continue;
-            //                case 2: //leave tower
-            //                    i = 3;
-            //                    continue;
-            //                case 3:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 4:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 5)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //Run away
-            //                    i = 9;
-            //                    continue;
-            //                case 2: //Attempt to fight (death)
-            //                    i = 7;
-            //                    continue;
-            //                case 3: //go on date, earn 2000 mells
-            //                    pc.Currency += 2000;
-            //                    continue;
-            //                case 4:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 5:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 9)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 8)
-            //    {
-            //        i = 9;
-            //        continue;
-            //    }
-            //    if (i == 12)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //Main street
-            //                    continue;
-            //                case 2: //Back Alley(battle)
-            //                    i = 19;
-            //                    continue;
-            //                case 3:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 4:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 15)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //Go with vampire
-            //                    continue;
-            //                case 2: //Go by yourself
-            //                    Console.Clear();
-            //                    Console.WriteLine(wombodum.Story[18]);
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i = 20;
-            //                    continue;
-            //                case 3:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 4:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 17)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 22)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //Fight through
-            //                    i = 35;
-            //                    continue;
-            //                case 2: //Attempt to sneak
-            //                    i = 24;
-            //                    continue;
-            //                case 3: //Yell (death)
-            //                    continue;
-            //                case 4:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 5:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 24)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 27)
-            //    {
-            //        if (int.TryParse(Console.ReadLine(), out input) && input < 7 && input > 0)
-            //        {
-            //            switch (input)
-            //            {
-            //                case 1: //Give Awesome Cyborg Doll
-            //                    i = 34;
-            //                    continue;
-            //                case 2: //Metal? (death)
-            //                    continue;
-            //                case 3: //Awesome? (death)
-            //                    i = 31;
-            //                    continue;
-            //                case 4: //Fight
-            //                    i = 35;
-            //                    continue;
-            //                case 5:
-            //                    Console.Clear();
-            //                    for (int j = 0; j < pc.Inventory.Count; j++)
-            //                    {
-            //                        Console.Write(pc.Inventory[j].Name);
-            //                        if (j != pc.Inventory.Count - 1)
-            //                        {
-            //                            Console.Write(", ");
-            //                        }
-            //                    }
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //                case 6:
-            //                    Console.Clear();
-            //                    Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n");
-            //                    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //                    Console.ReadKey();
-            //                    i--;
-            //                    continue;
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-            //            Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //            Console.ReadKey();
-            //            i--;
-            //            continue;
-            //        }
-            //    }
-            //    if (i == 31)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 34)
-            //    {
-            //        Console.WriteLine("GAME OVER");
-            //        return;
-            //    }
-            //    if (i == 35)
-            //    {
-            //        i = 40;
-            //        continue;
-            //    }
+                if (i == 12) //Decision at crossroads
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //go to marketplace
+                                continue;
+                            case 2: //go to jungle
+                                i = 18;
+                                continue;
+                            case 3: //attempt to ride schlemal
+                                i = 16;
+                                continue;
+                            case 4: //see inventory/equip item
+                                //clear console and display inventory
+                                Console.Clear();
+                                int j;
+                                for (j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
+                                {
+                                    pc.EquipItem(pc.Inventory[input - 1]);
+                                    foreach (char letter in $"\nYou have equipped {pc.EquippedItem.Name}.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                //decrement i to bring loop back to decision statement
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 14) //User input at marketplace to buy items, sell items, see inventory/equip item, or leave
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //buy items
+                                continue;
+                            case 2: //sell items
+                                i = 15;
+                                continue;
+                            case 3: //view inventory/equip item
+                                //clear console and display inventory
+                                Console.Clear();
+                                int j;
+                                for (j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
+                                {
+                                    pc.EquipItem(pc.Inventory[input - 1]);
+                                    foreach (char letter in $"\nYou have equipped {pc.EquippedItem.Name}.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                //decrement i to bring loop back to decision statement
+                                i--;
+                                continue;
+                            case 4: //see stats
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 5: //leave
+                                i = 18;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 15) //buy menu
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //buy Auto Chopper
+                                if (aventus.Buy(pc, aventus.StoreInventory, "Auto Chopper"))
+                                {
+                                    foreach (char letter in "\nYou have purchased an Auto Chopper.\n")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                else
+                                {
+                                    foreach (char letter in "Either you have insufficient funds to purchase this item or it is out of stock.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 13;
+                                continue;
+                            case 2: //buy Jungle Starter Kit
+                                if (aventus.Buy(pc, aventus.StoreInventory, "Jungle Starter Kit"))
+                                {
+                                    foreach (char letter in "\nYou have purchased a Jungle Starter Kit.\n")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                else
+                                {
+                                    foreach (char letter in "Either you have insufficient funds to purchase this item or it is out of stock.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 13;
+                                continue;
+                            case 3: //buy Schlemal Doll
+                                if (aventus.Buy(pc, aventus.StoreInventory, "Schlemal Doll"))
+                                {
+                                    foreach (char letter in "\nYou have purchased a Schlemal Doll.\n")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                else
+                                {
+                                    foreach (char letter in "Either you have insufficient funds to purchase this item or it is out of stock.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 13;
+                                continue;
+                            case 4: //buy Green Remote
+                                if (aventus.Buy(pc, aventus.StoreInventory, "Green Remote"))
+                                {
+                                    foreach (char letter in "\nYou have purchased a Green Remote.\n")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                else
+                                {
+                                    foreach (char letter in "Either you have insufficient funds to purchase this item or it is out of stock.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 13;
+                                continue;
+                            case 5: //leave
+                                foreach (char letter in "\nYou decide not to buy for now.")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 13;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 16) //sell menu
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 3 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //show player inventory with item values and option to sell
+                                Console.Clear();
+                                //presents player inventory with values of each inventory item
+                                int j;
+                                for (j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}: {pc.Inventory[j].Value} mells")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                //based on user selection, sell item from inventory or move on
+                                foreach (char letter in "\n\nIf you would like to sell an item, input it's number.\nIf you choose not to sell, press any other key.\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
+                                {
+                                    string itemSoldName = pc.Inventory[input - 1].Name;
+                                    short itemSoldValue = pc.Inventory[input - 1].Value;
+                                    if (aventus.Sell(pc, itemSoldName))
+                                    {
+                                        foreach (char letter in $"You have sold {itemSoldName} for {itemSoldValue} mells.")
+                                        {
+                                            Console.Write(letter);
+                                            Thread.Sleep(10);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        foreach (char letter in "You may not sell this item.")
+                                        {
+                                            Console.Write(letter);
+                                            Thread.Sleep(10);
+                                        }
+                                    }
+                                    foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                    Console.ReadKey();
+                                    i = 13;
+                                    continue;
+                                }
 
-            //    Console.WriteLine("\n\n\n\nPress any key to continue...");
-            //    Console.ReadKey();
-            //}
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 2: //leave
+                                foreach (char letter in "\nYou decide not to sell for now.")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 13;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+
+                if (i == 18) //attempt to ride schlemal death
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+
+                if (i == 20) //jungle path option
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //take right path
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                continue;
+
+                            case 2: //take left path
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 22;
+                                continue;
+                            case 3: //check inventory
+                                Console.Clear();
+                                int j;
+                                for (j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
+                                {
+                                    pc.EquipItem(pc.Inventory[input - 1]);
+                                    foreach (char letter in $"\nYou have equipped {pc.EquippedItem.Name}.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4: //check stats
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+
+                if (i == 22) //jungle flower death
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+
+                if (i == 25) //manticore decision
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 4 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //feed manticore
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 28;
+                                continue;
+                            case 2: //kick manticore
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                continue;
+                            case 3: //run to ship
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 30;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+
+
+                if (i == 28)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+
+                if (i == 30)
+                {
+                    pc.PlayerStatus.Add("Missing a hand");
+                    pc.PlayerStatus.Add("Has manticore cub pet");
+                }
+
+                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
+                Console.ReadKey();
+            }
+
+            //Planet 3 SpotMee
+            Planet spotMee = new Planet(Enumerations.PlanetTypes.SpotMee, pc);
+
+            for (int i = 0; i < spotMee.Story.Count; i++)
+            {
+                Console.Clear();
+                foreach (char letter in spotMee.Story[i])
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
+
+                if (i == 3)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1:
+                                continue;
+                            case 2:
+                                i = 6;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 10)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 7 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1:
+                                Console.Clear();
+                                foreach (char letter in "\n\nPlease enter your Arena Name:")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadLine();
+                                i = 18;
+                                continue;
+                            case 2:
+                                i = 13;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                foreach (char letter in spotMee.Story[18])
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 17;
+                                continue;
+                            case 4:
+                                continue;
+                            case 5:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 6:
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 13)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 17)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 18)
+                {
+                    i = 29;
+                    continue;
+                }
+                if (i == 21)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1:
+                                Console.Clear();
+                                foreach (char letter in spotMee.Story[22])
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                continue;
+                            case 2:
+                                i = 22;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                foreach (char letter in spotMee.Story[25])
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 24;
+                                continue;
+                            case 4:
+                                i = 25;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 24)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 27)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 22)
+                {
+                    i = 27;
+                    continue;
+                }
+                if (i == 25)
+                {
+                    i = 27;
+                    continue;
+                }
+
+
+                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
+                Console.ReadKey();
+            }
+
+            //Planet 4 Wombodum
+            Planet wombodum = new Planet(Enumerations.PlanetTypes.Wombodum, pc);
+            for (int i = 0; i < wombodum.Story.Count; i++)
+            {
+                Console.Clear();
+                foreach (char letter in wombodum.Story[i])
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
+
+                if (i == 2)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //implement shop
+                                continue;
+                            case 2: //leave tower
+                                i = 3;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 5)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Run away
+                                i = 9;
+                                continue;
+                            case 2: //Attempt to fight (death)
+                                i = 7;
+                                continue;
+                            case 3: //go on date, earn 2000 mells
+                                pc.Currency += 2000;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 5:
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 9)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 8)
+                {
+                    i = 9;
+                    continue;
+                }
+                if (i == 12)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Main street
+                                continue;
+                            case 2: //Back Alley(battle)
+                                i = 19;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 15)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 5 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Go with vampire
+                                continue;
+                            case 2: //Go by yourself
+                                Console.Clear();
+                                foreach (char letter in wombodum.Story[18])
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i = 20;
+                                continue;
+                            case 3:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 17)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 22)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 6 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Fight through
+                                i = 35;
+                                continue;
+                            case 2: //Attempt to sneak
+                                i = 24;
+                                continue;
+                            case 3: //Yell (death)
+                                continue;
+                            case 4:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 5:
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 24)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 27)
+                {
+                    if (int.TryParse(Console.ReadLine(), out input) && input < 7 && input > 0)
+                    {
+                        switch (input)
+                        {
+                            case 1: //Give Awesome Cyborg Doll
+                                i = 34;
+                                continue;
+                            case 2: //Metal? (death)
+                                continue;
+                            case 3: //Awesome? (death)
+                                i = 31;
+                                continue;
+                            case 4: //Fight
+                                i = 35;
+                                continue;
+                            case 5:
+                                Console.Clear();
+                                for (int j = 0; j < pc.Inventory.Count; j++)
+                                {
+                                    Console.Write(pc.Inventory[j].Name);
+                                    if (j != pc.Inventory.Count - 1)
+                                    {
+                                        Console.Write(", ");
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                            case 6:
+                                Console.Clear();
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                foreach (string status in pc.PlayerStatus)
+                                {
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                }
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
+                                Console.ReadKey();
+                                i--;
+                                continue;
+                        }
+                    }
+                    else //handles incorrect user input
+                    {
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        Console.ReadKey();
+                        i--;
+                        continue;
+                    }
+                }
+                if (i == 31)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 34)
+                {
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    return;
+                }
+                if (i == 35)
+                {
+                    i = 40;
+                    continue;
+                }
+
+                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
+                Console.ReadKey();
+            }
 
             //Start Planet 5
             Planet krytunga = new Planet(Enumerations.PlanetTypes.Krytunga, pc);
@@ -1098,7 +1717,11 @@ namespace SpaceGame
             for (int i = 0; i < krytunga.Story.Count; i++)
             {
                 Console.Clear(); //clears console before every iteration
-                Console.WriteLine(krytunga.Story[i]); //outputs the string at position i from the Aventus story list
+                foreach (char letter in krytunga.Story[i])
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
 
                 if (i == 7) //choose the action for your conversation crystal alien
                 {
@@ -1122,37 +1745,72 @@ namespace SpaceGame
                                 int j;
                                 for (j = 0; j < pc.Inventory.Count; j++)
                                 {
-                                    Console.WriteLine($"{j + 1}) {pc.Inventory[j].Name}");
+                                    foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
-
-                                Console.WriteLine("\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n");
+                                foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
                                 {
                                     pc.EquipItem(pc.Inventory[input - 1]);
-                                    Console.WriteLine($"\nYou have equipped {pc.EquippedItem.Name}.");
+                                    foreach (char letter in $"\nYou have equipped {pc.EquippedItem.Name}.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
 
-                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 Console.ReadKey();
                                 i--;
                                 continue;
                             case 6: //see stats
                                 Console.Clear();
-                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n");
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 foreach (string status in pc.PlayerStatus)
                                 {
-                                    Console.WriteLine($"{status}\n");
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
-                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 Console.ReadKey();
                                 i--;
                                 continue;
                         }
                     }
-                    else //handle incorrect user inputs
+                    else //handles incorrect user input
                     {
-                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
                         Console.ReadKey();
                         i--;
                         continue;
@@ -1160,7 +1818,11 @@ namespace SpaceGame
                 }
                 if (i == 12)
                 {
-                    Console.WriteLine("GAME OVER");
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
                     return;
                 }
                 if (i == 16) //choose the action for the stairs
@@ -1179,37 +1841,72 @@ namespace SpaceGame
                                 int j;
                                 for (j = 0; j < pc.Inventory.Count; j++)
                                 {
-                                    Console.WriteLine($"{j + 1}) {pc.Inventory[j].Name}");
+                                    foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
-
-                                Console.WriteLine("\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n");
+                                foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
                                 {
                                     pc.EquipItem(pc.Inventory[input - 1]);
-                                    Console.WriteLine($"\nYou have equipped {pc.EquippedItem.Name}.");
+                                    foreach (char letter in $"\nYou have equipped {pc.EquippedItem.Name}.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
 
-                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 Console.ReadKey();
                                 i--;
                                 continue;
                             case 4: //see stats
                                 Console.Clear();
-                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n");
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 foreach (string status in pc.PlayerStatus)
                                 {
-                                    Console.WriteLine($"{status}\n");
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
-                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 Console.ReadKey();
                                 i--;
                                 continue;
                         }
                     }
-                    else //handle incorrect user inputs
+                    else //handles incorrect user input
                     {
-                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
                         Console.ReadKey();
                         i--;
                         continue;
@@ -1217,7 +1914,11 @@ namespace SpaceGame
                 }
                 if(i == 21)
                 {
-                    Console.WriteLine("GAME OVER");
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
                     return;
                 }
                 if (i == 24) //choose the action for your conversation with THE MAN
@@ -1239,37 +1940,72 @@ namespace SpaceGame
                                 int j;
                                 for (j = 0; j < pc.Inventory.Count; j++)
                                 {
-                                    Console.WriteLine($"{j + 1}) {pc.Inventory[j].Name}");
+                                    foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
-
-                                Console.WriteLine("\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n");
+                                foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
                                 {
                                     pc.EquipItem(pc.Inventory[input - 1]);
-                                    Console.WriteLine($"\nYou have equipped {pc.EquippedItem.Name}.");
+                                    foreach (char letter in $"\nYou have equipped {pc.EquippedItem.Name}.")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
 
-                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 Console.ReadKey();
                                 i--;
                                 continue;
                             case 5: //see stats
                                 Console.Clear();
-                                Console.WriteLine($"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n");
+                                foreach (char letter in $"\n{pc.Name}\nHP: {pc.Hp}\nEquipped Item: {pc.EquippedItem.Name}\nCurrency: {pc.Currency} mells\n\nStatus:\n")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 foreach (string status in pc.PlayerStatus)
                                 {
-                                    Console.WriteLine($"{status}\n");
+                                    foreach (char letter in pc.PlayerStatus[i])
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
                                 }
-                                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                {
+                                    Console.Write(letter);
+                                    Thread.Sleep(10);
+                                }
                                 Console.ReadKey();
                                 i--;
                                 continue;
                         }
                     }
-                    else //handle incorrect user inputs
+                    else //handles incorrect user input
                     {
-                        Console.WriteLine("\n\nYou may input only the number of one of the selections offered.");
-                        Console.WriteLine("\n\n\n\nPress any key to continue...");
+                        foreach (char letter in "\n\nYou may input only the number of one of the selections offered.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\n\n\nPress any key to continue...")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
                         Console.ReadKey();
                         i--;
                         continue;
@@ -1277,19 +2013,35 @@ namespace SpaceGame
                 }
                 if (i == 30)
                 {
-                    Console.WriteLine("GAME OVER");
+                    foreach (char letter in "GAME OVER")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
                     return;
                 }
                 if (i == 37)
                 {
-                    Console.WriteLine("Play again?");
+                    foreach (char letter in "Play again?")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
                 }
                 if (i == 47)
                 {
-                    Console.WriteLine("Play again?");
+                    foreach (char letter in "Play again?")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
                 }
 
-                Console.WriteLine("\n\n\n\nPress any key to continue...");
+                foreach (char letter in "\n\n\n\nPress any key to continue...")
+                {
+                    Console.Write(letter);
+                    Thread.Sleep(10);
+                }
                 Console.ReadKey();
             }
         }
