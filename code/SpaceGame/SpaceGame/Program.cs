@@ -216,7 +216,7 @@ namespace SpaceGame
                                 {
                                     Console.Write(letter);
                                     Thread.Sleep(10);
-                                }                                                              
+                                }
                                 if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
                                 {
                                     pc.EquipItem(pc.Inventory[input - 1]);
@@ -1173,6 +1173,119 @@ namespace SpaceGame
                 if (i == 25)
                 {
                     i = 27;
+                    continue;
+                }
+                if (i == 29)
+                {
+                    short enemyHP = 55;
+                    short enemyDPS = 8;
+                    Console.Clear();
+                    foreach (char letter in "A Great Horned Lizard is released. \n \n The fight begins!")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    foreach (char letter in "\n\n\n\nPress any key to continue...")
+                    {
+                        Console.Write(letter);
+                        Thread.Sleep(10);
+                    }
+                    Console.ReadKey();
+                    
+                    while (enemyHP > 0)
+                    {
+
+                        Console.Clear();
+                        foreach (char letter in $"The lizard has {enemyHP}HP left.")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        foreach (char letter in "\n\nWhat do you do? \n\n1.)  Attack with equipped weapon.\n\n2.)  Dodge\n\n3.)  Change weapons \n")
+                        {
+                            Console.Write(letter);
+                            Thread.Sleep(10);
+                        }
+                        if (int.TryParse(Console.ReadLine(), out input) && input < 4 && input > 0)
+                        {
+                            switch (input)
+                            {
+                                case 1: //Deal damage
+                                    enemyHP -= pc.EquippedItem.Damage;
+                                    foreach (char letter in $"You dealt {pc.EquippedItem.Damage} to the lizard")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                    if(enemyHP > 0)
+                                    {
+                                        pc.Hp -= enemyDPS;
+                                        foreach (char letter in $"The lizard dealt {enemyDPS} to {pc.Name} ")
+                                        {
+                                            Console.Write(letter);
+                                            Thread.Sleep(10);
+                                        }
+                                    }
+                                    foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                    Console.ReadKey();
+                                    if (pc.Hp <= 0)
+                                    {
+                                        foreach (char letter in "Nice try there guy! \n\nGAME OVER")
+                                        {
+                                            Console.Write(letter);
+                                            Thread.Sleep(10);
+                                        }
+                                        return;
+                                    }
+                                    continue;
+                                case 2: //Dodge
+                                    foreach (char letter in "You dodged the lizard's attack")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                    continue;
+                                case 3: //check inventory
+                                    Console.Clear();
+                                    int j;
+                                    for (j = 0; j < pc.Inventory.Count; j++)
+                                    {
+                                        foreach (char letter in $"{j + 1}) {pc.Inventory[j].Name}")
+                                        {
+                                            Console.Write(letter);
+                                            Thread.Sleep(10);
+                                        }
+                                    }
+                                    foreach (char letter in "\n\nIf you would like to equip an item, input it's number.\nTo keep your equipped item the same, hit another key.\n")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                    if (int.TryParse(Console.ReadLine(), out input) && input < j + 1 && input > 0)
+                                    {
+                                        pc.EquipItem(pc.Inventory[input - 1]);
+                                        foreach (char letter in $"\nYou have equipped {pc.EquippedItem.Name}.")
+                                        {
+                                            Console.Write(letter);
+                                            Thread.Sleep(10);
+                                        }
+                                    }
+
+                                    foreach (char letter in "\n\n\n\nPress any key to continue...")
+                                    {
+                                        Console.Write(letter);
+                                        Thread.Sleep(10);
+                                    }
+                                    Console.ReadKey();
+                                    i--;
+                                    continue;
+                            }
+                        }
+                    }
                     continue;
                 }
 

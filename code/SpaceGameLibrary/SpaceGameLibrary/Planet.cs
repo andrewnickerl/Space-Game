@@ -631,7 +631,7 @@ namespace SpaceGameLibrary
                     /*3*/story.Add("1) Go to the Marketplace.\n\n2) Go to Guilds Gym Arena.\n\n3)	Check inventory.\n\n4)	Check stats.\n\nWhat do you do?\n");
                     /*4*/story.Add("As you wander down the marketplace, you see a store called, DO YOU EVEN LIFT. You decide to shop there."); // Option 1
                     /*5*/story.Add("1) Buy.\n\n2) Sell.\n\n3)	Leave.\n\nWhat will you do?\n");
-                    /*6*/story.Add("1) 20lbs Dumbbell/ qty: 20 price: 250 mells\n\n2) 45lbs Plate/ qty: 3 price: 50 mells3) OFFs Protein/ price: 400 mells\n\n4)	Animal Energy Powder/ price: 150 mells\n\n5) Leave.\n\nWhat will you do?\n"); //"Shop Items to buy
+                    /*6*/story.Add("Unavailable at this time :(");   /*("1) 20lbs Dumbbell/ qty: 20 price: 250 mells\n\n2) 45lbs Plate/ qty: 3 price: 50 mells3) OFFs Protein/ price: 400 mells\n\n4)	Animal Energy Powder/ price: 150 mells\n\n5) Leave.\n\nWhat will you do?\n");*/ //"Shop Items to buy
                     /*7*/story.Add("You run off towards Guilds Gym Arena, the AD bot blaring the same ad the whole way. When you arrive to the arena you see a line with various aliens hoping to win THE MAN’s fortune."); // Option 2
                     /*8*/story.Add("When you finally get to the front you recognize an Orgus by its big green pig head with tusk shooting out. He has a name tag that reads Daisy.");
                     /*9*/story.Add("(Daisy)\nin a deep gruff voice he asks,“Arena name and race?\n”");
@@ -665,7 +665,7 @@ namespace SpaceGameLibrary
                     /*0*/story.Add("You chase THE MAN to Wumbodom. \n \nThe whole planet is one giant city and THE MAN went straight to land in the slums of the planet");
                     /*1*/story.Add("With your larger ship, you can’t fit in where he landed, so you land on the roof of one of the outlying towers. As you climb down the building, you see a store called Wumbohex. ");
                     /*2*/story.Add("1) Shop\n\n2) Leave the tower.\n\n3) Check Inventory.\n\n4) Check Stats\n\nWhat will you do?\n"); // Options
-                    /*3*/story.Add("1) The Claw/ price: 600 mells.\n\n2) Purple Remote/ price: 200 mells.\n\n3) Awesome Cyborg Doll/ price: 350 mells.\n\n4)	Laser Sword/ price: 400 mells.\n\n5) Leave.\n\nWhat will you do?\n"); // Shop buy options
+                    /*3*/story.Add("Unavailable at this time :(");   /*("1) The Claw/ price: 600 mells.\n\n2) Purple Remote/ price: 200 mells.\n\n3) Awesome Cyborg Doll/ price: 350 mells.\n\n4)	Laser Sword/ price: 400 mells.\n\n5) Leave.\n\nWhat will you do?\n");*/ // Shop buy options
                     /*4*/story.Add("You race down the rest of the tower and as you exit you bump into a cyborg Ephantus, an Elephant man race. He turns and stares at you with his red robotic eye.");
                     /*5*/story.Add("1) Apologize and run away.\n\n2) Attempt to fight.\n\n3) Ask if they wanna go.\n\nWhat do you do?\n"); // Options
                     /*6*/story.Add("You ask the Ephantus and found it he is a she. She says she is Klarice and was surprise her hired date was a human."); // Option 3:
@@ -719,7 +719,7 @@ namespace SpaceGameLibrary
                      /*6*/story.Add("(Crystal Alien) \n “Yo homedog! Care to swap some sparkle spazzles?\n”");
                      /*7*/story.Add("1) Say I guess?\n\n2) Say “Some what?!?\n\n 3) Punt the crystal dwarf thing.\n\n4) Ignore and rush into the fortress.\n\n5) Check Inventory.\n\n6) Check Stats\n\nWhat do you do?"); // Options
                      /*8*/story.Add("(Crystal Alien) \n “Cool! Here’s what I got flesh man!”"); // Option 1:
-                     /*9*/story.Add("1) Red Crystal/ price: 200 mells.\n\n2) Blue Crystal/ price: 200 mells.\n\n3)	Green Crystal/ price: 200 mells\n\n4) Leave.\n\nWhat will you do?\n"); // Items Sold:[Go into Buy/Sell mode]
+                     /*9*/story.Add("Unavailable at this time :(");   //*"1) Red Crystal/ price: 200 mells.\n\n2) Blue Crystal/ price: 200 mells.\n\n3)	Green Crystal/ price: 200 mells\n\n4) Leave.\n\nWhat will you do?\n");*/ // Items Sold:[Go into Buy/Sell mode]
                      /*10*/story.Add("The crystal alien launches into the history of the planet and the local lingo. You attempt to leave several times, but he cuts you off every time."); // Option 2:
                      /*11*/story.Add("He leaves no room to interrupt during his entire 8-year long lecture. Given no room to ever leave, you die from starvation 1 month into the lecture.");
                      /*12*/story.Add("Should've brought a snack pak there guy!");
