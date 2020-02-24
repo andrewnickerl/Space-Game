@@ -48,7 +48,13 @@ namespace SpaceGame
                 ConsoleDraw(arr, x, y);
                 Thread.Sleep(100);
             }
+            foreach (char letter in "Press any key to begin the game...")
+            {
+                Console.Write(letter);
+                Thread.Sleep(10);
+            }
             Console.ReadKey();
+            Console.Clear();
             run();
         }
 
