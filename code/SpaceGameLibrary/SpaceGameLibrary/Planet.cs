@@ -428,7 +428,7 @@ namespace SpaceGameLibrary
 
                     return true;
             }
-                
+            return false;    
         }
 
         public List<BattleEntity> AssignBattleEntities(Player pc)
