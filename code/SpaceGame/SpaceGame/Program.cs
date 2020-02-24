@@ -1259,10 +1259,11 @@ namespace SpaceGame
                 }
                 if (i == 30)
                 {
-                    //battleEntity = spotMee.BattleEntities<spotMee>(i => )
-                    //description => description == spotMee.BattleEntities;
+                    BattleEntity greatHornedLizard = new BattleEntity();
+                    greatHornedLizard = spotMee.BattleEntities.Find(enemy => enemy.Name == "Great Horned Lizard");
+
                     Console.Clear();
-                    foreach (char letter in )
+                    foreach (char letter in greatHornedLizard.Intro)
                     {
                         Console.Write(letter);
                         Thread.Sleep(10);
