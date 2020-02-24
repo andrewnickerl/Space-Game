@@ -84,7 +84,7 @@ namespace SpaceGame
             foreach (var line in linesToPrint)
             {
                 Console.SetCursorPosition(line.X, line.Y);
-                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.Write(line.Text);
             }
         }

@@ -439,6 +439,73 @@ namespace SpaceGameLibrary
             return true;
         }
 
+        public List<BattleEntity> BattleEntities(Player pc)
+        {
+            List<BattleEntity> battleEntities = new List<BattleEntity>();
+
+            switch (this.Name)
+            {
+                case PlanetTypes.SpotMee:
+                    BattleEntity greatHornedLizard = new BattleEntity();
+                    greatHornedLizard.Name = "Great Horned Lizard";
+                    greatHornedLizard.Damage = 8;
+                    greatHornedLizard.Hp = 55;
+                    greatHornedLizard.Intro = "A Great Horned Lizard was released!";
+                    BattleEntity thunderBear = new BattleEntity();
+                    thunderBear.Name = "Thunder Bear";
+                    thunderBear.Damage = 10;
+                    thunderBear.Hp = 50;
+                    thunderBear.Intro = "The Thunder Bear was called from the storm!";
+                    return battleEntities;
+                case PlanetTypes.Wombodum:
+                    BattleEntity gobleen = new BattleEntity();
+                    gobleen.Name = "Gobleen";
+                    gobleen.Hp = 35;
+                    gobleen.Damage = 15;
+                    gobleen.Intro = "The gobleen lashed out!";
+                    BattleEntity awesomeGangMember = new BattleEntity();
+                    awesomeGangMember.Name = "Awesome Gang Member";
+                    awesomeGangMember.Damage = 5;
+                    awesomeGangMember.Hp = 40;
+                    awesomeGangMember.Intro = "An Awesome Gang Member appeared!";
+                    BattleEntity metalGangMember = new BattleEntity();
+                    metalGangMember.Name = "Metal Gang Member";
+                    metalGangMember.Damage = 5;
+                    metalGangMember.Hp = 40;
+                    metalGangMember.Intro = "A Metal Gang Member appeared!!";
+                    return battleEntities;
+                case PlanetTypes.Krytunga:
+                    BattleEntity theMAN = new BattleEntity();
+                    theMAN.Name = "THE MAN";
+                    theMAN.Damage = 45;
+                    theMAN.Hp = 1000;
+                    theMAN.Intro = "The final showdown with THE MAN begins!";
+                    BattleEntity yellowCrystalMouse = new BattleEntity();
+                    yellowCrystalMouse.Name = "Yellow Crystal Mouse";
+                    yellowCrystalMouse.Damage = 5;
+                    yellowCrystalMouse.Hp = 30;
+                    yellowCrystalMouse.Intro = "The yellow cyrstal turned into a 3 foot tall mouse!";
+                    BattleEntity redCrystalDragon = new BattleEntity();
+                    redCrystalDragon.Name = "Red Crystal Dragon";
+                    redCrystalDragon.Damage = 15;
+                    redCrystalDragon.Hp = 35;
+                    redCrystalDragon.Intro = $"{pc.Name} threw out the red crystal. It turned into a Crystal Dragon!";
+                    BattleEntity blueCrystal = new BattleEntity();
+                    blueCrystal.Name = "Blue Crystal Cannon Turtle";
+                    blueCrystal.Damage = 10;
+                    blueCrystal.Hp = 40;
+                    blueCrystal.Intro = $"{pc.Name} threw out the blue crystal. It turned into a Crystal Cannon Turtle!";
+                    BattleEntity greenCrystal = new BattleEntity();
+                    greenCrystal.Name = "Green Crystal Flower Frog";
+                    greenCrystal.Damage = 8;
+                    greenCrystal.Hp = 45;
+                    greenCrystal.Intro = $"{pc.Name} threw out the green crystal. It turned into a Crystal Flower Frog!";
+                    return battleEntities;
+                default:
+                    return battleEntities;
+            }
+        }
+
         public List<Item> AssignWeapons()
         {
             List<Item> inventory = new List<Item>();

@@ -9,6 +9,7 @@ namespace SpaceGameLibrary
         public string Name { get; set; }
         public short Hp { get; set; }
         public short Damage { get; set; }
+        public string Intro { get; set; }
 
         public bool TakenDamage(short damage)
         {
