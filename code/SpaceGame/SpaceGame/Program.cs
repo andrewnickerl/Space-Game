@@ -1259,9 +1259,10 @@ namespace SpaceGame
                 }
                 if (i == 30)
                 {
-                    
+                    //battleEntity = spotMee.BattleEntities<spotMee>(i => )
+                    //description => description == spotMee.BattleEntities;
                     Console.Clear();
-                    foreach (char letter in battleEntity.Intro)
+                    foreach (char letter in )
                     {
                         Console.Write(letter);
                         Thread.Sleep(10);

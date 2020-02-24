@@ -12,12 +12,14 @@ namespace SpaceGameLibrary
             this.Name = planet;
             this.StoreInventory = AssignWeapons();
             this.Story = AssignStory(pc);
+            this.BattleEntities = AssignBattleEntities(pc);
         }
 
         public PlanetTypes Name { get; set; }
         public string Objective { get; set; }
         public List<Item> StoreInventory { get; set; }
         public List<string> Story { get; set; }
+        public List<BattleEntity> BattleEntities { get; set; }
 
         public bool Buy(Player pc, List<Item> storeInventory, string selection)
         {
@@ -420,23 +422,13 @@ namespace SpaceGameLibrary
 
         public bool Combat(Player pc, BattleEntity enemy)
         {
-            do
+            switch (enemy.Name)
             {
-                enemy.Hp -= pc.EquippedItem.Damage;
-                if(enemy.Hp > 0)
-                {
-                    pc.Hp -= enemy.Damage;
-                }
-                if(enemy.Hp <= 0)
-                {
-                    break;
-                }
-            } while (pc.Hp > 0);
-            if(pc.Hp <= 0)
-            {
-                return false;
+                case "Great Horned Lizard":
+
+                    return true;
             }
-            return true;
+                
         }
 
         public List<BattleEntity> AssignBattleEntities(Player pc)
