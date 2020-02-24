@@ -91,6 +91,7 @@ namespace SpaceGame
         static void run()
         {
             Player pc = new Player();
+            BattleEntity battleEntity = new BattleEntity();
 
             int input; //used for input validation
 
@@ -109,7 +110,7 @@ namespace SpaceGame
 
 
             //Planet 1 - Noir - Intro
-            Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc);
+            Planet noir = new Planet(Enumerations.PlanetTypes.Noir, pc, battleEntity);
             //loops through story List<string> for Noir and manipulates output from list using i based on user input
             for (int i = 0; i < noir.Story.Count; i++)
             {
@@ -252,7 +253,7 @@ namespace SpaceGame
 
 
             //Planet 2 - Aventus
-            Planet aventus = new Planet(Enumerations.PlanetTypes.Aventus, pc);
+            Planet aventus = new Planet(Enumerations.PlanetTypes.Aventus, pc, battleEntity);
             //Loops through story List<string> for Aventus and manipulates output from list using i based on user input
             for (int i = 0; i < aventus.Story.Count; i++)
             {
@@ -972,7 +973,7 @@ namespace SpaceGame
             }
 
             //Planet 3 SpotMee
-            Planet spotMee = new Planet(Enumerations.PlanetTypes.SpotMee, pc);
+            Planet spotMee = new Planet(Enumerations.PlanetTypes.SpotMee, pc, battleEntity);
 
             for (int i = 0; i < spotMee.Story.Count; i++)
             {
@@ -1165,7 +1166,7 @@ namespace SpaceGame
                 }
                 if (i == 18)
                 {
-                    i = 29;
+                    i = 33;
                     continue;
                 }
                 if (i == 21)
@@ -1256,12 +1257,11 @@ namespace SpaceGame
                     i = 27;
                     continue;
                 }
-                if (i == 29)
+                if (i == 30)
                 {
-                    short enemyHP = 55;
-                    short enemyDPS = 8;
+                    
                     Console.Clear();
-                    foreach (char letter in "A Great Horned Lizard is released. \n \n The fight begins!")
+                    foreach (char letter in battleEntity.Intro)
                     {
                         Console.Write(letter);
                         Thread.Sleep(10);
@@ -1273,11 +1273,11 @@ namespace SpaceGame
                     }
                     Console.ReadKey();
                     
-                    while (enemyHP > 0)
+                    while (battleEntity.Hp > 0)
                     {
 
                         Console.Clear();
-                        foreach (char letter in $"The lizard has {enemyHP}HP left.")
+                        foreach (char letter in $"The {battleEntity.Name} has {battleEntity.Hp}HP left.")
                         {
                             Console.Write(letter);
                             Thread.Sleep(10);
@@ -1292,16 +1292,16 @@ namespace SpaceGame
                             switch (input)
                             {
                                 case 1: //Deal damage
-                                    enemyHP -= pc.EquippedItem.Damage;
-                                    foreach (char letter in $"You dealt {pc.EquippedItem.Damage} to the lizard")
+                                    battleEntity.Hp -= pc.EquippedItem.Damage;
+                                    foreach (char letter in $"You dealt {pc.EquippedItem.Damage} to the {battleEntity.Name}")
                                     {
                                         Console.Write(letter);
                                         Thread.Sleep(10);
                                     }
-                                    if(enemyHP > 0)
+                                    if(battleEntity.Hp > 0)
                                     {
-                                        pc.Hp -= enemyDPS;
-                                        foreach (char letter in $"The lizard dealt {enemyDPS} to {pc.Name} ")
+                                        pc.Hp -= battleEntity.Damage;
+                                        foreach (char letter in $"The {battleEntity.Damage} dealt {battleEntity.Damage} to {pc.Name} ")
                                         {
                                             Console.Write(letter);
                                             Thread.Sleep(10);
@@ -1381,7 +1381,7 @@ namespace SpaceGame
             }
 
             //Planet 4 Wombodum
-            Planet wombodum = new Planet(Enumerations.PlanetTypes.Wombodum, pc);
+            Planet wombodum = new Planet(Enumerations.PlanetTypes.Wombodum, pc, battleEntity);
             for (int i = 0; i < wombodum.Story.Count; i++)
             {
                 Console.Clear();
@@ -1907,7 +1907,7 @@ namespace SpaceGame
             }
 
             //Start Planet 5
-            Planet krytunga = new Planet(Enumerations.PlanetTypes.Krytunga, pc);
+            Planet krytunga = new Planet(Enumerations.PlanetTypes.Krytunga, pc, battleEntity);
 
             for (int i = 0; i < krytunga.Story.Count; i++)
             {

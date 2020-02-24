@@ -11,7 +11,8 @@ namespace SpaceGameLibrary
         public List<string> PlayerStatus { get; set; } = new List<string>();
         public short Currency { get; set; } = 500;
         public Item EquippedItem { get; set; }
-        public string PetName { get; set; } 
+        public string PetName { get; set; }
+        public List<BattleEntity> BattleEntities { get; set; } = new List<BattleEntity>();
 
         public bool EquipItem(Item weapon)
         {

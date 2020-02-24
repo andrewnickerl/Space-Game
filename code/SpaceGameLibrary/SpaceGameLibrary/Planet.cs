@@ -7,7 +7,7 @@ namespace SpaceGameLibrary
 {
     public class Planet
     {
-        public Planet(PlanetTypes planet, Player pc)
+        public Planet(PlanetTypes planet, Player pc, BattleEntity battleEntity)
         {
             this.Name = planet;
             this.StoreInventory = AssignWeapons();
@@ -439,7 +439,7 @@ namespace SpaceGameLibrary
             return true;
         }
 
-        public List<BattleEntity> BattleEntities(Player pc)
+        public List<BattleEntity> AssignBattleEntities(Player pc)
         {
             List<BattleEntity> battleEntities = new List<BattleEntity>();
 
@@ -722,9 +722,13 @@ namespace SpaceGameLibrary
                     /*27*/story.Add("A little low on that food chain now my guy!");
                     /*28*/story.Add("(Announcer)\n “Champions moving on to round 2! You shall face one of our beasts we have in our arena. When called, come face your beast!”"); // Round 2
                     /*29*/story.Add("The first 2 contestants both quickly get eaten, making you nervous.");
-                    /*30*/story.Add("(Announcer) \n THE MAN shall greet the champion!"); // Fight {random Enemy} Win move on , lose Game Over // Round 3:
-                    /*31*/story.Add("THE MAN walks out to greet you but freezes when he sees you. He screams for them to release another beast as he runs away.");
-                    /*32*/story.Add("You chase after THE MAN barely making it to your ship before you see his ship leave atmosphere. You follow after him in the ship."); // Fight [Random Enemy] [Win move on, lose Game over]
+                    /*30*/story.Add("");//Battle start
+                    /*31*/story.Add("");//Battle end
+                    /*32*/story.Add("(Announcer) \n THE MAN shall greet the champion!"); // Fight {random Enemy} Win move on , lose Game Over // Round 3:
+                    /*33*/story.Add("THE MAN walks out to greet you but freezes when he sees you. He screams for them to release another beast as he runs away.");
+                    /*34*/story.Add("");
+                    /*35*/story.Add("");
+                    /*36*/story.Add("You chase after THE MAN barely making it to your ship before you see his ship leave atmosphere. You follow after him in the ship."); // Fight [Random Enemy] [Win move on, lose Game over]
                     // End of SpotMee
                     return story;
 
