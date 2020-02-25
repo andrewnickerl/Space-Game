@@ -443,11 +443,13 @@ namespace SpaceGameLibrary
                     greatHornedLizard.Damage = 8;
                     greatHornedLizard.Hp = 55;
                     greatHornedLizard.Intro = "A Great Horned Lizard was released!";
+                    battleEntities.Add(greatHornedLizard);
                     BattleEntity thunderBear = new BattleEntity();
                     thunderBear.Name = "Thunder Bear";
                     thunderBear.Damage = 10;
                     thunderBear.Hp = 50;
                     thunderBear.Intro = "The Thunder Bear was called from the storm!";
+                    battleEntities.Add(thunderBear);
                     return battleEntities;
                 case PlanetTypes.Wombodum:
                     BattleEntity gobleen = new BattleEntity();
@@ -455,16 +457,19 @@ namespace SpaceGameLibrary
                     gobleen.Hp = 35;
                     gobleen.Damage = 15;
                     gobleen.Intro = "The gobleen lashed out!";
+                    battleEntities.Add(gobleen);
                     BattleEntity awesomeGangMember = new BattleEntity();
                     awesomeGangMember.Name = "Awesome Gang Member";
                     awesomeGangMember.Damage = 5;
                     awesomeGangMember.Hp = 40;
                     awesomeGangMember.Intro = "An Awesome Gang Member appeared!";
+                    battleEntities.Add(awesomeGangMember);
                     BattleEntity metalGangMember = new BattleEntity();
                     metalGangMember.Name = "Metal Gang Member";
                     metalGangMember.Damage = 5;
                     metalGangMember.Hp = 40;
                     metalGangMember.Intro = "A Metal Gang Member appeared!!";
+                    battleEntities.Add(metalGangMember);
                     return battleEntities;
                 case PlanetTypes.Krytunga:
                     BattleEntity theMAN = new BattleEntity();
@@ -472,26 +477,31 @@ namespace SpaceGameLibrary
                     theMAN.Damage = 45;
                     theMAN.Hp = 1000;
                     theMAN.Intro = "The final showdown with THE MAN begins!";
+                    battleEntities.Add(theMAN);
                     BattleEntity yellowCrystalMouse = new BattleEntity();
                     yellowCrystalMouse.Name = "Yellow Crystal Mouse";
                     yellowCrystalMouse.Damage = 5;
                     yellowCrystalMouse.Hp = 30;
-                    yellowCrystalMouse.Intro = "The yellow cyrstal turned into a 3 foot tall mouse!";
+                    yellowCrystalMouse.Intro = "The yellow cyrstal mouse started its attack!";
+                    battleEntities.Add(yellowCrystalMouse);
                     BattleEntity redCrystalDragon = new BattleEntity();
                     redCrystalDragon.Name = "Red Crystal Dragon";
                     redCrystalDragon.Damage = 15;
                     redCrystalDragon.Hp = 35;
                     redCrystalDragon.Intro = $"{pc.Name} threw out the red crystal. It turned into a Crystal Dragon!";
+                    battleEntities.Add(redCrystalDragon);
                     BattleEntity blueCrystal = new BattleEntity();
                     blueCrystal.Name = "Blue Crystal Cannon Turtle";
                     blueCrystal.Damage = 10;
                     blueCrystal.Hp = 40;
                     blueCrystal.Intro = $"{pc.Name} threw out the blue crystal. It turned into a Crystal Cannon Turtle!";
+                    battleEntities.Add(blueCrystal);
                     BattleEntity greenCrystal = new BattleEntity();
                     greenCrystal.Name = "Green Crystal Flower Frog";
                     greenCrystal.Damage = 8;
                     greenCrystal.Hp = 45;
                     greenCrystal.Intro = $"{pc.Name} threw out the green crystal. It turned into a Crystal Flower Frog!";
+                    battleEntities.Add(greenCrystal);
                     return battleEntities;
                 default:
                     return battleEntities;
@@ -745,30 +755,31 @@ namespace SpaceGameLibrary
                     /*17*/story.Add("Nice job there Guy!");
                     /*18*/story.Add("She flutters away sobbing about being hungry. Then you notice her start drinking the blood of another beggar in an alley. He becomes a mummy is 30 seconds. You just dodged a bullet."); // Continue where option 2 joins back in]
                     /*19*/story.Add("As you begin walking through the alley, a small green humanoid with large pointy ears clutching what appears to be a butter knife runs into you. You recognize him as a Gobleen. "); // // Option 2
-                    /*20*/story.Add("He is short of breath as if he was running from something. He realizes you’re not a wall but a person and freaks out. He screams, “You will not take my precious!!” as he strokes his butter knife. "); // Fight
-                    /*21*/story.Add("As you leave beggar central you see THE MAN’s ship, but there is a massive gang war on the path to the ship"); // [Win, gain Holy Butter Knife and join back with option 1] ,[Lose, Game over.]
-                    /*22*/story.Add("1) Fight your way through.\n\n2) Attempt to sneak around.\n\n3) Yell dumbbell fight!\n\n4) Check Inventory.\n\n5) Check Stats\n\nWhat do you do?\n"); // Options:
-                    /*23*/story.Add("You yell out and both gangs turn to you. You hear someone says, “wrong planet!” as a pizza flies toward you.  Its aroma attracts the local Flesh fleas. You are eaten alive by the fleas. "); // Option 3:
-                    /*24*/story.Add("Nice job there guy!");
-                    /*25*/story.Add("As you attempt to sneak past the war grounds, a humanoid cyborg with no details to see his original race but a large ‘A’ on his chest confronts you. "); // Option 2:
-                    /*26*/story.Add("(Cyborg) \n “To whose allegiance do you claim?! Awesome or Metal?!\n” ");
-                    /*27*/story.Add("1) Give item from inventory.\n\n2)	Answer with “Metal?”\n\n3)	Answer with Awesome?\n\n4)	[Fight]\n\nWhat do you Do?\n");  // Option 4: Go to option 1, fight through.
-                    /*28*/story.Add("(Cyborg) \n “You dare say Metal Man is better?!?! To me, an Awesome Cyborg fan?!?!?! Be converted!!” "); //Option 2:
-                    /*29*/story.Add("He throws a helmet on you. \nIt forces you to watch ‘The Adventures of Awesome Cyborg’ on repeat for 3 weeks straight.");
-                    /*30*/story.Add("Awesome Cyborg is love; \nAwesome Cyborg is life. \nYou join the gang with no self-will attempting to convert others to your cause.");
-                    /*31*/story.Add("Way to follow the sheep there guy!");
-                    /*32*/story.Add("(Cyborg) \n“I see through you lies Metal Man spy!! There is no saving your kind!”"); // Option 3:
-                    /*33*/story.Add("He pulls out an anti-battleship cannon and vaporizes you.You are wiped from existence.");
-                    /*34*/story.Add("Battleship's not your game there guy!");
-                    /*35*/story.Add("(Cyborg) \n “You would give me this rare figurine of Awesome Cyborg?! There are only 10 in existence! I will cherish what you have given me! May you bring justice to the blind comrade!”"); //Option 1: // [If you give Awesome Cyborg Doll]
-                    /*36*/story.Add(""); // [Continue on to THE MAN’s ship]
-                    /*37*/story.Add("[Fight Random Enemy]"); // Option 1:
-                    /*38*/story.Add(""); // Win: [Fight Random Enemy]
-                    /*39*/story.Add(""); // Lose: Game Over.
-                    /*40*/story.Add(""); // Win Both: Continue on to THE MANS ship
-                    /*41*/story.Add("After scrapping through the warzone, you finally make it to THE MAN’s ship. \n \nSadly, right as you approach the ship, the entry ramp raises up and the ship begins to leave. \n \nOver a speaker from the ship you hear THE MAN call out. ");
-                    /*42*/story.Add($"(THE MAN)\n “Muahahahaha!{pc.Name} you’re too slow. I’ve got everything I need to feast with {pc.PetName}. \n \nIf you want to join us on Krytunga then be my guest!” He then speeds off into space");
-                    /*43*/story.Add($"You know where this ends. Time to get {pc.PetName} back. \n \nYou head back to your ship, setting coordinates for the planet of Krytunga, the crystal world.");
+                    /*20*/story.Add("He is short of breath as if he was running from something. He realizes you’re not a wall but a person and freaks out. He screams, “You will not take my precious!!” as he strokes his butter knife. ");
+                    /*21*/story.Add(""); // Fight
+                    /*22*/story.Add("As you leave beggar central you see THE MAN’s ship, but there is a massive gang war on the path to the ship"); // [Win, gain Holy Butter Knife and join back with option 1] ,[Lose, Game over.]
+                    /*23*/story.Add("1) Fight your way through.\n\n2) Attempt to sneak around.\n\n3) Yell dumbbell fight!\n\n4) Check Inventory.\n\n5) Check Stats\n\nWhat do you do?\n"); // Options:
+                    /*24*/story.Add("You yell out and both gangs turn to you. You hear someone says, “wrong planet!” as a pizza flies toward you.  Its aroma attracts the local Flesh fleas. You are eaten alive by the fleas. "); // Option 3:
+                    /*25*/story.Add("Nice job there guy!");
+                    /*26*/story.Add("As you attempt to sneak past the war grounds, a humanoid cyborg with no details to see his original race but a large ‘A’ on his chest confronts you. "); // Option 2:
+                    /*27*/story.Add("(Cyborg) \n “To whose allegiance do you claim?! Awesome or Metal?!\n” ");
+                    /*28*/story.Add("1) Give item from inventory.\n\n2)	Answer with “Metal?”\n\n3)	Answer with Awesome?\n\n4)	[Fight]\n\nWhat do you Do?\n");  // Option 4: Go to option 1, fight through.
+                    /*29*/story.Add("(Cyborg) \n “You dare say Metal Man is better?!?! To me, an Awesome Cyborg fan?!?!?! Be converted!!” "); //Option 2:
+                    /*30*/story.Add("He throws a helmet on you. \nIt forces you to watch ‘The Adventures of Awesome Cyborg’ on repeat for 3 weeks straight.");
+                    /*31*/story.Add("Awesome Cyborg is love; \nAwesome Cyborg is life. \nYou join the gang with no self-will attempting to convert others to your cause.");
+                    /*32*/story.Add("Way to follow the sheep there guy!");
+                    /*33*/story.Add("(Cyborg) \n“I see through you lies Metal Man spy!! There is no saving your kind!”"); // Option 3:
+                    /*34*/story.Add("He pulls out an anti-battleship cannon and vaporizes you.You are wiped from existence.");
+                    /*35*/story.Add("Battleship's not your game there guy!");
+                    /*36*/story.Add("(Cyborg) \n “You would give me this rare figurine of Awesome Cyborg?! There are only 10 in existence! I will cherish what you have given me! May you bring justice to the blind comrade!”"); //Option 1: // [If you give Awesome Cyborg Doll]
+                    /*37*/story.Add(""); // [Continue on to THE MAN’s ship]
+                    /*38*/story.Add(""); // Option 1:
+                    /*39*/story.Add(""); // Win: [Fight Random Enemy]
+                    /*40*/story.Add(""); // Lose: Game Over.
+                    /*41*/story.Add(""); // Win Both: Continue on to THE MANS ship
+                    /*42*/story.Add("After scrapping through the warzone, you finally make it to THE MAN’s ship. \n \nSadly, right as you approach the ship, the entry ramp raises up and the ship begins to leave. \n \nOver a speaker from the ship you hear THE MAN call out. ");
+                    /*43*/story.Add($"(THE MAN)\n “Muahahahaha!{pc.Name} you’re too slow. I’ve got everything I need to feast with {pc.PetName}. \n \nIf you want to join us on Krytunga then be my guest!” He then speeds off into space");
+                    /*44*/story.Add($"You know where this ends. Time to get {pc.PetName} back. \n \nYou head back to your ship, setting coordinates for the planet of Krytunga, the crystal world.");
                     // End of Wombodum
                     return story;
 
